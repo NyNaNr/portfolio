@@ -18,11 +18,11 @@ import {
   WebGLRenderer,
   sRGBEncoding,
 } from "three"
-import { media, rgbToThreeColor } from "utils/style"
-import { cleanRenderer, cleanScene, removeLights } from "utils/three"
-import styles from "./app/DisplacementSphere.module.css"
-import fragShader from "./app/displacementSphereFragment.glsl"
-import vertShader from "./app/displacementSphereVertex.glsl"
+import { media, rgbToThreeColor } from "../utils/style"
+import { cleanRenderer, cleanScene, removeLights } from "../utils/three"
+import styles from "./DisplacementSphere.module.css"
+import fragShader from "./displacementSphereFragment.glsl"
+import vertShader from "./displacementSphereVertex.glsl"
 
 const springConfig = {
   stiffness: 30,
@@ -198,7 +198,7 @@ export const DisplacementSphere = (props) => {
       {(visible) => (
         <canvas
           aria-hidden
-          className={styles.canvas}
+          className={`${styles.canvas} ${visible ? styles.canvasVisible : ""}`}
           data-visible={visible}
           ref={canvasRef}
           {...props}
