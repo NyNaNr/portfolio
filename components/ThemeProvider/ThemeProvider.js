@@ -1,45 +1,48 @@
-import GothamBoldItalic from 'assets/fonts/gotham-bold-italic.woff2';
-import GothamBold from 'assets/fonts/gotham-bold.woff2';
-import GothamBookItalic from 'assets/fonts/gotham-book-italic.woff2';
-import GothamBook from 'assets/fonts/gotham-book.woff2';
-import GothamMediumItalic from 'assets/fonts/gotham-medium-italic.woff2';
-import GothamMedium from 'assets/fonts/gotham-medium.woff2';
-import { useHasMounted } from 'hooks';
-import Head from 'next/head';
-import { createContext, useEffect } from 'react';
-import { classes, media } from 'utils/style';
-import { theme, tokens } from './theme';
-import { useTheme } from './useTheme';
+import GothamBoldItalic from "../../app/assets/fonts/gotham-bold-italic.woff2"
+import GothamBold from "../../app/assets/fonts/gotham-bold.woff2"
+import GothamBookItalic from "../../app/assets/fonts/gotham-book-italic.woff2"
+import GothamBook from "../../app/assets/fonts/gotham-book.woff2"
+import GothamMediumItalic from "../../app/assets/fonts/gotham-medium-italic.woff2"
+import GothamMedium from "../../app/assets/fonts/gotham-medium.woff2"
+import { useHasMounted } from "hooks"
+import Head from "next/head"
+import { createContext, useEffect } from "react"
+import { classes, media } from "../../app/utils/style"
+import { theme, tokens } from "./theme"
+import { useTheme } from "./useTheme"
 
-export const ThemeContext = createContext({});
+export const ThemeContext = createContext({})
 
 export const ThemeProvider = ({
-  themeId = 'dark',
+  themeId = "dark",
   theme: themeOverrides,
   children,
   className,
-  as: Component = 'div',
+  as: Component = "div",
   ...rest
 }) => {
-  const currentTheme = { ...theme[themeId], ...themeOverrides };
-  const parentTheme = useTheme();
-  const isRootProvider = !parentTheme.themeId;
-  const hasMounted = useHasMounted();
+  const currentTheme = { ...theme[themeId], ...themeOverrides }
+  const parentTheme = useTheme()
+  const isRootProvider = !parentTheme.themeId
+  const hasMounted = useHasMounted()
 
   // Save root theme id to localstorage and apply class to body
   useEffect(() => {
     if (isRootProvider && hasMounted) {
-      window.localStorage.setItem('theme', JSON.stringify(themeId));
-      document.body.dataset.theme = themeId;
+      window.localStorage.setItem("theme", JSON.stringify(themeId))
+      document.body.dataset.theme = themeId
     }
-  }, [themeId, isRootProvider, hasMounted]);
+  }, [themeId, isRootProvider, hasMounted])
 
   return (
     <ThemeContext.Provider value={currentTheme}>
       {isRootProvider && (
         <>
           <Head>
-            <meta name="theme-color" content={`rgb(${currentTheme.rgbBackground})`} />
+            <meta
+              name="theme-color"
+              content={`rgb(${currentTheme.rgbBackground})`}
+            />
           </Head>
           {children}
         </>
@@ -47,7 +50,7 @@ export const ThemeProvider = ({
       {/* Nested providers need a div to override theme tokens */}
       {!isRootProvider && (
         <Component
-          className={classes('theme-provider', className)}
+          className={classes("theme-provider", className)}
           data-theme={themeId}
           {...rest}
         >
@@ -55,14 +58,14 @@ export const ThemeProvider = ({
         </Component>
       )}
     </ThemeContext.Provider>
-  );
-};
+  )
+}
 
 /**
  * Squeeze out spaces and newlines
  */
 export function squish(styles) {
-  return styles.replace(/\s\s+/g, ' ');
+  return styles.replace(/\s\s+/g, " ")
 }
 
 /**
@@ -71,25 +74,25 @@ export function squish(styles) {
 export function createThemeProperties(theme) {
   return squish(
     Object.keys(theme)
-      .filter(key => key !== 'themeId')
-      .map(key => `--${key}: ${theme[key]};`)
-      .join('\n\n')
-  );
+      .filter((key) => key !== "themeId")
+      .map((key) => `--${key}: ${theme[key]};`)
+      .join("\n\n"),
+  )
 }
 
 /**
  * Transform theme tokens into a React CSSProperties object
  */
 export function createThemeStyleObject(theme) {
-  let style = {};
+  let style = {}
 
   for (const key of Object.keys(theme)) {
-    if (key !== 'themeId') {
-      style[`--${key}`] = theme[key];
+    if (key !== "themeId") {
+      style[`--${key}`] = theme[key]
     }
   }
 
-  return style;
+  return style
 }
 
 /**
@@ -98,17 +101,17 @@ export function createThemeStyleObject(theme) {
 export function createMediaTokenProperties() {
   return squish(
     Object.keys(media)
-      .map(key => {
+      .map((key) => {
         return `
         @media (max-width: ${media[key]}px) {
           :root {
             ${createThemeProperties(tokens[key])}
           }
         }
-      `;
+      `
       })
-      .join('\n')
-  );
+      .join("\n"),
+  )
 }
 
 export const tokenStyles = squish(`
@@ -125,7 +128,7 @@ export const tokenStyles = squish(`
   [data-theme='light'] {
     ${createThemeProperties(theme.light)}
   }
-`);
+`)
 
 export const fontStyles = squish(`
   @font-face {
@@ -175,4 +178,4 @@ export const fontStyles = squish(`
     font-display: block;
     font-style: italic;
   }
-`);
+`)
