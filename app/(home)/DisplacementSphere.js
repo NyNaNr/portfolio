@@ -124,7 +124,7 @@ export const DisplacementSphere = (props) => {
     const { width, height } = windowSize
 
     const adjustedHeight = height + height * 0.3
-    renderer.current.setSize(width * 0.989, adjustedHeight) //すこしはみ出る問題　renderer.current.setSize(width, adjustedHeight)
+    renderer.current.setSize(width * 0.989, adjustedHeight) //すこしはみ出る問題　元は　renderer.current.setSize(width, adjustedHeight)
     camera.current.aspect = width / adjustedHeight
     camera.current.updateProjectionMatrix()
 
