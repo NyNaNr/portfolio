@@ -6,13 +6,8 @@
   transition-property: opacity;
   transition-duration: 3s;
   transition-timing-function: var(--bezierFastoutSlowin);
-
-  opacity: 0; /* 追加 */
-  transition-property: opacity; /* 追加 */
-  transition-duration: var(--durationXl); /* 追加 */
-  transition-timing-function: var(--bezierFastoutSlowin); /* 追加 */
 }
 
 .canvasVisible {
-  opacity: 1; /* 追加 */
+  opacity: 1;
 }
