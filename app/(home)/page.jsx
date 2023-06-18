@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image"
 import dynamic from "next/dynamic"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { ThemeProvider } from "../../components/ThemeProvider"
 
 const DisplacementSphere = dynamic(
@@ -13,16 +13,31 @@ const DisplacementSphere = dynamic(
 )
 
 export default function Home() {
-  const [themeId, setThemeId] = useState("dark")
+  const [themeId, setThemeId] = useState("light")
 
   const toggleTheme = () => {
     setThemeId((currentThemeId) =>
       currentThemeId === "dark" ? "light" : "dark",
     )
   }
+  useEffect(() => {
+    // themeに応じて.darkを追加または削除
+    if (themeId === "dark") {
+      document.documentElement.classList.add("dark")
+    } else {
+      document.documentElement.classList.remove("dark")
+    }
+  }, [themeId])
+
   return (
     <ThemeProvider themeId={themeId}>
       <main className="flex min-h-screen flex-col items-center justify-between p-24 ">
+        <button
+          className="z-20 dark:text-white text-3xl font-semibold"
+          onClick={toggleTheme}
+        >
+          テーマを切り替え
+        </button>
         <DisplacementSphere />
         <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
           <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
@@ -48,7 +63,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="z-20 text-white text-9xl font-bold ">
+        <div className="z-20 dark:text-white text-9xl font-bold ">
           <p>Yu Nishioka</p>
         </div>
         <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
