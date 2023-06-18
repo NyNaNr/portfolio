@@ -13,6 +13,15 @@ const DisplacementSphere = dynamic(
 )
 
 export default function Home() {
+  //実験
+  const [storedTheme] = useLocalStorage("theme", "dark")
+  const [state, dispatch] = useReducer(reducer, initialState)
+
+  useEffect(() => {
+    dispatch({ type: "setTheme", value: storedTheme || "dark" })
+  }, [storedTheme])
+  //実験
+
   const [themeId, setThemeId] = useState("light")
 
   const toggleTheme = () => {
@@ -64,7 +73,7 @@ export default function Home() {
           </div>
         </div>
         <div className="z-20 dark:text-white text-9xl font-bold ">
-          <p>Yu Nishioka</p>
+          <p>Ayumi Nishioka</p>
         </div>
         <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
           <a
