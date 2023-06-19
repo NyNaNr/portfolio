@@ -27,9 +27,9 @@ export default function DarkModeButton({
   return (
     <button
       onClick={toggleTheme}
-      className="text-4xl z-20 font-bold dark:text-white"
+      className="z-20 dark:text-white text-3xl font-semibold "
     >
-      テーマを切り替え2
+      テーマを切り替え
     </button>
   )
 }
