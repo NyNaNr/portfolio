@@ -3,8 +3,6 @@ import Image from "next/image"
 import dynamic from "next/dynamic"
 import { useState, useEffect, useReducer } from "react"
 import { ThemeProvider } from "../../components/ThemeProvider"
-import { useLocalStorage } from "@/hooks"
-import { initialState, reducer } from "@/app/(home)/reducer"
 import { Transition } from "@/components/Transition"
 
 const DisplacementSphere = dynamic(
