@@ -13,16 +13,19 @@ export default function HomeLayout({ children }) {
   }
   return (
     <>
-      <Transition in key={themeId} timeout={3000}>
-        {(visible, status) => (
-          <ThemeProvider themeId={themeId}>
-            <themeContext.Provider value={value}>
-              <div className="fixed left-0 z-20 bg-slate-600 h-full w-20 dark:bg-blue-300"></div>
-              {children}
-            </themeContext.Provider>
-          </ThemeProvider>
-        )}
-      </Transition>
+      <ThemeProvider themeId={themeId}>
+        <themeContext.Provider value={value}>
+          <Transition in key={themeId} timeout={3000}>
+            {(visible, status) => (
+              <>
+                <div className="fixed left-0 z-20 bg-slate-600 h-full w-20 dark:bg-blue-300"></div>
+
+                {children}
+              </>
+            )}
+          </Transition>
+        </themeContext.Provider>
+      </ThemeProvider>
     </>
   )
 }
