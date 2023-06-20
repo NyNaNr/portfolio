@@ -1,16 +1,11 @@
-import React, { useEffect, Dispatch, SetStateAction } from "react"
+import React, { useEffect, Dispatch, SetStateAction, useContext } from "react"
+import { themeContext } from "@/app/(home)/page"
 
-type DarkModeButtonProps = {
-  setThemeId: Dispatch<SetStateAction<string>>
-  themeId: string
-}
+export default function DarkModeButton() {
+  const { themeId, setThemeId } = useContext(themeContext)
 
-export default function DarkModeButton({
-  setThemeId,
-  themeId,
-}: DarkModeButtonProps) {
   const toggleTheme = () => {
-    setThemeId((currentThemeId) =>
+    setThemeId((currentThemeId: "dark" | "light") =>
       currentThemeId === "dark" ? "light" : "dark",
     )
   }
