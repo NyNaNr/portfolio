@@ -4,7 +4,7 @@ import { useState, useLayoutEffect } from "react"
 
 export default function Navbar() {
   //SSR対策、初回レンダリングされた際にisMobileが実行され、正しい値がステートに保存される
-  const [isMobileDevice, setIsMobileDevice] = useState(false)
+  const [isMobileDevice, setIsMobileDevice] = useState(true)
   useLayoutEffect(() => {
     setIsMobileDevice(isMobile())
   }, [])
