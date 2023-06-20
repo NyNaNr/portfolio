@@ -3,8 +3,6 @@
 import dynamic from "next/dynamic"
 
 import DarkModeButton from "@/components/DarkModeButton"
-import { useContext } from "react"
-import { themeContext } from "./layout"
 
 const DisplacementSphere = dynamic(
   () =>
@@ -15,10 +13,9 @@ const DisplacementSphere = dynamic(
 )
 
 export default function Home() {
-  const { themeId, setThemeId } = useContext(themeContext)
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 ">
-      <DarkModeButton setThemeId={setThemeId} themeId={themeId} />
+      <DarkModeButton />
 
       <DisplacementSphere />
 
