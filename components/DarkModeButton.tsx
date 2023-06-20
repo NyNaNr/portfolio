@@ -1,5 +1,5 @@
 import React, { useEffect, Dispatch, SetStateAction, useContext } from "react"
-import { themeContext } from "@/app/(home)/page"
+import { themeContext } from "@/app/(home)/layout"
 
 export default function DarkModeButton() {
   const { themeId, setThemeId } = useContext(themeContext)
