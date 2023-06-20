@@ -22,7 +22,7 @@ export default function DarkModeButton() {
   return (
     <button
       onClick={toggleTheme}
-      className="z-20 dark:text-white text-3xl font-semibold "
+      className="flex z-20 dark:text-white text-3xl font-semibold "
     >
       テーマを切り替え
     </button>
