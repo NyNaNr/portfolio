@@ -15,6 +15,8 @@ export default function HomeLayout({ children }) {
     <>
       <ThemeProvider themeId={themeId}>
         <themeContext.Provider value={value}>
+          {/*<NavBar /> */}
+          {/*<Home /> */}
           <Transition in key={themeId} timeout={3000}>
             {(visible, status) => (
               <>
@@ -24,6 +26,8 @@ export default function HomeLayout({ children }) {
               </>
             )}
           </Transition>
+          {/*<web紹介 /> */}
+          {/*<技術紹介 /> */}
         </themeContext.Provider>
       </ThemeProvider>
     </>
