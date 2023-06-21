@@ -1,4 +1,4 @@
-import React, { useEffect, Dispatch, SetStateAction, useContext } from "react"
+import React, { useEffect, useContext } from "react"
 import { themeContext } from "@/app/(home)/layout"
 
 export default function DarkModeButton() {
