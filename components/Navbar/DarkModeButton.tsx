@@ -1,6 +1,7 @@
 import React, { useEffect, useContext } from "react"
 import { themeContext } from "@/app/(home)/layout"
 import Sun from "./svgs/sun.svg"
+import Moon from "./svgs/moon.svg"
 
 export default function DarkModeButton() {
   const { themeId, setThemeId } = useContext(themeContext)
@@ -26,9 +27,13 @@ export default function DarkModeButton() {
         onClick={toggleTheme}
         className="flex z-20 dark:text-white text-3xl font-semibold "
       >
-        テーマを切り替え
+        <div className="dark:hidden">
+          <Sun width={38} height={38} strokeWidth={"1.2px"} />
+        </div>
+        <div className="hidden dark:flex">
+          <Moon width={38} height={38} strokeWidth={"1.2px"} />
+        </div>
       </button>
-      <Sun />
     </>
   )
 }
