@@ -25,7 +25,7 @@ export default function DarkModeButton() {
     <>
       <button
         onClick={toggleTheme}
-        className="flex z-20 dark:text-white hover:bg-gray-300 hover:bg-opacity-25"
+        className="flex justify-center items-center z-20 dark:text-white hover:bg-gray-300 hover:bg-opacity-25 h-14 w-14"
       >
         <div className="dark:hidden">
           <Sun width={38} height={38} strokeWidth={"1.2px"} />
