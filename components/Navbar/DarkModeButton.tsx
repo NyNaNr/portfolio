@@ -1,5 +1,6 @@
 import React, { useEffect, useContext } from "react"
 import { themeContext } from "@/app/(home)/layout"
+import Sun from "./svgs/sun.svg"
 
 export default function DarkModeButton() {
   const { themeId, setThemeId } = useContext(themeContext)
@@ -20,11 +21,14 @@ export default function DarkModeButton() {
   }, [themeId])
 
   return (
-    <button
-      onClick={toggleTheme}
-      className="flex z-20 dark:text-white text-3xl font-semibold "
-    >
-      テーマを切り替え
-    </button>
+    <>
+      <button
+        onClick={toggleTheme}
+        className="flex z-20 dark:text-white text-3xl font-semibold "
+      >
+        テーマを切り替え
+      </button>
+      <Sun />
+    </>
   )
 }
