@@ -19,5 +19,7 @@ module.exports = {
       test: /\.glsl$/,
       type: "asset/source",
     })
+
+    return config
   },
 }
