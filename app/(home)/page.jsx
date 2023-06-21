@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic"
 import { Transition } from "@/components/Transition"
 import { useContext } from "react"
-import DarkModeButton from "@/components/Navbar/DarkModeButton"
+
 import { themeContext } from "./layout"
 
 const DisplacementSphere = dynamic(
