@@ -10,11 +10,13 @@ export default function NavbarForMobile() {
   return (
     <>
       <div className="md:hidden">
-        <div className="m-3">
+        <div className="flex justify-between">
           <button
             onClick={handleMenuOpen}
             type="button"
-            className="flex  z-20 space-y-2"
+            className={`flex flex-col z-20 m-3 w-10 h-10 ${
+              openMenu ? "space-y-1" : "space-y-2"
+            }`}
           >
             <div
               className={
