@@ -1,13 +1,6 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   webpack(config, { isServer }) {
-    // Import `svg` files as React components
-    config.module.rules.push({
-      test: /\.svg$/,
-      resourceQuery: { not: [/url/] },
-      use: [{ loader: "@svgr/webpack", options: { svgo: false } }],
-    })
-
     // Import videos, models, hdrs, and fonts
     config.module.rules.push({
       test: /\.(mp4|hdr|glb|woff|woff2)$/i,
@@ -18,6 +11,11 @@ module.exports = {
     config.module.rules.push({
       test: /\.glsl$/,
       type: "asset/source",
+    })
+
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ["@svgr/webpack"],
     })
 
     return config
