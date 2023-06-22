@@ -1,10 +1,8 @@
 "use client"
-import { useState, createContext } from "react"
+import { useState } from "react"
 import { ThemeProvider } from "../../components/ThemeProvider"
-
+import { ThemeContext } from "@/components/themeContext"
 import Navbar from "@/components/Navbar/Navbar"
-
-export const themeContext = createContext()
 
 export default function HomeLayout({ children }) {
   const [themeId, setThemeId] = useState("light")
@@ -15,7 +13,7 @@ export default function HomeLayout({ children }) {
   return (
     <>
       <ThemeProvider themeId={themeId}>
-        <themeContext.Provider value={value}>
+        <ThemeContext.Provider value={value}>
           <Navbar />
           {/*<Intro /> */}
           {children}
@@ -23,7 +21,7 @@ export default function HomeLayout({ children }) {
 
           {/*<web紹介 /> */}
           {/*<技術紹介 /> */}
-        </themeContext.Provider>
+        </ThemeContext.Provider>
       </ThemeProvider>
     </>
   )
