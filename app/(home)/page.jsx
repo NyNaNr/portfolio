@@ -23,7 +23,7 @@ export default function Home() {
           <main className="flex min-h-screen flex-col items-center justify-between p-24 ">
             <DisplacementSphere />
 
-            <div className="z-20 dark:text-white text-9xl font-bold ">
+            <div className="z-10 dark:text-white text-9xl font-bold ">
               <p>Yu Nishioka</p>
             </div>
           </main>
