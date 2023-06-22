@@ -12,7 +12,8 @@ export default function NavbarForMobile() {
   return (
     <>
       <div className="md:hidden">
-        <div className="flex justify-between">
+        <div className="flex">
+          {/*↑のflexは必要。親コンポーネントにflexないと子コンポーネント消える */}
           <button
             onClick={handleMenuOpen}
             type="button"
