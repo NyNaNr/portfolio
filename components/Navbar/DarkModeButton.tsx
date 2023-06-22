@@ -1,16 +1,15 @@
 import React, { useEffect, useContext } from "react"
-import { themeContext } from "@/app/(home)/layout"
+import { ThemeContext } from "@/components/themeContext"
 import Sun from "./svgs/sun.svg"
 import Moon from "./svgs/moon.svg"
 
 export default function DarkModeButton() {
-  const { themeId, setThemeId } = useContext(themeContext)
+  const { themeId, setThemeId } = useContext(ThemeContext)
 
   const toggleTheme = () => {
-    setThemeId((currentThemeId: "dark" | "light") =>
-      currentThemeId === "dark" ? "light" : "dark",
-    )
+    setThemeId(themeId === "dark" ? "light" : "dark")
   }
+
   //これで、CSSがモードに切り替かえられる
   useEffect(() => {
     // themeに応じて.darkを追加または削除

@@ -4,7 +4,7 @@ import dynamic from "next/dynamic"
 import { Transition } from "@/components/Transition"
 import { useContext } from "react"
 
-import { themeContext } from "./layout"
+import { ThemeContext } from "@/components/themeContext"
 
 const DisplacementSphere = dynamic(
   () =>
@@ -15,7 +15,7 @@ const DisplacementSphere = dynamic(
 )
 
 export default function Home() {
-  const { themeId, setThemeId } = useContext(themeContext)
+  const { themeId, setThemeId } = useContext(ThemeContext)
   return (
     <Transition in key={themeId} timeout={3000}>
       {(visible, status) => (
