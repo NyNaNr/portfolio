@@ -44,8 +44,15 @@ export default function NavbarForMobile() {
               }
             />
           </button>
+          <nav
+            className={`fixed ease-in duration-1000 ${
+              openMenu
+                ? "z-10 text-left top-0 right-0 w-full h-screen flex flex-col justify-start pt-8 px-3  bg-slate-50 bg-opacity-40 backdrop-blur-lg dark:bg-black dark:bg-opacity-40"
+                : "z-10 top-[-100dvh]"
+            }`}
+          ></nav>
         </div>
-        <div className="fixed right-0 top-0 z-20 bg-slate-600 h-20 w-20 dark:bg-blue-300"></div>
+
         <div className="flex absolute top-0 right-0">
           <DarkModeButton />
         </div>
