@@ -18,7 +18,6 @@ export default function NavbarForMobile() {
             onClick={handleMenuOpen}
             type="button"
             className={`fixed top-0 right-0 flex justify-center items-center flex-col z-20 m-3 w-12 h-12
-            
             active:bg-gray-300 active:bg-opacity-25
               ${openMenu ? "space-y-1" : "space-y-2"}`}
           >
@@ -44,11 +43,12 @@ export default function NavbarForMobile() {
               }
             />
           </button>
+          <div className="transition-all fixed ease-in duration-300"></div>
           <nav
             className={`fixed ease-in duration-300 ${
               openMenu
                 ? "z-10 text-left top-0 right-0  w-full flex flex-col bg-slate-50 bg-opacity-40 backdrop-blur-lg dark:bg-black dark:bg-opacity-40"
-                : "z-10 top-[-100dvh]"
+                : "z-10 top-[-100dvh] w-full"
             }`}
             style={{ height: "100dvh" }}
           >
