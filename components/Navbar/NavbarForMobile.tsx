@@ -17,7 +17,7 @@ export default function NavbarForMobile() {
           <button
             onClick={handleMenuOpen}
             type="button"
-            className={`flex justify-center items-center flex-col z-20 m-3 w-12 h-12
+            className={`fixed top-0 right-0 flex justify-center items-center flex-col z-20 m-3 w-12 h-12
             transition-all duration-500 ease-out
             active:bg-gray-300 active:bg-opacity-25
               ${openMenu ? "space-y-1" : "space-y-2"}`}
