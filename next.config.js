@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
+  productionBrowserSourceMaps: true,
   webpack(config, { isServer }) {
     // Import videos, models, hdrs, and fonts
     config.module.rules.push({
