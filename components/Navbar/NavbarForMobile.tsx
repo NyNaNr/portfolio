@@ -43,15 +43,20 @@ export default function NavbarForMobile() {
               }
             />
           </button>
-          <div className="transition-all fixed ease-in duration-300"></div>
           <nav
             className={`fixed ease-in duration-300 ${
               openMenu
-                ? "z-10 text-left top-0 right-0  w-full flex flex-col bg-slate-50 bg-opacity-40 backdrop-blur-lg dark:bg-black dark:bg-opacity-40"
+                ? "z-10 text-left top-0 right-0  w-full bg-slate-50 bg-opacity-40 backdrop-blur-lg dark:bg-black dark:bg-opacity-40"
                 : "z-10 top-[-100dvh] w-full"
             }`}
             style={{ height: "100dvh" }}
           >
+            <div className="flex flex-col justify-center items-center space-y-10 text-3xl">
+              <a href="#">About me</a>
+              <a href="#">Works</a>
+              <a href="#">Skills</a>
+              <a href="#">Contact</a>
+            </div>
             <div className="absolute bottom-0 right-0 m-2">
               <DarkModeButton />
             </div>
