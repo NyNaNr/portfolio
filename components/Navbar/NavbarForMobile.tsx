@@ -51,13 +51,14 @@ export default function NavbarForMobile() {
             }`}
             style={{ height: "100dvh" }}
           >
-            <div className="flex flex-col sticky top-1/3 left-1/2 text-center space-y-10 text-3xl">
-              <a
-                href="#"
-                className="border-b-2 border-transparent hover:border-blue-500 active:border-blue-500 transition-colors duration-300"
-              >
-                About me
-              </a>
+            <div className="flex flex-col sticky top-1/3 left-1/2 text-center space-y-10 text-3xl whitespace-nowrap dark:text-white">
+              <p className="relative group mx-16 sm:mx-64">
+                <a href="#" className="">
+                  About me
+                </a>
+                <span className="absolute -bottom-1 left-0 w-0 h-2 bg-strongCyan transition-all group-hover:w-full group-active:w-full"></span>
+              </p>
+
               <a href="#" className="">
                 Works
               </a>
