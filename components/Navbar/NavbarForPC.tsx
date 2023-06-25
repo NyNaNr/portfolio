@@ -1,12 +1,13 @@
 import DarkModeButton from "./DarkModeButton"
 import NavLink from "./NavLink"
+import Yu from "./svgs/yu.svg"
 
 export default function NavbarForPC() {
   return (
     <>
       <div className="hidden md:flex">
-        <div className="fixed z-20 bg-transparent border-2 h-full w-50 ">
-          <div className="fixed top-72 flex flex-row-reverse -rotate-90 space-x-10 space-x-reverse text-lg">
+        <div className="fixed z-20 bg-transparent  h-full w-48 ">
+          <div className="fixed top-72 -left-28 flex flex-row-reverse -rotate-90 space-x-10 space-x-reverse text-lg font-medium">
             <NavLink text="About me" />
             <NavLink text="Works" />
             <NavLink text="Skills" />
