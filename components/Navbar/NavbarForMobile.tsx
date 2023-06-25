@@ -51,11 +51,19 @@ export default function NavbarForMobile() {
             }`}
             style={{ height: "100dvh" }}
           >
-            <div className="flex flex-col justify-center items-center space-y-10 text-3xl">
-              <a href="#">About me</a>
-              <a href="#">Works</a>
-              <a href="#">Skills</a>
-              <a href="#">Contact</a>
+            <div className="flex flex-col sticky top-1/3 left-1/2 text-center space-y-10 text-3xl">
+              <a href="#" className="">
+                About me
+              </a>
+              <a href="#" className="">
+                Works
+              </a>
+              <a href="#" className="">
+                Skills
+              </a>
+              <a href="#" className="">
+                Contact
+              </a>
             </div>
             <div className="absolute bottom-0 right-0 m-2">
               <DarkModeButton />
