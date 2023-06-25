@@ -1,6 +1,5 @@
 import DarkModeButton from "./DarkModeButton"
 import NavLink from "./NavLink"
-import Yu from "./svgs/yu.svg"
 
 export default function NavbarForPC() {
   return (
