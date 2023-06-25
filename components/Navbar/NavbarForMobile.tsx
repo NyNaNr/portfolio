@@ -12,7 +12,7 @@ export default function NavbarForMobile() {
   }
   return (
     <>
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <div className="flex">
           {/*↑のflexは必要。親コンポーネントにflexないと子コンポーネント消える */}
           <button
@@ -52,11 +52,13 @@ export default function NavbarForMobile() {
             }`}
             style={{ height: "100dvh" }}
           >
-            <div className="flex flex-col sticky top-1/3 left-1/2 mx-16 sm:mx-40 text-center space-y-10 text-3xl">
-              <NavLink text="About me" />
-              <NavLink text="Works" />
-              <NavLink text="Skills" />
-              <NavLink text="Contact" />
+            <div className="flex justify-center items-center h-full">
+              <div className="flex flex-col mx-16 sm:mx-40 text-center space-y-10 text-3xl">
+                <NavLink text="About me" />
+                <NavLink text="Works" />
+                <NavLink text="Skills" />
+                <NavLink text="Contact" />
+              </div>
             </div>
             <div className="absolute bottom-0 right-0 m-2">
               <DarkModeButton />
