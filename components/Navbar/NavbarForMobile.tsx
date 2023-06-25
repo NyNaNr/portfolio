@@ -18,7 +18,7 @@ export default function NavbarForMobile() {
             onClick={handleMenuOpen}
             type="button"
             className={`fixed top-0 right-0 flex justify-center items-center flex-col z-20 m-3 w-12 h-12
-            active:bg-gray-300 active:bg-opacity-25
+            hover:bg-gray-300 hover:bg-opacity-25 active:bg-gray-300 active:bg-opacity-25
               ${openMenu ? "space-y-1" : "space-y-2"}`}
           >
             <div
@@ -52,7 +52,10 @@ export default function NavbarForMobile() {
             style={{ height: "100dvh" }}
           >
             <div className="flex flex-col sticky top-1/3 left-1/2 text-center space-y-10 text-3xl">
-              <a href="#" className="">
+              <a
+                href="#"
+                className="border-b-2 border-transparent hover:border-blue-500 active:border-blue-500 transition-colors duration-300"
+              >
                 About me
               </a>
               <a href="#" className="">
