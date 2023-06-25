@@ -52,7 +52,7 @@ export default function NavbarForMobile() {
             }`}
             style={{ height: "100dvh" }}
           >
-            <div className="flex flex-col sticky top-1/3 left-1/2 text-center space-y-10 text-3xl whitespace-nowrap dark:text-white">
+            <div className="flex flex-col sticky top-1/3 left-1/2 text-center space-y-10 text-3xl dark:text-white">
               <NavLink text="About me" />
               <NavLink text="Works" />
               <NavLink text="Skills" />
