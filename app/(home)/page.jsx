@@ -20,7 +20,10 @@ export default function Home() {
     <Transition in key={themeId} timeout={3000}>
       {(visible, status) => (
         <>
-          <main className="flex min-h-screen flex-col items-center justify-between p-24 ">
+          <main
+            className="flex flex-col items-center justify-between p-24"
+            style={{ height: "calc(1.3 * 100vh)" }}
+          >
             <DisplacementSphere />
 
             <div className="z-0 absolute top-72 dark:text-white text-3xl md:text-6xl lg:text-9xl font-bold ">
