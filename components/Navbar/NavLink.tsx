@@ -4,6 +4,8 @@ interface NavLinkProps {
   text: string
 }
 
+//リンク（位置）を受け取れるように改良する
+
 const NavLink: React.FC<NavLinkProps> = ({ text }) => (
   <p className="relative group mx-16 sm:mx-40">
     <a href="#" className="">
