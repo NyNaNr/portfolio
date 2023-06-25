@@ -1,7 +1,9 @@
 export default function AboutMe() {
   return (
     <>
-      <h2 className="flex z-0 justify-center mb-5 text-3xl">About me</h2>
+      <h2 className="flex z-0 justify-center mb-5 text-3xl font-medium">
+        About me
+      </h2>
       <p className="flex flex-row flex-wrap max-w-2xl z-0">
         こんにちは、私の名前は田中です。現在は、ソフトウェアエンジニアとして働いています。私のスキルセットはフロントエンドからバックエンドまで幅広く、特にReact.jsとNode.jsを用いた開発が得意です。大学でコンピューターサイエンスを学び、その後数年間の実務経験を経て、フルスタックの開発者として多様なプロジェクトに携わってきました。
         仕事だけでなく、個人的な趣味としてもプログラミングに取り組んでいます。特にオープンソースプロジェクトに貢献することを楽しんでおり、自分のスキルを共有し、他の開発者から学ぶことに情熱を傾けています。
