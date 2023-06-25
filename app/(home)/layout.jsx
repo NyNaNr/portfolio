@@ -20,7 +20,7 @@ export default function HomeLayout({ children }) {
           {children}
           {/*<Intro /> */}
           <div className="flex justify-center ">
-            <div className="flex flex-col mx-10 max-w-xl justify-center dark:text-white">
+            <div className="flex flex-col mx-10 max-w-xl justify-center tracking-wider leading-relaxed dark:text-white">
               <AboutMe />
 
               {/*<web紹介 /> */}
