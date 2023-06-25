@@ -52,7 +52,7 @@ export default function NavbarForMobile() {
             }`}
             style={{ height: "100dvh" }}
           >
-            <div className="flex justify-center items-center h-full">
+            <div className="flex justify-center items-center h-full ">
               <div className="flex flex-col mx-16 sm:mx-40 text-center space-y-10 text-3xl">
                 <NavLink text="About me" />
                 <NavLink text="Works" />
