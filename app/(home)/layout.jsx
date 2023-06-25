@@ -19,10 +19,14 @@ export default function HomeLayout({ children }) {
           {/*<Intro /> */}
           {children}
           {/*<Intro /> */}
-          <AboutMe />
+          <div className="flex justify-center ">
+            <div className="flex flex-col mx-10 max-w-xl justify-center dark:text-white">
+              <AboutMe />
 
-          {/*<web紹介 /> */}
-          {/*<技術紹介 /> */}
+              {/*<web紹介 /> */}
+              {/*<技術紹介 /> */}
+            </div>
+          </div>
         </ThemeContext.Provider>
       </ThemeProvider>
     </>
