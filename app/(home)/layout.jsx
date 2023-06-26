@@ -22,11 +22,11 @@ export default function HomeLayout({ children }) {
           {/*<Intro /> */}
           <div className="">
             {/* tracking-wider leading-relaxed 見やすい行間調べて調整すべし*/}
-            <div className=" flex flex-col justify-center tracking-wider leading-loose dark:text-white">
+            <div className="flex flex-col justify-center tracking-wider leading-loose dark:text-white">
               <AboutMe />
-              <div className="">
-                <Works />
-              </div>
+
+              <Works />
+
               {/*<web紹介 /> */}
               {/*<技術紹介 /> */}
             </div>
