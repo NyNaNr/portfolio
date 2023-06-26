@@ -1,7 +1,7 @@
 export default function AboutMe() {
   return (
     <>
-      <div className=" mx-auto w-screen flex flex-col max-w-xs">
+      <div className=" mx-auto w-screen flex flex-col max-w-xs sm:max-w-md">
         <h2 className="flex z-0 justify-center mb-5 text-3xl font-medium">
           About me
         </h2>
