@@ -26,7 +26,7 @@ export default function Home() {
           >
             <DisplacementSphere />
 
-            <div className="z-0 absolute top-72 dark:text-white text-3xl md:text-6xl lg:text-9xl font-bold ">
+            <div className="z-0 absolute top-96 dark:text-white text-3xl md:text-6xl lg:text-9xl font-bold ">
               <p>Yu&apos;s Portfolio</p>
             </div>
           </main>
