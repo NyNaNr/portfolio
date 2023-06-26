@@ -1,4 +1,5 @@
 import Image from "next/image"
+import ImageCard from "@/components/ImageCard"
 
 export default function Works() {
   return (
@@ -10,17 +11,7 @@ export default function Works() {
         <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-4 mx-5 ">
           {/* 一行目 */}
 
-          <div className="relative overflow-hidden mb-10">
-            <Image
-              src="/randomNameApp.png"
-              alt="randomNameApp Sample"
-              width={500}
-              height={200}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className="shadow-lg"
-            />
-            <div className="flex justify-center">Random Name App</div>
-          </div>
+          <ImageCard src="/randomNameApp32.png" title="Random Name App" />
           <div className="bg-red-300">02</div>
           <div className="bg-red-400 h-96">03</div>
           {/* 二行目 */}
