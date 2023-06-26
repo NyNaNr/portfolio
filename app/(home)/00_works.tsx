@@ -12,6 +12,7 @@ export default function Works() {
           {/* 一行目 */}
 
           <ImageCard src="/randomNameApp32.png" title="Random Name App" />
+          <ImageCard src="/yu_portfolio32.png" title="Yu's Portfolio" />
           <div className="bg-red-300">02</div>
           <div className="bg-red-400 h-96">03</div>
           {/* 二行目 */}
