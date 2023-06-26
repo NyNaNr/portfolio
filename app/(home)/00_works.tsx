@@ -13,21 +13,6 @@ export default function Works() {
 
           <ImageCard src="/randomNameApp32.png" title="Random Name App" />
           <ImageCard src="/yu_portfolio32.png" title="Yu's Portfolio" />
-          <div className="bg-red-300">02</div>
-          <div className="bg-red-400 h-96">03</div>
-          {/* 二行目 */}
-          <div className="bg-orange-100">04</div>
-          <div className="bg-orange-200 ">05</div>
-          {/* 一部を縦長にしてみる */}
-          <div className="bg-orange-300">06</div>
-          <div className="bg-orange-400">07</div>
-          <div className="bg-orange-500 ">08</div>
-          {/* 三行目 */}
-          <div className="bg-blue-300">09</div>
-          <div className="bg-orange-400">10</div>
-
-          {/* 四行名 */}
-          <div className="bg-blue-400">11</div>
         </div>
       </div>
     </>
