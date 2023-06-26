@@ -20,13 +20,13 @@ export default function HomeLayout({ children }) {
           {/*<Intro /> */}
           {children}
           {/*<Intro /> */}
-          <div className="w-screen">
+          <div className="">
             {/* tracking-wider leading-relaxed 見やすい行間調べて調整すべし*/}
-            <div className="w-screen mx-10 flex flex-col justify-center tracking-wider leading-loose dark:text-white">
+            <div className=" flex flex-col justify-center tracking-wider leading-loose dark:text-white">
               <AboutMe />
-
-              <Works />
-
+              <div className="">
+                <Works />
+              </div>
               {/*<web紹介 /> */}
               {/*<技術紹介 /> */}
             </div>
