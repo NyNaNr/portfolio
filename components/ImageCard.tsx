@@ -16,7 +16,7 @@ const ImageCard: React.FC<ImageCardProps> = ({ src, title }) => {
         width={500}
         height={0}
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        className="drop-shadow-xl hover:active:scale-105  transform duration-300 "
+        className="drop-shadow-xl hover:scale-105  transform duration-300 "
       />
       <div className="flex justify-center mt-5">{title}</div>
     </div>
