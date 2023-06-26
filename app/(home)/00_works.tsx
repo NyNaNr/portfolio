@@ -1,15 +1,15 @@
 export default function Works() {
   return (
     <>
-      <div className="h-screen grid grid-cols-5 grid-rows-4">
+      <div className="h-screen grid grid-cols-5 grid-rows-4 gap-4">
         {/* 一行目 */}
-        <div className=""></div>
-        <div className="bg-blue-200 col-span-2"></div>
+
+        <div className="bg-blue-200 col-start-2 col-span-2"></div>
         <div className="bg-red-300"></div>
         <div className="bg-red-400"></div>
         {/* 二行目 */}
         <div className="bg-orange-100"></div>
-        <div className=""></div>
+        <div className="bg-orange-200 row-span-3"></div>
         {/* 一部を縦長にしてみる */}
         <div className="bg-orange-300"></div>
         <div className="bg-orange-400"></div>
@@ -17,7 +17,7 @@ export default function Works() {
         {/* 三行目 */}
         <div className="bg-blue-300"></div>
         <div className="bg-orange-400"></div>
-        <div className="bg-red-400"></div>
+        <div className=""></div>
         {/* 四行名 */}
         <div className="bg-blue-400"></div>
       </div>
