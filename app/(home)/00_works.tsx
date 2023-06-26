@@ -5,7 +5,7 @@ export default function Works() {
         <h2 className="flex z-0 justify-center mb-5 text-3xl font-medium">
           Works
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-4  ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-4 mx-5 ">
           {/* 一行目 */}
 
           <div className="bg-blue-200 h-32">
