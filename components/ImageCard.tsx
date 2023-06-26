@@ -1,5 +1,7 @@
 import Image from "next/image"
 
+// リンクも受け取れるようにする
+
 interface ImageCardProps {
   src: string
   title: string
