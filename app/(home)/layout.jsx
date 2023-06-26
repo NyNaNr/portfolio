@@ -21,7 +21,7 @@ export default function HomeLayout({ children }) {
           {children}
           {/*<Intro /> */}
           <div className="">
-            {/* tracking-wider leading-relaxed 見やすい行間調べて調整すべし*/}
+            {/* tracking-wider leading-relaxed 見やすい行間調べて調整すべし＆以下の行をchildrenに移したほうがいいかも*/}
             <div className="flex flex-col justify-center tracking-wider leading-loose dark:text-white">
               <AboutMe />
 
