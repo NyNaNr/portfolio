@@ -20,9 +20,9 @@ export default function HomeLayout({ children }) {
           {/*<Intro /> */}
           {children}
           {/*<Intro /> */}
-          <div className="flex justify-center ">
+          <div className="flex justify-center w-screen">
             {/* tracking-wider leading-relaxed 見やすい行間調べて調整すべし*/}
-            <div className="flex flex-col mx-10 max-w-xl justify-center tracking-wider leading-loose dark:text-white">
+            <div className="flex flex-col max-w-2xl 2xl:max-w-7xl mx-10 justify-center tracking-wider leading-loose dark:text-white">
               <AboutMe />
               <Works />
 
