@@ -1,7 +1,7 @@
 export default function Works() {
   return (
     <>
-      <div className="">
+      <div className=" mx-auto w-screen max-w-2xl 2xl:max-w-7xl">
         <h2 className="flex z-0 justify-center mb-5 text-3xl font-medium">
           Works
         </h2>
