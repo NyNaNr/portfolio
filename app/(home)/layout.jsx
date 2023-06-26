@@ -5,6 +5,8 @@ import { ThemeContext } from "@/components/themeContext"
 import Navbar from "@/components/Navbar/Navbar"
 import AboutMe from "./00_about_me"
 import Works from "./00_works"
+import SkillSet from "./00_skill_set"
+import Contact from "./00_contact"
 
 export default function HomeLayout({ children }) {
   const [themeId, setThemeId] = useState("light")
@@ -26,6 +28,8 @@ export default function HomeLayout({ children }) {
               <AboutMe />
 
               <Works />
+              <SkillSet />
+              <Contact />
 
               {/*<web紹介 /> */}
               {/*<技術紹介 /> */}
