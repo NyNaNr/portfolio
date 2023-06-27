@@ -18,7 +18,7 @@ export default function NavbarForMobile() {
           <button
             onClick={handleMenuOpen}
             type="button"
-            className={`fixed top-0 right-0 flex justify-center items-center flex-col z-20 m-3 w-12 h-12
+            className={`fixed top-0 right-0 flex justify-center items-center flex-col z-30 m-3 w-12 h-12
             hover:active:bg-gray-300 hover:active:bg-opacity-25
               ${openMenu ? "space-y-1" : "space-y-2"}`}
           >
@@ -47,8 +47,8 @@ export default function NavbarForMobile() {
           <nav
             className={`fixed ease-in duration-300 ${
               openMenu
-                ? "z-10 text-left top-0 right-0  w-full bg-slate-50 bg-opacity-50 backdrop-blur-lg dark:bg-black dark:bg-opacity-40"
-                : "z-10 top-[-100dvh] w-full"
+                ? "z-20 text-left top-0 right-0  w-full bg-slate-50 bg-opacity-50 backdrop-blur-lg dark:bg-black dark:bg-opacity-40"
+                : "z-20 top-[-100dvh] w-full"
             }`}
             style={{ height: "100dvh" }}
           >
