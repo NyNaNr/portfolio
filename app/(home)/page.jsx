@@ -26,8 +26,13 @@ export default function Home() {
           >
             <DisplacementSphere />
 
-            <div className="z-0 absolute top-96 dark:text-white text-3xl md:text-6xl lg:text-9xl font-bold ">
-              <p>Yu&apos;s Portfolio</p>
+            <div
+              className="flex z-10 w-full justify-center items-center  "
+              style={{ height: "100dvh" }}
+            >
+              <p className="dark:text-white text-3xl md:text-6xl lg:text-9xl font-bold">
+                Yu&apos;s Portfolio
+              </p>
             </div>
           </main>
         </>
