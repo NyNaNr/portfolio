@@ -7,7 +7,7 @@ type StarProps = {
 }
 
 const StarRating: React.FC<StarProps> = ({ rate }) => {
-  const stars = Array(5).fill(0) // max propertyを削除し、直接5をハードコーディング
+  const stars = Array(5).fill(0)
 
   return (
     <div className="flex">
@@ -15,7 +15,8 @@ const StarRating: React.FC<StarProps> = ({ rate }) => {
         <FontAwesomeIcon
           key={i}
           icon={i < rate ? fasStar : farStar}
-          className={`h-6 w-6 ${
+          //   ↓　h-6 w-6　とかで星の大きさ変更可能
+          className={` ${
             i < rate
               ? "text-black dark:text-white"
               : "text-black dark:text-gray-500"
