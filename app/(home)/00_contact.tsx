@@ -1,7 +1,10 @@
 export default function Contact() {
   return (
     <>
-      <div className="mx-auto w-screen max-w-md sm:max-w-2xl md:max-w-3xl lg:max-w-4xl 2xl:max-w-7xl">
+      <div
+        className="mx-auto w-screen max-w-md sm:max-w-2xl md:max-w-3xl lg:max-w-4xl 2xl:max-w-7xl"
+        id="contact"
+      >
         <h2 className="flex z-0 justify-center mb-5 text-3xl font-medium">
           Contact
         </h2>

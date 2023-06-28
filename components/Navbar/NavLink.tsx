@@ -10,7 +10,9 @@ interface NavLinkProps {
 
 const NavLink: React.FC<NavLinkProps> = ({ text, id }) => (
   <p className="relative group whitespace-nowrap dark:text-white">
-    <Scroll to={id}>{text}</Scroll>
+    <Scroll to={id} smooth={true}>
+      {text}
+    </Scroll>
     <span className="absolute -bottom-1 left-0 w-0 h-2 bg-strongCyan transition-all  group-hover:w-full group-active:w-full"></span>
   </p>
 )

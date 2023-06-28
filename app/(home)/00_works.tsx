@@ -8,7 +8,10 @@ export default function Works() {
         <h2 className="flex z-0 justify-center mb-5 text-3xl font-medium">
           Works
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-4 mx-5 ">
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-4 mx-5"
+          id="works"
+        >
           {/* 一行目 */}
 
           <ImageCard src="/randomNameApp32.png" title="Random Name App" />
