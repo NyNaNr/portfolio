@@ -7,6 +7,7 @@ type ElapsedTimeProps = {
 const ElapsedTime: React.FC<ElapsedTimeProps> = ({ startDate }) => {
   const now = new Date()
   const start = new Date(startDate)
+  // monthで計算しているのでおおさっぱです。
   const diffInMonths =
     now.getMonth() -
     start.getMonth() +
