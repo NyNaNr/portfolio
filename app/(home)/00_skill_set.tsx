@@ -1,4 +1,5 @@
 import TableRow from "@/components/SkillSet/TableRow"
+import TableHeader from "@/components/SkillSet/TableHeader"
 
 export default function SkillSet() {
   return (
@@ -20,15 +21,11 @@ export default function SkillSet() {
 
             <table className="w-full table-auto mx-auto">
               <thead>
-                <tr>
-                  <th className="px-4 py-2 text-sm sm:text-base">技術</th>
-                  <th className="px-4 py-2 text-sm sm:text-base">経過年数</th>
-                  <th className="px-4 py-2 text-sm sm:text-base">スキル</th>
-                </tr>
+                <TableHeader />
               </thead>
               <tbody>
                 <TableRow title={"HTML5"} startDate={"2022-11-01"} rate={4} />
-                <TableRow title={"CSS3"} startDate={"2022-01-01"} rate={2} />
+                <TableRow title={"CSS3"} startDate={"2022-07-01"} rate={2} />
 
                 <tr className="">
                   <td className="border px-4 py-2">CSS3</td>
