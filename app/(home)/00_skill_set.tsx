@@ -10,8 +10,7 @@ export default function SkillSet() {
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mx-5 ">
           {/* 背景色変更はここ↓ */}
-          <div className="">
-            {/* コンポーネント化しましょう */}
+          <div className="design-cording">
             <div className="flex justify-center font-semibold my-3">
               デザイン・コーディング
             </div>
@@ -25,26 +24,114 @@ export default function SkillSet() {
               </thead>
               <tbody>
                 <TableRow title={"HTML5"} startDate={"2022-11-01"} rate={4} />
-                <TableRow title={"CSS3"} startDate={"2022-07-01"} rate={2} />
-
-                <tr className="">
-                  <td className="border px-4 py-2">CSS3</td>
-                  <td className="border px-4 py-2">Adam</td>
-                  <td className="border px-4 py-2">112</td>
-                </tr>
-                <tr>
-                  <td className="border px-4 py-2">Intro to JavaScript</td>
-                  <td className="border px-4 py-2">Chris</td>
-                  <td className="border px-4 py-2">1,280</td>
-                </tr>
+                <TableRow title={"CSS3"} startDate={"2022-06-30"} rate={2} />
               </tbody>
             </table>
           </div>
-          <div className="bg-red-100">2</div>
-          <div className="bg-orange-100">3</div>
-          <div className="bg-amber-100">4</div>
-          <div className="bg-yellow-100">5</div>
-          <div className="bg-lime-100">6</div>
+
+          <div className="front-end">
+            <div className="flex justify-center font-semibold my-3">
+              フロントエンド
+            </div>
+            <div className="flex justify-center m-3">
+              WorksのプロジェクトはすべてNext.jsで作っています。
+            </div>
+
+            <table className="w-full table-auto mx-auto">
+              <thead>
+                <TableHeader />
+              </thead>
+              <tbody>
+                <TableRow
+                  title={"JavaScript"}
+                  startDate={"2022-11-01"}
+                  rate={4}
+                />
+                <TableRow
+                  title={"TypeScript"}
+                  startDate={"2022-11-01"}
+                  rate={4}
+                />
+                <TableRow title={"React"} startDate={"2022-06-30"} rate={2} />
+                <TableRow title={"Next.js"} startDate={"2022-06-30"} rate={2} />
+              </tbody>
+            </table>
+          </div>
+
+          <div className="back-end">
+            <div className="flex justify-center font-semibold my-3">
+              バックエンド
+            </div>
+            <div className="flex justify-center m-3">
+              力を入れているところです。
+            </div>
+            <table className="w-full table-auto mx-auto">
+              <thead>
+                <TableHeader />
+              </thead>
+              <tbody>
+                <TableRow title={"Node.js"} startDate={"2022-11-01"} rate={4} />
+                <TableRow title={"Python"} startDate={"2022-11-01"} rate={4} />
+              </tbody>
+            </table>
+          </div>
+
+          <div className="date-base">
+            <div className="flex justify-center font-semibold my-3">
+              データベース
+            </div>
+            <div className="flex justify-center m-3">
+              直近では〇〇を使用しました。
+            </div>
+            <table className="w-full table-auto mx-auto">
+              <thead>
+                <TableHeader />
+              </thead>
+              <tbody>
+                <TableRow title={"MySQL"} startDate={"2022-11-01"} rate={4} />
+                <TableRow title={"MongoDB"} startDate={"2022-11-01"} rate={4} />
+              </tbody>
+            </table>
+          </div>
+
+          <div className="etc">
+            <div className="flex justify-center font-semibold my-3">その他</div>
+            <div className="flex justify-center m-3">
+              開発等で使用したツールです。
+            </div>
+            <table className="w-full table-auto mx-auto">
+              <thead>
+                <TableHeader />
+              </thead>
+              <tbody>
+                <TableRow title={"Git"} startDate={"2022-11-01"} rate={4} />
+                <TableRow title={"Docker"} startDate={"2022-11-01"} rate={4} />
+                <TableRow
+                  title={"Photoshop"}
+                  startDate={"2022-11-01"}
+                  rate={4}
+                />
+              </tbody>
+            </table>
+          </div>
+
+          <div className="qualification">
+            <div className="flex justify-center font-semibold my-3">
+              保有資格
+            </div>
+            <div className="flex justify-center m-3">
+              大学でも英語を専攻していました。
+            </div>
+
+            <table className="w-full table-auto mx-auto">
+              <thead>
+                <TableHeader />
+              </thead>
+              <tbody>
+                <TableRow title={"英検2級"} startDate={"2022-11-01"} rate={4} />
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </>
