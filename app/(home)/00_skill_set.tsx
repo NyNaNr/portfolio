@@ -11,7 +11,7 @@ export default function SkillSet() {
         <h2 className="flex z-0 justify-center mb-5 text-3xl font-medium">
           My skill set
         </h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mx-5 ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mx-5 ">
           {/* 背景色変更はここ↓ */}
           <div className="design-cording">
             <div className="flex justify-center font-semibold my-3">
