@@ -54,10 +54,10 @@ export default function NavbarForMobile() {
           >
             <div className="flex justify-center items-center h-full ">
               <div className="flex flex-col mx-16 sm:mx-40 text-center space-y-10 text-3xl">
-                <NavLink text="About me" />
-                <NavLink text="Works" />
-                <NavLink text="Skills" />
-                <NavLink text="Contact" />
+                <NavLink text="About me" id="about-me" />
+                <NavLink text="Works" id="works" />
+                <NavLink text="Skills" id="skills" />
+                <NavLink text="Contact" id="contact" />
               </div>
             </div>
             <div className="absolute bottom-0 right-0 m-2">
