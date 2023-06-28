@@ -1,5 +1,5 @@
-import StarRating from "@/components/SkillSet/StarRating"
-import ElapsedTime from "@/components/SkillSet/ElapsedTime"
+import TableRow from "@/components/SkillSet/TableRow"
+
 export default function SkillSet() {
   return (
     <>
@@ -8,7 +8,8 @@ export default function SkillSet() {
           My skill set
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mx-5 ">
-          <div className="bg-red-500">
+          {/* 背景色変更はここ↓ */}
+          <div className="">
             {/* コンポーネント化しましょう */}
             <div className="flex justify-center font-semibold my-3">
               デザイン・コーディング
@@ -26,16 +27,10 @@ export default function SkillSet() {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td className="border  px-4 py-2 text-center">HTML5</td>
-                  <td className="border px-4 py-2 text-center">
-                    <ElapsedTime startDate={"2022-11-01"} />
-                  </td>
-                  <td className="border px-4 py-2 ">
-                    <StarRating rate={4} />
-                  </td>
-                </tr>
-                <tr className="bg-gray-200">
+                <TableRow title={"HTML5"} startDate={"2022-11-01"} rate={4} />
+                <TableRow title={"CSS3"} startDate={"2022-01-01"} rate={2} />
+
+                <tr className="">
                   <td className="border px-4 py-2">CSS3</td>
                   <td className="border px-4 py-2">Adam</td>
                   <td className="border px-4 py-2">112</td>
