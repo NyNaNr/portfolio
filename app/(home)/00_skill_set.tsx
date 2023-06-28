@@ -20,9 +20,9 @@ export default function SkillSet() {
             <table className="w-full table-auto mx-auto">
               <thead>
                 <tr>
-                  <th className="px-4 py-2">技術</th>
-                  <th className="px-4 py-2">経過年数</th>
-                  <th className="px-4 py-2">スキル</th>
+                  <th className="px-4 py-2 text-sm sm:text-base">技術</th>
+                  <th className="px-4 py-2 text-sm sm:text-base">経過年数</th>
+                  <th className="px-4 py-2 text-sm sm:text-base">スキル</th>
                 </tr>
               </thead>
               <tbody>
@@ -31,7 +31,7 @@ export default function SkillSet() {
                   <td className="border px-4 py-2 text-center">
                     <ElapsedTime startDate={"2022-11-01"} />
                   </td>
-                  <td className="border px-4 py-2 text-center">
+                  <td className="border px-4 py-2 ">
                     <StarRating rate={4} />
                   </td>
                 </tr>
