@@ -3,11 +3,11 @@ import { NextApiRequest, NextApiResponse } from "next"
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "POST") {
     const sgMail = require("@sendgrid/mail")
-    sgMail.setApiKey(process.env.SENDGRID_KEY) //SendGridのAPIキー
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY) //SendGridのAPIキー
 
     const msgToManager = {
-      to: "peishim18works@gmail.com",
-      from: "peishim18works@gmail.com",
+      to: process.env.MAIL_TO,
+      from: process.env.MAIL_FROM,
       subject: "ポートフォリオサイトからの問い合わせ",
       text:
         req.body.name +
