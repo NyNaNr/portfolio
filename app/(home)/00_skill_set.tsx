@@ -1,4 +1,4 @@
-import StarRating from "@/components/StarRating"
+import StarRating from "@/components/SkillSet/StarRating"
 export default function SkillSet() {
   return (
     <>
