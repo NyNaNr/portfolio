@@ -10,7 +10,7 @@ const StarRating: React.FC<StarProps> = ({ rate }) => {
   const stars = Array(5).fill(0)
 
   return (
-    <div className="flex">
+    <div className="flex justify-center ">
       {stars.map((_, i) => (
         <FontAwesomeIcon
           key={i}
