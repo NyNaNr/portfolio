@@ -1,3 +1,4 @@
+import StarRating from "@/components/StarRating"
 export default function SkillSet() {
   return (
     <>
@@ -11,22 +12,35 @@ export default function SkillSet() {
             <div className="flex justify-center font-semibold my-3">
               デザイン・コーディング
             </div>
-            <div className="flex justify-center my-3">
+            <div className="flex justify-center m-3">
               基本的なことは一通りできます。CSSフレームワークはTailwindCSSを使っています。
             </div>
-            <table>
-              <tr>
-                <th>果物</th>
-                <th>味</th>
-              </tr>
-              <tr>
-                <td>イチゴ</td>
-                <td>甘い</td>
-              </tr>
-              <tr>
-                <td>レモン</td>
-                <td>酸っぱい</td>
-              </tr>
+            <StarRating rate={4} />
+            <table className="w-full table-auto mx-auto">
+              <thead>
+                <tr>
+                  <th className="px-4 py-2">Title</th>
+                  <th className="px-4 py-2">Author</th>
+                  <th className="px-4 py-2">Views</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border  px-4 py-2">HTML5</td>
+                  <td className="border px-4 py-2">Adam</td>
+                  <td className="border px-4 py-2">858</td>
+                </tr>
+                <tr className="bg-gray-200">
+                  <td className="border px-4 py-2">CSS3</td>
+                  <td className="border px-4 py-2">Adam</td>
+                  <td className="border px-4 py-2">112</td>
+                </tr>
+                <tr>
+                  <td className="border px-4 py-2">Intro to JavaScript</td>
+                  <td className="border px-4 py-2">Chris</td>
+                  <td className="border px-4 py-2">1,280</td>
+                </tr>
+              </tbody>
             </table>
           </div>
           <div className="bg-red-100">2</div>
