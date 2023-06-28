@@ -19,6 +19,7 @@ export default function NavbarForMobile() {
             onClick={handleMenuOpen}
             type="button"
             className={`fixed top-0 right-0 flex justify-center items-center flex-col z-30 m-3 w-12 h-12
+            
             hover:active:bg-gray-300 hover:active:bg-opacity-25
               ${openMenu ? "space-y-1" : "space-y-2"}`}
           >
@@ -26,21 +27,21 @@ export default function NavbarForMobile() {
               className={
                 openMenu
                   ? "w-8 h-0.5 bg-gray-600 dark:bg-gray-50 translate-y-2.5 rotate-45 transition duration-500 ease-in-out"
-                  : "w-8 h-0.5 bg-gray-600 dark:bg-gray-50 transition duration-500 ease-in-out"
+                  : "w-8 h-0.5 bg-gray-600 dark:bg-gray-50 transition duration-500 ease-in-out backdrop-invert sm:filter-none"
               }
             />
             <div
               className={
                 openMenu
                   ? "opacity-0 transition duration-500 ease-in-out"
-                  : "w-8 h-0.5 bg-gray-600 dark:bg-gray-50 transition duration-500 ease-in-out"
+                  : "w-8 h-0.5 bg-gray-600 dark:bg-gray-50 transition duration-500 ease-in-out backdrop-invert sm:filter-none"
               }
             />
             <div
               className={
                 openMenu
                   ? "w-8 h-0.5 bg-gray-600 dark:bg-gray-50 -rotate-45 transition duration-500 ease-in-out"
-                  : "w-8 h-0.5 bg-gray-600 dark:bg-gray-50 transition duration-500 ease-in-out"
+                  : "w-8 h-0.5 bg-gray-600 dark:bg-gray-50 transition duration-500 ease-in-out backdrop-invert sm:filter-none"
               }
             />
           </button>
