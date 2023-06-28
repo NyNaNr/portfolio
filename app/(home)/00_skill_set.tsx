@@ -1,4 +1,5 @@
 import StarRating from "@/components/SkillSet/StarRating"
+import ElapsedTime from "@/components/SkillSet/ElapsedTime"
 export default function SkillSet() {
   return (
     <>
@@ -26,9 +27,11 @@ export default function SkillSet() {
               </thead>
               <tbody>
                 <tr>
-                  <td className="border  px-4 py-2">HTML5</td>
-                  <td className="border px-4 py-2"></td>
-                  <td className="border px-4 py-2">
+                  <td className="border  px-4 py-2 text-center">HTML5</td>
+                  <td className="border px-4 py-2 text-center">
+                    <ElapsedTime startDate={"2022-11-01"} />
+                  </td>
+                  <td className="border px-4 py-2 text-center">
                     <StarRating rate={4} />
                   </td>
                 </tr>
