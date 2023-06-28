@@ -10,11 +10,11 @@ type StarProps = {
 const TableRow: React.FC<StarProps> = ({ title, rate, startDate }) => {
   return (
     <tr>
-      <td className="border  px-4 py-2 text-center">{title}</td>
-      <td className="border px-4 py-2 text-center">
+      <td className="border-t border-b px-4 py-2 text-center">{title}</td>
+      <td className="border-t border-b  px-4 py-2 text-center">
         <ElapsedTime startDate={startDate} />
       </td>
-      <td className="border px-4 py-2 ">
+      <td className="border-t border-b  px-4 py-2 ">
         <StarRating rate={rate} />
       </td>
     </tr>
