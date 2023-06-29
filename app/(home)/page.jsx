@@ -17,9 +17,6 @@ export default function Home() {
           <Works />
           <SkillSet />
           <Contact />
-
-          {/*<web紹介 /> */}
-          {/*<技術紹介 /> */}
         </div>
       </div>
     </>
