@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Intro />
       <div className="">
-        {/* tracking-wider leading-relaxed 見やすい行間調べて調整すべし＆以下の行をchildrenに移したほうがいいかも*/}
+        {/* tracking-wider leading-relaxed 見やすい行間調べて調整すべし*/}
         <div className="flex flex-col justify-center tracking-wider leading-loose dark:text-white">
           <AboutMe />
 
