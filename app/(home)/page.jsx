@@ -1,9 +1,9 @@
 "use client"
 import Intro from "@/app/(home)/00_intro"
-import AboutMe from "./00_about_me"
-import Works from "./00_works"
-import SkillSet from "./00_skill_set"
-import Contact from "./00_contact"
+import AboutMe from "./01_about_me"
+import Works from "./02_works"
+import SkillSet from "./03_skill_set"
+import Contact from "./04_contact"
 
 export default function Home() {
   return (
