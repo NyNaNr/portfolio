@@ -9,7 +9,7 @@ interface NavLinkProps {
 //リンク（位置）を受け取れるように改良する
 
 const NavLink: React.FC<NavLinkProps> = ({ text, id }) => (
-  <p className="relative group whitespace-nowrap dark:text-white">
+  <p className="relative group whitespace-nowrap cursor-pointer dark:text-white">
     <Scroll to={id} smooth={true} offset={-50}>
       {text}
     </Scroll>
