@@ -1,42 +1,27 @@
 "use client"
-
-import dynamic from "next/dynamic"
-import { Transition } from "@/components/Transition"
-import { useContext } from "react"
-
-import { ThemeContext } from "@/components/themeContext"
-
-const DisplacementSphere = dynamic(
-  () =>
-    import("app/(home)/DisplacementSphere").then(
-      (mod) => mod.DisplacementSphere,
-    ),
-  { ssr: false },
-)
+import Intro from "@/app/(home)/00_intro"
+import AboutMe from "./00_about_me"
+import Works from "./00_works"
+import SkillSet from "./00_skill_set"
+import Contact from "./00_contact"
 
 export default function Home() {
-  const { themeId, setThemeId } = useContext(ThemeContext)
   return (
-    <Transition in key={themeId} timeout={3000}>
-      {(visible, status) => (
-        <>
-          <main
-            className="flex flex-col items-center justify-between p-24"
-            style={{ height: "calc(1.3 * 100vh)" }}
-          >
-            <DisplacementSphere />
+    <>
+      <Intro />
+      <div className="">
+        {/* tracking-wider leading-relaxed 見やすい行間調べて調整すべし＆以下の行をchildrenに移したほうがいいかも*/}
+        <div className="flex flex-col justify-center tracking-wider leading-loose dark:text-white">
+          <AboutMe />
 
-            <div
-              className="flex z-10 w-full justify-center items-center  "
-              style={{ height: "100dvh" }}
-            >
-              <p className="dark:text-white text-3xl md:text-6xl lg:text-9xl font-bold">
-                Yu&apos;s Portfolio
-              </p>
-            </div>
-          </main>
-        </>
-      )}
-    </Transition>
+          <Works />
+          <SkillSet />
+          <Contact />
+
+          {/*<web紹介 /> */}
+          {/*<技術紹介 /> */}
+        </div>
+      </div>
+    </>
   )
 }
