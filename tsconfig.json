@@ -30,7 +30,8 @@
     ".next/types/**/*.ts",
     "app/(home)/page.jsx",
     "app/(home)/page.jsx",
-    "app/(home)/layout.jsx"
+    "app/(home)/layout.jsx",
+    "app/(home)/00_intro.jsx"
   ],
   "exclude": ["node_modules"]
 }
