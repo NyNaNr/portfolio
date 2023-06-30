@@ -28,7 +28,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     const msgToUser = {
       to: req.body.email,
-      from: "peishim18works@gmail.com",
+      from: process.env.MAIL_FROM,
       subject: "お問合せありがとうございました。",
       text:
         "お問合せを受け付けました。回答をお待ちください。" + req.body.message,
