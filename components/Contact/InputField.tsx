@@ -4,9 +4,11 @@ import { motion } from "framer-motion"
 interface Props {
   type: string
   name: string
+  register: any
+  error: any
 }
 
-const InputField: React.FC<Props> = ({ type, name }) => {
+const InputField: React.FC<Props> = ({ type, name, register, error }) => {
   const [isFocused, setIsFocused] = useState(false)
   const [value, setValue] = useState("")
 
@@ -43,6 +45,7 @@ const InputField: React.FC<Props> = ({ type, name }) => {
             {["Email", "Name"].includes(name) ? `Your ${name}` : name}
           </motion.label>
           <input
+            {...register(name, { required: true })}
             id={name}
             type={type}
             value={value}
