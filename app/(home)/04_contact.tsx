@@ -8,15 +8,17 @@ export default function Contact() {
   const labelVariant = {
     focus: {
       scale: 0.7,
-      y: -10,
-      x: 20,
+      y: -15,
+      x: 5,
+
       color: "#2563eb",
       transition: { duration: 0.2, ease: "linear" },
     },
     blur: {
       scale: 1,
       y: 10,
-      x: 20,
+      x: 5,
+
       color: "#6b7280",
       transition: { duration: 0.2, ease: "linear" },
     },
@@ -31,11 +33,11 @@ export default function Contact() {
         <h2 className="flex z-0 justify-center mb-5 text-3xl font-medium">
           Contact
         </h2>
-        <div className="flex items-center justify-center h-screen">
+        <div className="flex items-center justify-center">
           <div className="p-6  relative">
             <motion.label
               htmlFor="email"
-              className="absolute left-2 pointer-events-none origin-left transition-transform duration-200"
+              className="absolute pointer-events-none origin-left transition-transform ease-out duration-200"
               initial={false}
               animate={isFocused || value !== "" ? "focus" : "blur"}
               variants={labelVariant}
