@@ -52,7 +52,7 @@ export default function Contact() {
   return (
     <>
       <div
-        className=" relative mx-auto w-screen max-w-md sm:max-w-2xl md:max-w-3xl lg:max-w-4xl 2xl:max-w-7xl mt-72"
+        className="flex flex-col items-center relative mx-auto w-screen max-w-md sm:max-w-2xl md:max-w-3xl lg:max-w-4xl 2xl:max-w-7xl mt-72"
         id="contact"
       >
         <h2 className="flex z-0 justify-center mb-5 text-3xl font-medium">
@@ -61,24 +61,24 @@ export default function Contact() {
         <form onSubmit={handleSubmit(onSubmit)}>
           <InputField
             type="text"
-            name="Name"
+            name="name"
             register={register}
             error={errors.name}
           />
           <InputField
             type="email"
-            name="Email"
+            name="email"
             register={register}
             error={errors.email}
           />
           <InputField
             type="text"
-            name="Message"
+            name="message"
             register={register}
             error={errors.message}
           />
           <input
-            className={`absolute inset-x-0 mx-32 bg-blue-500 py-1 px-3 rounded-md text-white ${
+            className={` mx-32 bg-blue-500 py-1 px-3 rounded-md text-white ${
               isValid
                 ? "border-black text-black"
                 : "border-red-500 text-red-500"
