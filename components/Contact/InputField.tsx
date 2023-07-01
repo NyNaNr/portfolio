@@ -42,7 +42,9 @@ const InputField: React.FC<Props> = ({ type, name, register, error }) => {
             animate={isFocused || value !== "" ? "focus" : "blur"}
             variants={labelVariant}
           >
-            {["Email", "Name"].includes(name) ? `Your ${name}` : name}
+            {["email", "name"].includes(name)
+              ? `Your ${name.charAt(0).toUpperCase() + name.slice(1)}`
+              : `${name.charAt(0).toUpperCase() + name.slice(1)}`}
           </motion.label>
           <input
             {...register(name, { required: true })}
