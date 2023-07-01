@@ -4,15 +4,8 @@ import * as yup from "yup"
 import InputField from "@/components/Contact/InputField"
 import { yupResolver } from "@hookform/resolvers/yup"
 
-// フォームの型
-type ContactForm = {
-  name: string
-  email: string
-  message: string
-}
-
 // バリーデーションルール
-const schema = yup.object({
+const schema = yup.object().shape({
   name: yup.string().required("必須項目です"),
   email: yup
     .string()
@@ -22,17 +15,30 @@ const schema = yup.object({
 })
 
 export default function Contact() {
+  // フォームの型
+  type ContactForm = {
+    name: string
+    email: string
+    message: string
+  }
+
   const {
     register,
     handleSubmit,
     formState: { errors, isValid },
   } = useForm<ContactForm>({
+    mode: "all",
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
     resolver: yupResolver(schema),
   })
 
   // フォーム送信時の処理（バリデーションOKな時に実行される）
   const onSubmit: SubmitHandler<ContactForm> = async (data) => {
-    const response = await fetch("../api/sendMail", {
+    const response = await fetch("/api", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
