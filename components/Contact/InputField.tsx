@@ -52,8 +52,6 @@ const InputField: React.FC<Props> = ({ type, name, register, error }) => {
             type={type}
             value={value}
             onChange={(e) => setValue(e.target.value)}
-            onFocus={() => setIsFocused(true)}
-            onBlur={() => setIsFocused(false)}
             className="w-full p-2 border-b-2 border-gray-400 outline-none text-lg transition-colors duration-200 focus:border-blue-500 bg-transparent"
           />
           {error && <p>{error.message}</p>}
