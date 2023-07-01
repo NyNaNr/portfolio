@@ -1,4 +1,7 @@
-const Test = () => {
-  return <> {console.log(process.env.SENDGRID_API_KEY)} </>
+export default function Home() {
+  return (
+    <>
+      <div className="text-3xl">Yu2</div>
+    </>
+  )
 }
-export default Test
