@@ -1,13 +1,24 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 
 type ElapsedTimeProps = {
   startDate: Date | string
 }
-
+// Reactのハイドレーションエラ-を回避すべし
 const ElapsedTime: React.FC<ElapsedTimeProps> = ({ startDate }) => {
-  const now = new Date()
+  const [now, setNow] = useState<Date | null>(null)
+
+  useEffect(() => {
+    setNow(new Date()) // 現在時刻を設定するのはクライアントサイドのみ
+
+    const intervalId = setInterval(() => setNow(new Date()), 1000)
+    return () => clearInterval(intervalId) // cleanup on unmount
+  }, [])
+
+  if (!now) {
+    return <div>Calculating...</div> // SSR時や初期描画時に表示される
+  }
+
   const start = new Date(startDate)
-  // monthで計算しているのでおおさっぱです。
   const diffInMonths =
     now.getMonth() -
     start.getMonth() +
