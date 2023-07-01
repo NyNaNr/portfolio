@@ -1,5 +1,5 @@
 import { SubmitHandler, useForm } from "react-hook-form"
-import { useRouter } from "next/navigation"
+import { useEffect } from "react"
 import * as yup from "yup"
 import InputField from "@/components/Contact/InputField"
 import { yupResolver } from "@hookform/resolvers/yup"
@@ -22,11 +22,10 @@ const schema = yup.object({
 })
 
 export default function Contact() {
-  const router = useRouter()
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isValid },
   } = useForm<ContactForm>({
     resolver: yupResolver(schema),
   })
@@ -46,6 +45,10 @@ export default function Contact() {
       alert("正常に送信できませんでした")
     }
   }
+  useEffect(() => {
+    console.log(isValid, errors)
+  }, [errors, isValid])
+
   return (
     <>
       <div
@@ -74,13 +77,15 @@ export default function Contact() {
             register={register}
             error={errors.message}
           />
-          <button
-            className="absolute inset-x-0 mx-32
-          bg-blue-500 py-1 px-3 rounded-md text-white"
+          <input
+            className={`absolute inset-x-0 mx-32 bg-blue-500 py-1 px-3 rounded-md text-white ${
+              isValid
+                ? "border-black text-black"
+                : "border-red-500 text-red-500"
+            }`}
             type="submit"
-          >
-            送信
-          </button>
+            value={isValid ? "送信する" : "不許可"}
+          />
         </form>
       </div>
     </>
