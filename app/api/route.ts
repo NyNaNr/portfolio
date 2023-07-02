@@ -1,6 +1,7 @@
-import { NextApiRequest, NextApiResponse } from "next"
+import { NextResponse } from "next/server"
+import { type NextRequest } from "next/server"
 
-export async function POST(req: NextApiRequest, res: NextApiResponse) {
+export async function POST(req: NextRequest, res: NextResponse) {
   if (req.method === "POST") {
     const sgMail = require("@sendgrid/mail")
     sgMail.setApiKey(process.env.SENDGRID_API_KEY) //SendGridのAPIキー
@@ -52,5 +53,4 @@ export async function POST(req: NextApiRequest, res: NextApiResponse) {
       }
     })()
   }
-  res.status(200)
 }
