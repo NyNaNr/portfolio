@@ -4,7 +4,6 @@ import AboutMe from "./01_about_me"
 import Works from "./02_works"
 import SkillSet from "./03_skill_set"
 import Contact from "./04_contact"
-import { Contact2 } from "./05_contact_text"
 
 export default function Home() {
   return (
@@ -18,7 +17,6 @@ export default function Home() {
           <Works />
           <SkillSet />
           <Contact />
-          <Contact2 />
         </div>
       </div>
     </>
