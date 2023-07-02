@@ -29,15 +29,22 @@ export default function POST(req: NextApiRequest, res: NextApiResponse) {
     const msgToUser = {
       to: req.body.email,
       from: process.env.MAIL_FROM,
-      subject: "お問合せありがとうございました。",
+      subject: "【Yu's Portfolio】お問合せありがとうございました。",
       text:
         "お問合せを受け付けました。回答をお待ちください。" + req.body.message,
       html: `
-        <p>${req.body.name}様</p>
-        <p>お問合せを受け付けました。回答をお待ちください。</p><br/>
+        <p>${req.body.name} 様</p>
+        <p>この度はお問い合わせいただきありがとうございました。回答をお待ちください。</p><br/>
 
-        <p>【問い合わせ内容】</p>
+        <p>お問い合わせいただいた内容は以下になります。</p>
+        <p>___________________</p>
+        <p>メールアドレス</p>
+        <p>${req.body.email}</p>
+        <p>メッセージ</p>
         <p>${req.body.message}</p>
+        <p>___________________</p>
+        <p>Yu's Portfolio</p>
+         <p><a href="https://yur-portfolio.vercel.app/">https://yur-portfolio.vercel.app/</a></p>
       `,
     }
 
