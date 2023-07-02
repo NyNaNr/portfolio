@@ -6,12 +6,24 @@ import { yupResolver } from "@hookform/resolvers/yup"
 
 // バリーデーションルール
 const schema = yup.object().shape({
-  name: yup.string().required("必須項目です"),
+  name: yup
+    .string()
+    .required("必須項目です")
+    .test("not-only-whitespace", "空白だけではない必要があります", (value) =>
+      value ? value.trim() !== "" : false,
+    ),
   email: yup
     .string()
     .required("必須項目です")
     .email("正しいメールアドレス入力してください"),
-  message: yup.string().required("必須項目です"),
+  message: yup
+    .string()
+    .required("必須項目です")
+    .test(
+      "not-only-whitespace",
+      "空白または改行だけではない必要があります",
+      (value) => (value ? value.trim() !== "" : false),
+    ),
 })
 
 export default function Contact() {
