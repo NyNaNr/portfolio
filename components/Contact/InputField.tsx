@@ -6,9 +6,20 @@ interface Props {
   name: string
   register: any
   error: any
+  isTextArea?: boolean
+  rows?: number
+  wrap?: "soft" | "hard" | "off"
 }
 
-const InputField: React.FC<Props> = ({ type, name, register, error }) => {
+const InputField: React.FC<Props> = ({
+  type,
+  name,
+  register,
+  error,
+  isTextArea = false,
+  rows = 1,
+  wrap = "soft",
+}) => {
   const [isFocused, setIsFocused] = useState(false)
   const [value, setValue] = useState("")
 
@@ -46,14 +57,26 @@ const InputField: React.FC<Props> = ({ type, name, register, error }) => {
               ? `Your ${name.charAt(0).toUpperCase() + name.slice(1)}`
               : `${name.charAt(0).toUpperCase() + name.slice(1)}`}
           </motion.label>
-          <input
-            {...register(name, { required: true })}
-            id={name}
-            type={type}
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
-            className="w-full p-2 border-b-2 border-gray-400 outline-none text-lg transition-colors duration-200 focus:border-blue-500 bg-transparent"
-          />
+          {isTextArea ? (
+            <textarea
+              {...register(name, { required: true })}
+              id={name}
+              rows={rows}
+              wrap={wrap}
+              value={value}
+              onChange={(e) => setValue(e.target.value)}
+              className="w-full p-2 border-b-2 border-gray-400 outline-none text-lg transition-colors duration-200 focus:border-blue-500 bg-transparent"
+            />
+          ) : (
+            <input
+              {...register(name, { required: true })}
+              id={name}
+              type={type}
+              value={value}
+              onChange={(e) => setValue(e.target.value)}
+              className="w-full p-2 border-b-2 border-gray-400 outline-none text-lg transition-colors duration-200 focus:border-blue-500 bg-transparent"
+            />
+          )}
           {error && <p>{error.message}</p>}
         </div>
       </div>
