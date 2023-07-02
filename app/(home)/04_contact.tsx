@@ -83,8 +83,6 @@ export default function Contact() {
             register={register}
             error={errors.message}
             isTextArea={true}
-            rows={5}
-            wrap="soft"
           />
           <input
             className={` mx-32 bg-blue-500 py-1 px-3 rounded-md text-white ${

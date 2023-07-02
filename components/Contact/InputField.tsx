@@ -7,8 +7,6 @@ interface Props {
   register: any
   error: any
   isTextArea?: boolean
-  rows?: number
-  wrap?: "soft" | "hard" | "off"
 }
 
 const InputField: React.FC<Props> = ({
@@ -17,8 +15,6 @@ const InputField: React.FC<Props> = ({
   register,
   error,
   isTextArea = false,
-  rows = 1,
-  wrap = "soft",
 }) => {
   const [isFocused, setIsFocused] = useState(false)
   const [value, setValue] = useState("")
@@ -65,8 +61,8 @@ const InputField: React.FC<Props> = ({
               <textarea
                 {...register(name, { required: true })}
                 id={name}
-                rows={rows}
-                wrap={wrap}
+                rows={5}
+                wrap={"soft"}
                 value={value}
                 onChange={(e) => setValue(e.target.value)}
                 className="w-full p-2 border-b-2 border-gray-400 outline-none text-lg transition-colors duration-200 focus:border-blue-500 bg-transparent"
