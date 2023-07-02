@@ -6,11 +6,11 @@ export default async function handler(
 ) {
   if (req.method === "POST") {
     const sgMail = require("@sendgrid/mail")
-    sgMail.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_KEY) //SendGridのAPIキー
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY) //SendGridのAPIキー
 
     const msgToManager = {
-      to: process.env.NEXT_PUBLIC_MAIL_TO,
-      from: process.env.NEXT_PUBLIC_MAIL_FROM,
+      to: process.env.MAIL_TO,
+      from: process.env.MAIL_FROM,
       subject: "ポートフォリオサイトからの問い合わせ",
       text:
         req.body.name +
@@ -31,7 +31,7 @@ export default async function handler(
 
     const msgToUser = {
       to: req.body.email,
-      from: process.env.NEXT_PUBLIC_MAIL_FROM,
+      from: process.env.MAIL_FROM,
       subject: "お問合せありがとうございました。",
       text:
         "お問合せを受け付けました。回答をお待ちください。" + req.body.message,
