@@ -65,7 +65,7 @@ const InputField: React.FC<Props> = ({
                 wrap={"soft"}
                 value={value}
                 onChange={(e) => setValue(e.target.value)}
-                className="w-full p-2 border-b-2 border-gray-400 outline-none text-lg transition-colors duration-200 focus:border-blue-500 bg-transparent"
+                className="w-full mt-3 p-2 border-b-2 border-gray-400 outline-none text-lg transition-colors duration-200 focus:border-blue-500 bg-transparent"
               />
             </div>
           ) : (
