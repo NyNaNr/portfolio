@@ -40,8 +40,8 @@ const InputField: React.FC<Props> = ({
 
   return (
     <>
-      <div className="flex items-center justify-center">
-        <div className="p-6  relative">
+      <div className="flex w-full items-center justify-center">
+        <div className="p-6 w-full relative">
           <motion.label
             htmlFor={name}
             className="absolute pointer-events-none origin-left transition-transform ease-out duration-200"
