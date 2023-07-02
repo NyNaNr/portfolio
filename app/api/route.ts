@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next"
-// eslint-disable-next-line import/no-anonymous-default-export
-export default async function (req: NextApiRequest, res: NextApiResponse) {
+
+export async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "POST") {
     const sgMail = require("@sendgrid/mail")
     sgMail.setApiKey(process.env.SENDGRID_API_KEY) //SendGridのAPIキー
