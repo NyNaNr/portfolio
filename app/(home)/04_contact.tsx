@@ -76,7 +76,10 @@ export default function Contact() {
         <h2 className="flex z-0 justify-center mb-5 text-3xl font-medium">
           Contact
         </h2>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="w-full sm:max-w-2xl md:max-w-3xl 2xl:max-w-4xl"
+        >
           <InputField
             type="text"
             name="name"
