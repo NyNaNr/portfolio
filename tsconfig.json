@@ -31,7 +31,8 @@
     "app/(home)/page.jsx",
     "app/(home)/page.jsx",
     "app/(home)/layout.jsx",
-    "app/(home)/00_intro.jsx"
+    "app/(home)/00_intro.jsx",
+    "app/api/route.js"
   ],
   "exclude": ["node_modules"]
 }
