@@ -58,28 +58,34 @@ const InputField: React.FC<Props> = ({
               : `${name.charAt(0).toUpperCase() + name.slice(1)}`}
           </motion.label>
           {isTextArea ? (
-            <textarea
-              {...register(name, { required: true })}
-              id={name}
-              rows={rows}
-              wrap={wrap}
-              value={value}
-              onChange={(e) => setValue(e.target.value)}
+            <div
               onFocus={() => setIsFocused(true)}
               onBlur={() => setIsFocused(false)}
-              className="w-full p-2 border-b-2 border-gray-400 outline-none text-lg transition-colors duration-200 focus:border-blue-500 bg-transparent"
-            />
+            >
+              <textarea
+                {...register(name, { required: true })}
+                id={name}
+                rows={rows}
+                wrap={wrap}
+                value={value}
+                onChange={(e) => setValue(e.target.value)}
+                className="w-full p-2 border-b-2 border-gray-400 outline-none text-lg transition-colors duration-200 focus:border-blue-500 bg-transparent"
+              />
+            </div>
           ) : (
-            <input
-              {...register(name, { required: true })}
-              id={name}
-              type={type}
-              value={value}
-              onChange={(e) => setValue(e.target.value)}
+            <div
               onFocus={() => setIsFocused(true)}
               onBlur={() => setIsFocused(false)}
-              className="w-full p-2 border-b-2 border-gray-400 outline-none text-lg transition-colors duration-200 focus:border-blue-500 bg-transparent"
-            />
+            >
+              <input
+                {...register(name, { required: true })}
+                id={name}
+                type={type}
+                value={value}
+                onChange={(e) => setValue(e.target.value)}
+                className="w-full p-2 border-b-2 border-gray-400 outline-none text-lg transition-colors duration-200 focus:border-blue-500 bg-transparent"
+              />
+            </div>
           )}
           {error && <p>{error.message}</p>}
         </div>
