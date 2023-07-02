@@ -15,6 +15,12 @@ module.exports = {
       },
       colors: {
         strongCyan: "hsl(186, 100%, 50%)",
+        light: {
+          DEFAULT: "#F2F2F2", // Light color
+        },
+        dark: {
+          DEFAULT: "#111111", // Dark color
+        },
       },
     },
   },
