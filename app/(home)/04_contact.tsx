@@ -70,22 +70,19 @@ export default function Contact() {
       //response.ok プロパティは、HTTPステータスコードが成功ステータス（200-299の範囲）を示している場合に true を返す
       setSending(false)
       setSuccessSending(true)
-      reset({
-        name: "",
-        email: "",
-        message: "",
-      })
+      reset()
       window.setTimeout(() => setSuccessSending(false), 10000)
     } else {
       setFailedSending(true)
       window.setTimeout(() => setFailedSending(false), 10000)
     }
   }
+
   useEffect(() => {
     if (formState.isSubmitSuccessful) {
       reset({ name: "", email: "", message: "" })
     }
-  }, [formState, reset])
+  }, [formState.isSubmitSuccessful, reset])
 
   useEffect(() => {
     console.log(isValid, errors)
