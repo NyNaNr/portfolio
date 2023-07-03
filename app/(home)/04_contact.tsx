@@ -70,7 +70,7 @@ export default function Contact() {
   return (
     <>
       <div
-        className="flex flex-col items-center relative mx-auto w-screen max-w-md sm:max-w-2xl md:max-w-3xl lg:max-w-4xl 2xl:max-w-7xl mt-72"
+        className="flex flex-col items-center relative mx-auto w-full max-w-md sm:max-w-2xl md:max-w-3xl lg:max-w-4xl 2xl:max-w-7xl mt-72"
         id="contact"
       >
         <h2 className="flex z-0 justify-center mb-5 text-3xl font-medium">
@@ -78,7 +78,7 @@ export default function Contact() {
         </h2>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="w-full sm:max-w-2xl md:max-w-3xl 2xl:max-w-4xl"
+          className=" w-full sm:max-w-2xl md:max-w-3xl 2xl:max-w-4xl flex flex-col items-center"
         >
           <InputField
             type="text"
@@ -100,13 +100,10 @@ export default function Contact() {
             isTextArea={true}
           />
           <input
-            className={` mx-32 bg-blue-500 py-1 px-3 rounded-md text-white ${
-              isValid
-                ? "border-black text-black"
-                : "border-red-500 text-red-500"
-            }`}
+            className={`font-semibold text-white py-1 px-3 rounded-md bg-black 
+            dark:bg-strongCyan dark:text-black`}
             type="submit"
-            value={isValid ? "送信する" : "不許可"}
+            value={"Send message"}
           />
         </form>
       </div>
