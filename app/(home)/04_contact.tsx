@@ -6,7 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import Send from "@/components/Contact/svgs/send.svg"
 import Alert from "@/components/Contact/svgs/alert-triangle.svg"
 import Success from "@/components/Contact/svgs/mood-check.svg"
-import Loading from "@/components/Contact/loading"
+import Loading from "@/components/Contact/Loader"
 
 // バリーデーションルール
 //
