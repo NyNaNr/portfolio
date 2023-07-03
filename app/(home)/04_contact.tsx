@@ -3,6 +3,7 @@ import { useEffect } from "react"
 import * as yup from "yup"
 import InputField from "@/components/Contact/InputField"
 import { yupResolver } from "@hookform/resolvers/yup"
+import Send from "@/components/Contact/svgs/send.svg"
 
 // バリーデーションルール
 const schema = yup.object().shape({
@@ -99,12 +100,14 @@ export default function Contact() {
             error={errors.message}
             isTextArea={true}
           />
-          <input
-            className={`font-semibold text-white py-1 px-3 rounded-md bg-black 
+          <button
+            className={`flex  items-center font-semibold text-white py-1 px-3 rounded-md bg-black 
             dark:bg-strongCyan dark:text-black`}
             type="submit"
-            value={"Send message"}
-          />
+          >
+            <Send width={24} height={24} strokeWidth={"1.2px"} />
+            <p className="ml-2">Send message</p>
+          </button>
         </form>
       </div>
     </>
