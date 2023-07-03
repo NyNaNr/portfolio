@@ -44,7 +44,7 @@ const InputField: React.FC<Props> = ({
         <div className="p-6 w-full relative">
           <motion.label
             htmlFor={name}
-            className="absolute pointer-events-none origin-left transition-transform ease-out duration-200"
+            className="absolute pointer-events-none origin-left transition-transform ease-out duration-200 "
             initial={false}
             animate={isFocused || value !== "" ? "focus" : "blur"}
             variants={labelVariant}
@@ -65,7 +65,9 @@ const InputField: React.FC<Props> = ({
                 wrap={"soft"}
                 value={value}
                 onChange={(e) => setValue(e.target.value)}
-                className="w-full mt-3 p-2 border-b-2 border-gray-400 outline-none text-lg transition-colors duration-200 focus:border-blue-500 bg-transparent"
+                className={`w-full mt-3 p-2 border-b-2  outline-none text-lg transition-colors duration-200 
+                focus:border-black dark:focus:border-strongCyan bg-transparent 
+                ${error ? "border-red-400" : "border-gray-400"}`}
               />
             </div>
           ) : (
@@ -79,11 +81,13 @@ const InputField: React.FC<Props> = ({
                 type={type}
                 value={value}
                 onChange={(e) => setValue(e.target.value)}
-                className="w-full p-2 border-b-2 border-gray-400 outline-none text-lg transition-colors duration-200 focus:border-blue-500 bg-transparent"
+                className={`w-full p-2 border-b-2  outline-none text-lg transition-colors duration-200 
+                focus:border-black dark:focus:border-strongCyan bg-transparent
+                ${error ? "border-red-400" : "border-gray-400"}`}
               />
             </div>
           )}
-          {error && <p>{error.message}</p>}
+          {error && <p className="text-red-600">{error.message}</p>}
         </div>
       </div>
     </>
