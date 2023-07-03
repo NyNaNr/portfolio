@@ -66,9 +66,13 @@ export default function Contact() {
     })
     if (response.status === 200) {
       setSending(false)
+      setSuccessSending(true)
+      window.setTimeout(() => setSuccessSending(false), 3000)
       alert("正常に送信できました")
     } else {
       alert("正常に送信できませんでした")
+      setFailedSending(true)
+      window.setTimeout(() => setFailedSending(false), 3000)
     }
   }
   useEffect(() => {
@@ -107,7 +111,7 @@ export default function Contact() {
             error={errors.message}
             isTextArea={true}
           />
-          <div className="Contact_form_Message flex  items-center h-20 w-full mx-32 bg-blue-400 bg-opacity-20">
+          <div className="Contact_form_Message flex mb-6 items-center h-20 w-full mx-32 bg-blue-400 bg-opacity-20">
             <div className="flex justify-center items-center ml-5">
               <Success width={18} height={18} strokeWidth={"1.2px"} />
               <p className="ml-3">送信できました</p>
