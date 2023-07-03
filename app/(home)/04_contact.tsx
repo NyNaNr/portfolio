@@ -10,7 +10,7 @@ const schema = yup.object().shape({
   name: yup
     .string()
     .required("必須項目です")
-    .test("not-only-whitespace", "空白だけではない必要があります", (value) =>
+    .test("not-only-whitespace", "必須項目です", (value) =>
       value ? value.trim() !== "" : false,
     ),
   email: yup
@@ -20,10 +20,8 @@ const schema = yup.object().shape({
   message: yup
     .string()
     .required("必須項目です")
-    .test(
-      "not-only-whitespace",
-      "空白または改行だけではない必要があります",
-      (value) => (value ? value.trim() !== "" : false),
+    .test("not-only-whitespace", "必須項目です", (value) =>
+      value ? value.trim() !== "" : false,
     ),
 })
 
@@ -105,7 +103,7 @@ export default function Contact() {
             dark:bg-strongCyan dark:text-black`}
             type="submit"
           >
-            <Send width={24} height={24} strokeWidth={"1.2px"} />
+            <Send width={20} height={20} strokeWidth={"1.2px"} />
             <p className="ml-2">Send message</p>
           </button>
         </form>
