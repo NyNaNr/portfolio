@@ -67,12 +67,10 @@ export default function Contact() {
     if (response.status === 200) {
       setSending(false)
       setSuccessSending(true)
-      window.setTimeout(() => setSuccessSending(false), 3000)
-      alert("正常に送信できました")
+      window.setTimeout(() => setSuccessSending(false), 10000)
     } else {
-      alert("正常に送信できませんでした")
       setFailedSending(true)
-      window.setTimeout(() => setFailedSending(false), 3000)
+      window.setTimeout(() => setFailedSending(false), 10000)
     }
   }
   useEffect(() => {
@@ -111,17 +109,33 @@ export default function Contact() {
             error={errors.message}
             isTextArea={true}
           />
-          <div className="Contact_form_Message flex mb-6 items-center h-20 w-full mx-32 bg-blue-400 bg-opacity-20">
-            <div className="flex justify-center items-center ml-5">
+          <div
+            className={`Contact_form_Message flex mb-6 items-center h-20 w-full mx-32 bg-blue-400 bg-opacity-20 ${
+              !successSending && !failedSending ? "hidden" : ""
+            }`}
+          >
+            <div
+              className={`flex justify-center items-center ml-5 ${
+                successSending ? "" : "hidden"
+              }`}
+            >
               <Success width={18} height={18} strokeWidth={"1.2px"} />
-              <p className="ml-3">送信できました</p>
+              <p className="ml-3">
+                送信成功。あなたのアドレスに受付完了メールを自動送信しました。ご確認ください。
+              </p>
             </div>
 
-            <div className="flex justify-center items-center ml-5 text-red-600">
+            <div
+              className={`flex justify-center items-center ml-5 text-red-600 ${
+                failedSending ? "" : "hidden"
+              }`}
+            >
               <div className="flex h-full justify-items-center">
                 <Alert width={18} height={18} strokeWidth={"1.2px"} />
               </div>
-              <p className="ml-3 ">送信に失敗しました</p>
+              <p className="ml-3 ">
+                送信に失敗しました。通信が回復しない場合は、githubやTwitterのアカウントにご連絡いただければ幸いです。
+              </p>
             </div>
           </div>
           <button
