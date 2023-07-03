@@ -1,5 +1,6 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import { motion } from "framer-motion"
+import { ThemeContext } from "@/components/themeContext"
 
 interface Props {
   type: string
@@ -18,6 +19,7 @@ const InputField: React.FC<Props> = ({
 }) => {
   const [isFocused, setIsFocused] = useState(false)
   const [value, setValue] = useState("")
+  const { themeId, setThemeId } = useContext(ThemeContext)
 
   const labelVariant = {
     focus: {
@@ -25,7 +27,7 @@ const InputField: React.FC<Props> = ({
       y: -15,
       x: 5,
 
-      color: "#2563eb",
+      color: themeId === "light" ? "#6b7280" : "#B3B3B3",
       transition: { duration: 0.2, ease: "linear" },
     },
     blur: {
@@ -33,7 +35,7 @@ const InputField: React.FC<Props> = ({
       y: 10,
       x: 5,
 
-      color: "#6b7280",
+      color: themeId === "light" ? "#666666" : "#ffffff",
       transition: { duration: 0.2, ease: "linear" },
     },
   }
