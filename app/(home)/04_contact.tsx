@@ -1,9 +1,12 @@
 import { SubmitHandler, useForm } from "react-hook-form"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import * as yup from "yup"
 import InputField from "@/components/Contact/InputField"
 import { yupResolver } from "@hookform/resolvers/yup"
 import Send from "@/components/Contact/svgs/send.svg"
+import Alert from "@/components/Contact/svgs/alert-triangle.svg"
+import Success from "@/components/Contact/svgs/mood-check.svg"
+import Loading from "@/components/Contact/loading"
 
 // バリーデーションルール
 const schema = yup.object().shape({
@@ -26,6 +29,10 @@ const schema = yup.object().shape({
 })
 
 export default function Contact() {
+  const [sending, setSending] = useState(false)
+  const [successSending, setSuccessSending] = useState(false)
+  const [failedSending, setFailedSending] = useState(false)
+
   // フォームの型
   type ContactForm = {
     name: string
@@ -49,6 +56,7 @@ export default function Contact() {
 
   // フォーム送信時の処理（バリデーションOKな時に実行される）
   const onSubmit: SubmitHandler<ContactForm> = async (data) => {
+    setSending(true)
     const response = await fetch("/api/send", {
       method: "POST",
       headers: {
@@ -57,6 +65,7 @@ export default function Contact() {
       body: JSON.stringify(data),
     })
     if (response.status === 200) {
+      setSending(false)
       alert("正常に送信できました")
     } else {
       alert("正常に送信できませんでした")
@@ -98,12 +107,30 @@ export default function Contact() {
             error={errors.message}
             isTextArea={true}
           />
+          <div className="Contact_form_Message flex  items-center h-20 w-full mx-32 bg-blue-400 bg-opacity-20">
+            <div className="flex justify-center items-center ml-5">
+              <Success width={18} height={18} strokeWidth={"1.2px"} />
+              <p className="ml-3">送信できました</p>
+            </div>
+
+            <div className="flex justify-center items-center ml-5 text-red-600">
+              <div className="flex h-full justify-items-center">
+                <Alert width={18} height={18} strokeWidth={"1.2px"} />
+              </div>
+              <p className="ml-3 ">送信に失敗しました</p>
+            </div>
+          </div>
           <button
             className={`flex  items-center font-semibold text-white py-1 px-3 rounded-md bg-black 
             dark:bg-strongCyan dark:text-black`}
             type="submit"
           >
-            <Send width={20} height={20} strokeWidth={"1.2px"} />
+            {sending ? (
+              <Loading />
+            ) : (
+              <Send width={20} height={20} strokeWidth={"1.2px"} />
+            )}
+
             <p className="ml-2">Send message</p>
           </button>
         </form>
