@@ -43,7 +43,9 @@ export default function Contact() {
   const {
     register,
     handleSubmit,
-    formState: { errors, isValid },
+    reset,
+    formState,
+    formState: { errors, isValid, isSubmitSuccessful },
   } = useForm<ContactForm>({
     mode: "all",
     defaultValues: {
@@ -64,15 +66,27 @@ export default function Contact() {
       },
       body: JSON.stringify(data),
     })
-    if (response.status === 200) {
+    if (response.ok) {
+      //response.ok プロパティは、HTTPステータスコードが成功ステータス（200-299の範囲）を示している場合に true を返す
       setSending(false)
       setSuccessSending(true)
+      reset({
+        name: "",
+        email: "",
+        message: "",
+      })
       window.setTimeout(() => setSuccessSending(false), 10000)
     } else {
       setFailedSending(true)
       window.setTimeout(() => setFailedSending(false), 10000)
     }
   }
+  useEffect(() => {
+    if (formState.isSubmitSuccessful) {
+      reset({ name: "", email: "", message: "" })
+    }
+  }, [formState, reset])
+
   useEffect(() => {
     console.log(isValid, errors)
   }, [errors, isValid])
