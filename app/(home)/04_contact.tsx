@@ -92,7 +92,7 @@ export default function Contact() {
   return (
     <>
       <div
-        className="flex flex-col items-center relative mx-auto w-full max-w-md sm:max-w-2xl md:max-w-3xl lg:max-w-4xl 2xl:max-w-7xl mt-72"
+        className="flex flex-col items-center relative mx-auto w-full max-w-xs sm:max-w-xl 2xl:max-w-5xl mt-72"
         id="contact"
       >
         <h2 className="flex z-0 justify-center mb-5 text-3xl font-medium">
@@ -100,7 +100,7 @@ export default function Contact() {
         </h2>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className=" w-full sm:max-w-2xl md:max-w-3xl 2xl:max-w-4xl flex flex-col items-center"
+          className=" w-full  flex flex-col items-center"
         >
           <InputField
             type="text"
