@@ -9,6 +9,7 @@ import Success from "@/components/Contact/svgs/mood-check.svg"
 import Loading from "@/components/Contact/loading"
 
 // バリーデーションルール
+//
 const schema = yup.object().shape({
   name: yup
     .string()
