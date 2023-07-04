@@ -29,7 +29,7 @@ export default function Intro() {
               className="flex z-10 w-full justify-center items-center  "
               style={{ height: "100dvh" }}
             >
-              <p className="dark:text-white text-3xl md:text-6xl lg:text-9xl font-bold">
+              <p className="dark:text-white text-2xl sm:text-3xl md:text-6xl lg:text-9xl font-bold">
                 Yu&apos;s Portfolio
               </p>
             </div>
