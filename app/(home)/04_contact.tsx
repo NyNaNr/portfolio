@@ -91,9 +91,12 @@ export default function Contact() {
         className="flex flex-col items-center relative mx-auto w-full max-w-xs sm:max-w-xl 2xl:max-w-5xl my-54"
         id="contact"
       >
-        <h2 className="flex z-0 justify-center mb-5 text-3xl font-medium">
-          Contact
-        </h2>
+        <div className="title max-w-fit mx-auto">
+          <h2 className="flex z-0 justify-center text-3xl font-medium">
+            Contact
+          </h2>
+          <div className="flex z-0 justify-center mx-auto bg-strongCyan h-1  mb-5"></div>
+        </div>
         <form
           onSubmit={handleSubmit(onSubmit)}
           className=" w-full  flex flex-col items-center"

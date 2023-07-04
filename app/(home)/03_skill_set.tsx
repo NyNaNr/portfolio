@@ -8,9 +8,12 @@ export default function SkillSet() {
         className="mx-auto  w-screen max-w-md sm:max-w-2xl md:max-w-3xl lg:max-w-4xl 2xl:max-w-7xl "
         id="skills"
       >
-        <h2 className="flex z-0 justify-center mb-5 text-3xl font-medium">
-          My skill set
-        </h2>
+        <div className="title max-w-fit mx-auto">
+          <h2 className="flex z-0 justify-center text-3xl font-medium">
+            My skill set
+          </h2>
+          <div className="flex z-0 justify-center mx-auto bg-strongCyan h-1  mb-5"></div>
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mx-5 ">
           {/* 背景色変更はここ↓ */}
           <div className="design-cording">

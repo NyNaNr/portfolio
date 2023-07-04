@@ -5,9 +5,13 @@ export default function AboutMe() {
         className="mx-auto w-screen flex flex-col max-w-xs sm:max-w-md "
         id="about-me"
       >
-        <h2 className="flex z-0 justify-center mb-5 text-3xl font-medium">
-          About me
-        </h2>
+        <div className="title max-w-fit mx-auto">
+          <h2 className="flex z-0 justify-center text-3xl font-medium">
+            About me
+          </h2>
+          <div className="flex z-0 justify-center mx-auto bg-strongCyan h-1  mb-5"></div>
+        </div>
+
         <p className="flex flex-wrap text-justify mx-5 mb-32 z-0">
           こんにちは、私の名前は田中です。現在は、ソフトウェアエンジニアとして働いています。私のスキルセットはフロントエンドからバックエンドまで幅広く、特にReact.jsとNode.jsを用いた開発が得意です。大学でコンピューターサイエンスを学び、その後数年間の実務経験を経て、フルスタックの開発者として多様なプロジェクトに携わってきました。
           仕事だけでなく、個人的な趣味としてもプログラミングに取り組んでいます。特にオープンソースプロジェクトに貢献することを楽しんでおり、自分のスキルを共有し、他の開発者から学ぶことに情熱を傾けています。

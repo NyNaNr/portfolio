@@ -8,9 +8,12 @@ export default function Works() {
         className="mx-auto w-screen max-w-md sm:max-w-2xl md:max-w-3xl lg:max-w-4xl 2xl:max-w-7xl"
         id="works"
       >
-        <h2 className="flex z-0 justify-center mb-5 text-3xl font-medium">
-          Works
-        </h2>
+        <div className="title max-w-fit mx-auto">
+          <h2 className="flex z-0 justify-center text-3xl font-medium">
+            Works
+          </h2>
+          <div className="flex z-0 justify-center mx-auto bg-strongCyan h-1  mb-5"></div>
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-4 mx-5">
           {/* 一行目 */}
 
