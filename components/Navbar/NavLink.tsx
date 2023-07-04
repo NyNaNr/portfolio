@@ -13,7 +13,7 @@ const NavLink: React.FC<NavLinkProps> = ({ text, id }) => (
     <Scroll to={id} smooth={true} offset={-50}>
       {text}
     </Scroll>
-    <span className="absolute -bottom-1 left-0 w-0 h-2 bg-strongCyan transition-all  group-hover:w-full group-active:w-full"></span>
+    <span className="absolute -bottom-1 left-0 w-0 h-1 bg-strongCyan transition-all  group-hover:w-full group-active:w-full"></span>
   </p>
 )
 
