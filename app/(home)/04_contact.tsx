@@ -88,7 +88,7 @@ export default function Contact() {
   return (
     <>
       <div
-        className="flex flex-col items-center relative mx-auto w-full max-w-xs sm:max-w-xl 2xl:max-w-5xl mt-72"
+        className="flex flex-col items-center relative mx-auto w-full max-w-xs sm:max-w-xl 2xl:max-w-5xl my-54"
         id="contact"
       >
         <h2 className="flex z-0 justify-center mb-5 text-3xl font-medium">
