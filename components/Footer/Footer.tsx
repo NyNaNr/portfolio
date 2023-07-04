@@ -11,7 +11,7 @@ export const Footer = () => {
         className="relative flex items-end justify-center h-14 w-48 bg-black dark:bg-strongCyan rounded-lg rounded-t-none hover:bg-opacity-75"
         onClick={() => window.scrollTo(0, 0)}
       >
-        <div className="absolute top-0 mt-1">
+        <div className="absolute top-0 mt-1 animate-bounce">
           <FontAwesomeIcon icon={faChevronUp} style={{ color: "#ffffff" }} />
         </div>
         <p className="text-white font-semibold text-sm mb-2 relative bottom-0 text-center dark:text-black">
