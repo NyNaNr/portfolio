@@ -31,6 +31,9 @@ module.exports = {
           DEFAULT: "#111111", // Dark color
         },
       },
+      screens: {
+        xs: "480px",
+      },
     },
   },
   plugins: [],
