@@ -8,6 +8,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        bounce: {
+          "0%, 100%": { transform: "translateY(-20%)" },
+          "50%": { transform: "translateY(20%)" },
+        },
+      },
+      animation: {
+        bounce: "bounce 1s ease-in-out infinite",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
