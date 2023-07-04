@@ -148,8 +148,11 @@ export default function Contact() {
           </div>
           <button
             className={`flex  items-center font-semibold text-white py-1 px-3 rounded-md bg-black 
-            dark:bg-strongCyan dark:text-black`}
+            dark:bg-strongCyan dark:text-black ${
+              isSubmitting ? "opacity-50 cursor-wait" : ""
+            }`}
             type="submit"
+            disabled={isSubmitting}
           >
             {isSubmitting ? (
               <Loading />
