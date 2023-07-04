@@ -15,9 +15,19 @@ export default function HomeLayout({ children }) {
     <>
       <ThemeProvider themeId={themeId}>
         <ThemeContext.Provider value={value}>
-          <Navbar />
-          {children}
-          <Footer />
+          {/* navbar.footerをdivで囲みスタイスと充てているのは、ふぉったーがページの一番下に来るようにするため */}
+          <div
+            className="flex flex-col"
+            style={{
+              minHeight: "100dvh",
+            }}
+          >
+            <div className="flex-grow">
+              <Navbar />
+              {children}
+            </div>
+            <Footer />
+          </div>
         </ThemeContext.Provider>
       </ThemeProvider>
     </>
