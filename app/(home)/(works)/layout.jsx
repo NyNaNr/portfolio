@@ -9,7 +9,7 @@ export default function WorksLayout({ children }) {
         // フッターの高さを引いた(フッター117px)
       }}
     >
-      <div className="flex-grow py-8 px-4 xs:m-8">{children}</div>
+      <div className="flex-grow py-8 px-4 xs:m-8 bg-light">{children}</div>
     </div>
   )
 }
