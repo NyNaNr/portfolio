@@ -7,9 +7,9 @@ import Send from "@/components/Contact/svgs/send.svg"
 import Alert from "@/components/Contact/svgs/alert-triangle.svg"
 import Success from "@/components/Contact/svgs/mood-check.svg"
 import Loading from "@/components/Contact/Loader"
+// TODO:リセット後にフォームをクリックするとリセット内容が復活する問題解消する。
 
 // バリーデーションルール
-//
 const schema = yup.object().shape({
   name: yup
     .string()
@@ -30,7 +30,6 @@ const schema = yup.object().shape({
 })
 
 export default function Contact() {
-  const [sending, setSending] = useState(false)
   const [successSending, setSuccessSending] = useState(false)
   const [failedSending, setFailedSending] = useState(false)
 
@@ -46,7 +45,7 @@ export default function Contact() {
     handleSubmit,
     reset,
     formState,
-    formState: { errors, isValid, isSubmitSuccessful },
+    formState: { errors, isValid, isSubmitting },
   } = useForm<ContactForm>({
     mode: "all",
     defaultValues: {
@@ -59,7 +58,6 @@ export default function Contact() {
 
   // フォーム送信時の処理（バリデーションOKな時に実行される）
   const onSubmit: SubmitHandler<ContactForm> = async (data) => {
-    setSending(true)
     const response = await fetch("/api/send", {
       method: "POST",
       headers: {
@@ -69,21 +67,19 @@ export default function Contact() {
     })
     if (response.ok) {
       //response.ok プロパティは、HTTPステータスコードが成功ステータス（200-299の範囲）を示している場合に true を返す
-      setSending(false)
+
       setSuccessSending(true)
-      reset()
-      window.setTimeout(() => setSuccessSending(false), 10000)
+      reset({ name: "", email: "", message: "" }, { keepDefaultValues: true })
     } else {
       setFailedSending(true)
-      window.setTimeout(() => setFailedSending(false), 10000)
     }
   }
 
   useEffect(() => {
-    if (formState.isSubmitSuccessful) {
-      reset({ name: "", email: "", message: "" })
+    if (successSending) {
+      reset({ name: "", email: "", message: "" }, { keepDefaultValues: true })
     }
-  }, [formState.isSubmitSuccessful, reset])
+  }, [successSending, reset])
 
   useEffect(() => {
     console.log(isValid, errors)
@@ -133,7 +129,7 @@ export default function Contact() {
             >
               <Success width={18} height={18} strokeWidth={"1.2px"} />
               <p className="ml-3">
-                送信成功。あなたのアドレスに受付完了メールを自動送信しました。ご確認ください。
+                送信成功です。あなたのアドレスに受付完了メールを自動送信しました。ご確認ください。
               </p>
             </div>
 
@@ -155,7 +151,7 @@ export default function Contact() {
             dark:bg-strongCyan dark:text-black`}
             type="submit"
           >
-            {sending ? (
+            {isSubmitting ? (
               <Loading />
             ) : (
               <Send width={20} height={20} strokeWidth={"1.2px"} />
