@@ -147,7 +147,7 @@ export default function Contact() {
             </div>
           </div>
           <button
-            className={`flex  items-center font-semibold text-white py-1 px-3 rounded-md bg-black 
+            className={`flex w-48 justify-center items-center font-semibold text-white py-1 px-3 pr-5 rounded-md bg-black 
             dark:bg-strongCyan dark:text-black ${
               isSubmitting ? "opacity-50 cursor-wait" : ""
             }`}
