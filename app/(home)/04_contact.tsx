@@ -118,7 +118,7 @@ export default function Contact() {
             isTextArea={true}
           />
           <div
-            className={`Contact_form_Message flex mb-6 items-center h-20 w-full mx-32 bg-blue-400 bg-opacity-20 ${
+            className={`Contact_form_Message flex mb-6 items-center min-h-fit w-full mx-32 bg-blue-400 bg-opacity-20 ${
               !successSending && !failedSending ? "hidden" : ""
             }`}
           >
@@ -127,14 +127,17 @@ export default function Contact() {
                 successSending ? "" : "hidden"
               }`}
             >
-              <Success width={18} height={18} strokeWidth={"1.2px"} />
-              <p className="ml-3">
+              <div className="flex">
+                <Success width={18} height={18} strokeWidth={"1.2px"} />
+              </div>
+
+              <p className="flex ml-3">
                 送信成功です。あなたのアドレスに受付完了メールを自動送信しました。ご確認ください。
               </p>
             </div>
 
             <div
-              className={`flex justify-center items-center ml-5 text-red-600 ${
+              className={`flex  justify-center items-center ml-5 text-red-600 ${
                 failedSending ? "" : "hidden"
               }`}
             >
