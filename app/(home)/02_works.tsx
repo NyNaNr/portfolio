@@ -1,5 +1,4 @@
-import Image from "next/image"
-import ImageCard from "@/components/ImageCard"
+import ImageCard from "@/components/works/ImageCard"
 
 export default function Works() {
   return (
