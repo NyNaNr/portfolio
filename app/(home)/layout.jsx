@@ -4,6 +4,7 @@ import { ThemeProvider } from "../../components/ThemeProvider"
 import { ThemeContext } from "@/components/themeContext"
 import Navbar from "@/components/Navbar/Navbar"
 import { Footer } from "@/components/Footer/Footer"
+import HomeButton from "@/components/homeButton/homeButton"
 
 export default function HomeLayout({ children }) {
   const [themeId, setThemeId] = useState("light")
@@ -23,6 +24,10 @@ export default function HomeLayout({ children }) {
             }}
           >
             <div className="flex-grow">
+              <div className="flex fixed top-0 left-0  z-40 m-3 lg:m-10 lg:ml-12">
+                <HomeButton />
+              </div>
+
               <Navbar />
               {children}
             </div>
