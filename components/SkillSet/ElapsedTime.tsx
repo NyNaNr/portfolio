@@ -15,7 +15,7 @@ const ElapsedTime: React.FC<ElapsedTimeProps> = ({ startDate }) => {
   }, [])
 
   if (!now) {
-    return <div>Calculating...</div> // SSR時や初期描画時に表示される
+    return <div></div> // SSR時や初期描画時に表示される
   }
 
   const start = new Date(startDate)
