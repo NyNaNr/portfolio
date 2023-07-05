@@ -1,11 +1,15 @@
 import DarkModeButton from "./DarkModeButton"
 import { useState } from "react"
-import NavLink from "./NavLink"
+import NavHomeLink from "./NavHomeLink"
+import NavGlobalLink from "./NavGlobalLink"
+import { usePathname } from "next/navigation"
 
 // hamburgerボタンとかをそれぞれコンポネント化するのもあり。でも、useStateの共有忘れすに
 
 export default function NavbarForMobile() {
   const [openMenu, setOpenMenu] = useState(false)
+
+  const pathname = usePathname()
 
   const handleMenuOpen = () => {
     setOpenMenu(!openMenu)
@@ -55,10 +59,21 @@ export default function NavbarForMobile() {
           >
             <div className="flex justify-center items-center h-full ">
               <div className="flex flex-col mx-16 sm:mx-40 text-center space-y-10 text-3xl">
-                <NavLink text="About me" id="about-me" />
-                <NavLink text="Works" id="works" />
-                <NavLink text="Skills" id="skills" />
-                <NavLink text="Contact" id="contact" />
+                {pathname === "/" ? (
+                  <>
+                    <NavHomeLink text="About me" id="about-me" />
+                    <NavHomeLink text="Works" id="works" />
+                    <NavHomeLink text="Skills" id="skills" />
+                    <NavHomeLink text="Contact" id="contact" />
+                  </>
+                ) : (
+                  <>
+                    <NavGlobalLink text="About me" id="about-me" />
+                    <NavGlobalLink text="Works" id="works" />
+                    <NavGlobalLink text="Skills" id="skills" />
+                    <NavGlobalLink text="Contact" id="contact" />
+                  </>
+                )}
               </div>
             </div>
             <div className="absolute bottom-0 right-0 m-2">
