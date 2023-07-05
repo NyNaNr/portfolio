@@ -1,14 +1,14 @@
 import React from "react"
 import { Link as Scroll } from "react-scroll"
 
-interface NavLinkProps {
+interface NavHomeLinkProps {
   text: string
   id: string
 }
 
 //リンク（位置）を受け取れるように改良する
 
-const NavLink: React.FC<NavLinkProps> = ({ text, id }) => (
+const NavHomeLink: React.FC<NavHomeLinkProps> = ({ text, id }) => (
   <p className="relative group whitespace-nowrap cursor-pointer dark:text-white">
     <Scroll to={id} smooth={true} offset={-50}>
       {text}
@@ -17,4 +17,4 @@ const NavLink: React.FC<NavLinkProps> = ({ text, id }) => (
   </p>
 )
 
-export default NavLink
+export default NavHomeLink
