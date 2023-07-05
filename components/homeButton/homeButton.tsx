@@ -1,7 +1,10 @@
 import React from "react"
 import Home from "@/components/homeButton/svgs/home.svg"
+import { usePathname } from "next/navigation"
+import { Link as Scroll } from "react-scroll"
 
 export default function HomeButton() {
+  const pathname = usePathname()
   return (
     <>
       <button
@@ -11,7 +14,15 @@ export default function HomeButton() {
         "
       >
         <div className="">
-          <Home width={38} height={38} strokeWidth={"1.2px"} />
+          {pathname === "/" ? (
+            <Scroll to={"intro"} smooth={true}>
+              <Home width={38} height={38} strokeWidth={"1.2px"} />
+            </Scroll>
+          ) : (
+            <a href={`/#intro`}>
+              <Home width={38} height={38} strokeWidth={"1.2px"} />
+            </a>
+          )}
         </div>
       </button>
     </>
