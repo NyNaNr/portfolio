@@ -19,9 +19,10 @@ export default function Intro() {
     <Transition in key={themeId} timeout={3000}>
       {(visible, status) => (
         <>
-          <main
+          <div
             className="flex flex-col items-center justify-between p-24"
             style={{ height: "calc(1.3 * 100vh)" }}
+            id="intro"
           >
             <DisplacementSphere />
 
@@ -33,7 +34,7 @@ export default function Intro() {
                 Yu&apos;s Portfolio
               </p>
             </div>
-          </main>
+          </div>
         </>
       )}
     </Transition>
