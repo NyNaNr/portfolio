@@ -3,9 +3,9 @@
 export default function WorksLayout({ children }) {
   return (
     <div
-      className="flex flex-col mx-auto w-screen xs:w-11/12 sm:max-w-2xl lg:max-w-3xl rounded-lg mt-24 lg:mt-10 bg-white dark:bg-light"
+      className="flex flex-col mx-auto w-screen xs:w-11/12 sm:max-w-2xl lg:max-w-3xl rounded-lg mt-24 lg:mt-10 mb-10 bg-white dark:bg-light"
       style={{
-        minHeight: "calc(100dvh - 230px)",
+        minHeight: "calc(100dvh - 240px)",
         // フッターの高さを引いた(フッター117px)
       }}
     >
