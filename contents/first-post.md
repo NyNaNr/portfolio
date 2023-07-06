@@ -4,10 +4,97 @@ date: "2023-07-05"
 description: "Next.jsでmarkdownファイルを利用したブログの構築手順を解説しています。"
 ---
 
-Next.js を使って portfolio を作成中。ついでに Markdown のブログサイトも作ろうと試行錯誤中。
+# 見出し 1
 
-## Next.js の準備
+## 見出し 2
 
-### プロジェクトの作成
+### 見出し 3
 
-npx create-next-app コマンドを利用して Next.js プロジェクトの作成を行います。
+#### 見出し 4
+
+##### 見出し 5
+
+###### 見出し 6
+
+- リスト 1
+  - ネスト リスト 1_1
+    - ネスト リスト 1_1_1
+    - ネスト リスト 1_1_2
+  - ネスト リスト 1_2
+- リスト 2
+- リスト 3
+
+1. 番号付きリスト 1
+   1. 番号付きリスト 1_1
+   1. 番号付きリスト 1_2
+1. 番号付きリスト 2
+1. 番号付きリスト 3
+
+> お世話になります。xxx です。
+>
+> ご連絡いただいた、バグの件ですが、仕様です。
+
+> お世話になります。xxx です。
+>
+> ご連絡いただいた、バグの件ですが、仕様です。
+>
+> > お世話になります。 yyy です。
+> >
+> > あの新機能バグってるっすね
+
+インストールコマンドは `gem install hoge` です
+
+normal _italic_ normal
+normal _italic_ normal
+
+normal **bold** normal
+normal **bold** normal
+
+normal **_bold_** normal
+normal **_bold_** normal
+
+---
+
+---
+
+---
+
+---
+
+[Google 先生](https://www.google.co.jp/)
+
+[こっちから google][google]
+その他の文章
+[こっちからも google][google]
+
+[google]: https://www.google.co.jp/
+
+https://www.google.co.jp/
+
+~~取り消し線~~
+
+~~~ruby
+　 class Hoge
+　 def hoge
+　 print 'hoge'
+　 end
+　 end
+　~~~
+
+| header1    |     header2 |   header3    |
+| :--------- | ----------: | :----------: |
+| align left | align right | align center |
+| a          |           b |      c       |
+
+## menu
+
+- [to header1](#header1)
+- [to header2](#header2)
+
+<!-- some long code -->
+
+[return to menu](#menu)
+
+### header1
+
+### header2
