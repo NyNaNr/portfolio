@@ -1,6 +1,7 @@
 ---
 title: "Next.jsでmarkdownブログ（ポートフォリオも兼ねる）を構築"
-date: "2023-07-05"
+created_at: "2023-07-05"
+updated_at: "2023-07-06"
 description: "Next.jsでmarkdownファイルを利用したブログの構築手順を解説しています。"
 ---
 

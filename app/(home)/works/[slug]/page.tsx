@@ -20,12 +20,20 @@ export default function BlogPost({ params }: ParamsType) {
   const { data, content } = matter(fileContents)
 
   const title = data.title
-  const postDate = data.date
+  const created_at = data.created_at
+  const updated_at = data.updated_at
 
   return (
     <div>
-      <h1>{title}</h1>
-      <h2>{postDate}</h2>
+      <div className="flex space-x-2">
+        <h2>投稿日 {created_at}</h2>
+        <h2>更新日 {updated_at}</h2>
+      </div>
+
+      <h1 className="mt-6 mb-2 text-2xl font-bold border-b border-gray-300">
+        {title}
+      </h1>
+
       <MarkdownRenderer>{content}</MarkdownRenderer>
       {/* <ReactMarkdown remarkPlugins={[remarkGfm]}></ReactMarkdown> */}
     </div>
