@@ -3,7 +3,7 @@ import path from "path"
 import matter from "gray-matter"
 import ReactMarkdown from "react-markdown"
 import remarkGfm from "remark-gfm"
-import { MarkdownRenderer } from "@/components/MarkdownRenderer"
+import { MarkdownRenderer } from "@/components/Markdown/MarkdownRenderer"
 
 type ParamsType = {
   params: {
