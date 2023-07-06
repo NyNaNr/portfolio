@@ -81,6 +81,12 @@ https://www.google.co.jp/
 　 end
 ```
 
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
+
 | header1    |     header2 |   header3    |
 | :--------- | ----------: | :----------: |
 | align left | align right | align center |
