@@ -3,6 +3,7 @@ import path from "path"
 import matter from "gray-matter"
 import ReactMarkdown from "react-markdown"
 import remarkGfm from "remark-gfm"
+import { MarkdownRenderer } from "@/components/MarkdownRenderer"
 
 type ParamsType = {
   params: {
@@ -25,7 +26,8 @@ export default function BlogPost({ params }: ParamsType) {
     <div>
       <h1>{title}</h1>
       <h2>{postDate}</h2>
-      <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+      <MarkdownRenderer>{content}</MarkdownRenderer>
+      {/* <ReactMarkdown remarkPlugins={[remarkGfm]}></ReactMarkdown> */}
     </div>
   )
 }
