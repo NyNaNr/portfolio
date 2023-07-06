@@ -224,7 +224,7 @@ const Blockquote: Components["blockquote"] = ({ node, ...props }) => {
 }
 
 const Table: Components["table"] = ({ node, ...props }) => {
-  return <table {...props} className={"table"} />
+  return <table {...props} className="mt-6 mb-6 border-collapse " />
 }
 
 const Thead: Components["thead"] = ({ node, ...props }) => {
@@ -240,15 +240,23 @@ const Tr: Components["tr"] = ({ node, isHeader, ...props }) => {
 }
 
 const Th: Components["th"] = ({ node, isHeader, ...props }) => {
-  return <th {...props} className={"th"} />
+  return (
+    <th
+      {...props}
+      className="font-heading font-bold uppercase tracking-wider px-6 py-3 text-xs text-gray-600 border-b border-gray-200"
+    />
+  )
 }
 
 const Td: Components["td"] = ({ node, isHeader, ...props }) => {
-  return <td {...props} className={"td"} />
+  return (
+    <td {...props} className="px-6 py-4 leading-7 border-b border-gray-200" />
+  )
 }
 
 const Hr: Components["hr"] = ({ node, ...props }) => {
-  return <hr {...props} className={"hr"} />
+  // Tailwind CSS does not support pseudo-elements. Additional custom CSS is required.
+  return <hr {...props} className="hr" />
 }
 
 const Img: Components["img"] = ({ src, alt }) => {

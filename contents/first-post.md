@@ -92,6 +92,16 @@ puts markdown.to_html
 | align left | align right | align center |
 | a          |           b |      c       |
 
+| ああああああああ | header2     | header3      |
+| :--------------- | :---------- | :----------- |
+| align left ｓ    | align right | align center |
+| a ｓ             | b           | c            |
+
+| 東京         |         長野 |  奈良  |
+| :----------- | -----------: | :----: |
+| スカイツリー |       スキー |  大仏  |
+| 高い         | やってみたい | でかい |
+
 ## menu
 
 - [to header1](#header1)
