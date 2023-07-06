@@ -73,13 +73,13 @@ https://www.google.co.jp/
 
 ~~取り消し線~~
 
-~~~ruby
+```ruby
 　 class Hoge
 　 def hoge
 　 print 'hoge'
 　 end
 　 end
-　~~~
+```
 
 | header1    |     header2 |   header3    |
 | :--------- | ----------: | :----------: |
