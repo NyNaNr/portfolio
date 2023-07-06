@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useLayoutEffect, useState } from "react"
 
 type ElapsedTimeProps = {
   startDate: Date | string
@@ -7,7 +7,7 @@ type ElapsedTimeProps = {
 const ElapsedTime: React.FC<ElapsedTimeProps> = ({ startDate }) => {
   const [now, setNow] = useState<Date | null>(null)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setNow(new Date()) // 現在時刻を設定するのはクライアントサイドのみ
 
     const intervalId = setInterval(() => setNow(new Date()), 1000)
