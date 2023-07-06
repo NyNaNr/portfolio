@@ -1,7 +1,10 @@
+"use client"
 import React from "react"
 import ReactMarkdown, { Components } from "react-markdown"
 import remarkSlug from "remark-slug"
 import remarkGfm from "remark-gfm"
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
+import { vsDark } from "react-syntax-highlighter/dist/cjs/styles/prism"
 
 import Link from "next/link"
 // import classes from "./MarkdownRenderer.module.scss"
@@ -9,6 +12,8 @@ import Link from "next/link"
 // import { SyntaxHighlighter } from "./SyntaxHighlighter"
 // import { RichLinkCard } from "./RichLinkCard"
 type Props = { children: string }
+
+// TODO: Components["code"]の// @ts-ignoreをなくす。'use client' をいれると問題なく動作するようになったが、エラーが解消せず
 
 export const MarkdownRenderer: React.FC<Props> = ({ children }) => {
   return (
@@ -23,7 +28,7 @@ export const MarkdownRenderer: React.FC<Props> = ({ children }) => {
           h4: Heading4,
           h5: Heading5,
           h6: Heading6,
-          // code: Code,
+          code: Code,
           // p: Paragraph,
           ul: UnorderedList,
           ol: OrderedList,
@@ -122,25 +127,34 @@ const Heading6: Components["h6"] = ({ level, node, ...props }) => {
   )
 }
 
-// const Code: Components["code"] = ({
-//   node,
-//   inline,
-//   className,
-//   children,
-//   ...props
-// }) => {
-//   const match = /language-(\w+)/.exec(className || "")
-//   return !inline ? (
-//     <div className={"codeBlock"}>
-//       <SyntaxHighlighter
-//         code={String(children).replace(/\n$/, "")}
-//         language={match?.[1] ?? "plain-text"}
-//       />
-//     </div>
-//   ) : (
-//     <code className={"inlineCode"}>{children}</code>
-//   )
-// }
+const Code: Components["code"] = ({
+  node,
+  inline,
+  className,
+  children,
+  ...props
+}) => {
+  const match = /language-(\w+)/.exec(className || "")
+  return !inline && match ? (
+    <div className="p-1 rounded-lg mb-2 bg-codeBack">
+      <SyntaxHighlighter
+        // @ts-ignore
+        style={vsDark}
+        language={match[1]}
+        PreTag="div"
+        {...props}
+      >
+        {String(children).replace(/\n$/, "")}
+      </SyntaxHighlighter>
+    </div>
+  ) : (
+    <span className="px-1 bg-codeBack rounded-lg">
+      <code className={className} {...props}>
+        {children}
+      </code>
+    </span>
+  )
+}
 
 const UnorderedList: Components["ul"] = ({
   node,
