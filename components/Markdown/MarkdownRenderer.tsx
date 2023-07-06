@@ -47,20 +47,21 @@ export const MarkdownRenderer: React.FC<Props> = ({ children }) => {
 
 const MDLink: Components["a"] = ({ node, href, ...props }) => {
   // a link to same domain
-  if (
-    href?.startsWith("#") ||
-    href?.startsWith("/") ||
-    href?.includes("stin.ink")
-  ) {
-    // @ts-expect-error
-    return <Link {...props} href={href} className={"textLink"} />
+  if (href?.startsWith("#") || href?.startsWith("/")) {
+    return (
+      <Link
+        {...props}
+        href={href}
+        className={"text-blue-400 visited:text-purple-600"}
+      />
+    )
   }
 
   return (
     <a
       {...props}
       href={href}
-      className={"textLink"}
+      className={"text-blue-400 visited:text-purple-600"}
       target="_blank"
       rel="noreferrer"
     />
@@ -147,11 +148,11 @@ const UnorderedList: Components["ul"] = ({
   ordered,
   ...props
 }) => {
-  return <ul {...props} className={"list"} />
+  return <ul {...props} className={"pl-8 mt-4 mb-4 list-disc"} />
 }
 
 const OrderedList: Components["ol"] = ({ node, depth, ordered, ...props }) => {
-  return <ol {...props} className={"list"} />
+  return <ol {...props} className={"pl-8 mt-4 mb-4 list-decimal"} />
 }
 
 const ListItem: Components["li"] = ({
@@ -161,7 +162,7 @@ const ListItem: Components["li"] = ({
   ordered,
   ...props
 }) => {
-  return <li {...props} className={"listItem"} />
+  return <li {...props} className={"leading-relaxed mt-2 mb-2"} />
 }
 
 // const Paragraph: Components["p"] = ({ node, ...props }) => {
