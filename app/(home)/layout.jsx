@@ -16,7 +16,7 @@ export default function HomeLayout({ children }) {
     <>
       <ThemeProvider themeId={themeId}>
         <ThemeContext.Provider value={value}>
-          {/* navbar.footerをdivで囲みスタイスと充てているのは、ふぉったーがページの一番下に来るようにするため。「Sticky Footer」パターン */}
+          {/* navbar.footerをdivで囲みスタイルと充てているのは、フッターがページの一番下に来るようにするため。「Sticky Footer」パターン */}
           <div
             className="flex flex-col"
             style={{
