@@ -30,6 +30,9 @@ module.exports = {
         dark: {
           DEFAULT: "#111111", // Dark color
         },
+        codeBack: {
+          DEFAULT: "#f5f2f0", // markdownのCSS
+        },
       },
       screens: {
         xs: "480px",
