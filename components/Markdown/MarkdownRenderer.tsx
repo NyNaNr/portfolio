@@ -199,7 +199,14 @@ const ListItem: Components["li"] = ({
 // }
 
 const Blockquote: Components["blockquote"] = ({ node, ...props }) => {
-  return <blockquote {...props} className={"blockquote"} />
+  return (
+    <blockquote
+      {...props}
+      className={
+        "mt-4 mb-4 pl-4 pt-1 pb-1 border-l-4 border-gray-200 dark:border-gray-600"
+      }
+    />
+  )
 }
 
 const Table: Components["table"] = ({ node, ...props }) => {
