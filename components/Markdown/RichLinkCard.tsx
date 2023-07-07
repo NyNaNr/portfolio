@@ -28,34 +28,46 @@ const RichLinkCardInner: React.FC<Props> = async ({ href }) => {
 
   return (
     <a
-      className={"cardRoot"}
+      className={
+        "cardRoot my-3 flex gap-2 h-36 w-full rounded-lg border border-gray-200 overflow-hidden transition-colors duration-300"
+      }
       href={metadata.url}
       target="_blank"
       rel="noreferrer"
     >
-      <div className={"loadedMetadata"}>
-        <div className={"loadedMetadataTitle"}>
+      <div className={"loadedMetadata flex flex-col p-2 h-full"}>
+        <div className={"loadedMetadataTitle font-bold break-all"}>
           {metadata.title ? metadata.title : metadata.url}
         </div>
-        <div className={"loadedMetadataDescriptionContainer"}>
-          <div className={"loadedMetadataDescription"}>
+        <div className={"loadedMetadataDescriptionContainer flex-grow mt-2"}>
+          <div
+            className={
+              "loadedMetadataDescription text-xs text-secondary break-all"
+            }
+          >
             {metadata.description}
           </div>
         </div>
-        <div className={"loadedMetadataSite"}>
+        <div className={"loadedMetadataSite flex items-center gap-2"}>
           <Image
             src={getFaviconUrl(url.hostname)}
             alt=""
             width={16}
             height={16}
           />
-          <span className={"loadedMetadataSiteName"}>{url.hostname}</span>
+          <span className={"loadedMetadataSiteName text-sm"}>
+            {url.hostname}
+          </span>
         </div>
       </div>
       {metadata.image && (
-        <div className={"loadedMetadataImageContainer"}>
+        <div className={"loadedMetadataImageContainer max-w-2/5 h-36"}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className={"loadedMetadataImage"} src={metadata.image} alt="" />
+          <img
+            className={"loadedMetadataImage w-full h-full object-cover"}
+            src={metadata.image}
+            alt=""
+          />
         </div>
       )}
     </a>
