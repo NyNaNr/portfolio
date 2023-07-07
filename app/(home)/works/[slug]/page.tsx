@@ -1,9 +1,7 @@
 import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
-import ReactMarkdown from "react-markdown"
-import remarkGfm from "remark-gfm"
-import { MarkdownRenderer } from "@/components/Markdown/MarkdownRenderer"
+import { MarkdownRenderer } from "@/app/(home)/works/[slug]/components/Markdown/MarkdownRenderer"
 
 type ParamsType = {
   params: {
