@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
+  images: {
+    domains: ["www.google.com"],
+  },
   productionBrowserSourceMaps: true,
   webpack(config, { isServer }) {
     // Import videos, models, hdrs, and fonts
