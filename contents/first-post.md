@@ -6,6 +6,10 @@ description: "Next.jsでmarkdownファイルを利用したブログの構築手
 tags: ["tech", "web", "nextjs"]
 ---
 
+https://qiita.com/tbpgr/items/989c6badefff69377da7
+
+https://musclecoding.com/nextjs-app-router-markdown-blog/
+
 # 見出し 1
 
 ## 見出し 2
