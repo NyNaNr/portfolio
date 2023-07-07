@@ -1,7 +1,7 @@
 import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
-import { MarkdownRenderer } from "@/app/(home)/works/[slug]/components/Markdown/MarkdownRenderer"
+import { MarkdownRenderer } from "@/components/Markdown/MarkdownRenderer"
 
 type ParamsType = {
   params: {
