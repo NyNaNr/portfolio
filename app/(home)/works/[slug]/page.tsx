@@ -22,6 +22,8 @@ export default function BlogPost({ params }: ParamsType) {
   const title = data.title
   const created_at = data.created_at
   const updated_at = data.updated_at
+  const description = data.description
+  const tags = data.tags
 
   return (
     <div>
@@ -29,10 +31,17 @@ export default function BlogPost({ params }: ParamsType) {
         <h2>投稿日 {created_at}</h2>
         <h2>更新日 {updated_at}</h2>
       </div>
-
-      <h1 className="mt-6 mb-2 text-2xl font-bold border-b border-gray-300">
-        {title}
-      </h1>
+      <div className="flex flex-col space-y-3 border-b border-gray-300 pb-2">
+        <h1 className="mt-6 mb-2 text-2xl font-bold ">{title}</h1>
+        <p>{description}</p>
+        <div className="space-x-2 ">
+          {tags.map((tag: string, index: number) => (
+            <span key={index} className="tag bg-codeBack py-1 px-2 rounded-md">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
 
       <MarkdownRenderer>{content}</MarkdownRenderer>
       {/* <ReactMarkdown remarkPlugins={[remarkGfm]}></ReactMarkdown> */}
