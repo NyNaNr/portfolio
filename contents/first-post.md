@@ -3,6 +3,7 @@ title: "Next.jsでmarkdownブログ（ポートフォリオも兼ねる）を構
 created_at: "2023-07-05"
 updated_at: "2023-07-06"
 description: "Next.jsでmarkdownファイルを利用したブログの構築手順を解説しています。"
+tags: ["tech", "web", "nextjs"]
 ---
 
 # 見出し 1
