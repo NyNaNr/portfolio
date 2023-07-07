@@ -7,10 +7,8 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import { vsDark } from "react-syntax-highlighter/dist/cjs/styles/prism"
 
 import Link from "next/link"
-// import classes from "./MarkdownRenderer.module.scss"
 // import { ArticleTweetCard } from "./ArticleTweetCard"
-// import { SyntaxHighlighter } from "./SyntaxHighlighter"
-// import { RichLinkCard } from "./RichLinkCard"
+import { RichLinkCard } from "./RichLinkCard"
 type Props = { children: string }
 
 // TODO: Components["code"]の// @ts-ignoreをなくす。'use client' をいれると問題なく動作するようになったが、エラーが解消せず
@@ -29,7 +27,7 @@ export const MarkdownRenderer: React.FC<Props> = ({ children }) => {
           h5: Heading5,
           h6: Heading6,
           code: Code,
-          // p: Paragraph,
+          p: Paragraph,
           ul: UnorderedList,
           ol: OrderedList,
           li: ListItem,
@@ -179,38 +177,36 @@ const ListItem: Components["li"] = ({
   return <li {...props} className={"leading-relaxed mt-2 mb-2"} />
 }
 
-// const Paragraph: Components["p"] = ({ node, ...props }) => {
-//   const child = node.children[0]
-//   if (
-//     node.children.length === 1 &&
-//     child.type === "element" &&
-//     child.tagName === "a" &&
-//     typeof child.properties?.href === "string" &&
-//     child.children[0].type === "text" &&
-//     child.properties.href === child.children[0].value
-//   ) {
-//     if (
-//       // Twitter の Tweet URL
-//       /https?:\/\/(www\.)?twitter.com\/\w{1,15}\/status\/.*/.test(
-//         child.properties.href,
-//       )
-//     ) {
-//       return (
-//         <div className={"embeded"}>
-//           <ArticleTweetCard url={child.properties.href} />
-//         </div>
-//       )
-//     }
-
-//     return (
-//       <div className={"embeded"}>
-//         <RichLinkCard href={child.properties.href} isExternal />
-//       </div>
-//     )
-//   }
-
-//   return <p {...props} className={"paragraph"} />
-// }
+const Paragraph: Components["p"] = ({ node, ...props }) => {
+  const child = node.children[0]
+  if (
+    node.children.length === 1 &&
+    child.type === "element" &&
+    child.tagName === "a" &&
+    typeof child.properties?.href === "string" &&
+    child.children[0].type === "text" &&
+    child.properties.href === child.children[0].value
+  ) {
+    // if (
+    //   // Twitter の Tweet URL
+    //   /https?:\/\/(www\.)?twitter.com\/\w{1,15}\/status\/.*/.test(
+    //     child.properties.href,
+    //   )
+    // ) {
+    //   return (
+    //     <div className={"embeded"}>
+    //       <ArticleTweetCard url={child.properties.href} />
+    //     </div>
+    //   )
+    // }
+    console.log(child.properties.href) //markdownのURLを取得できている
+    return (
+      <div className={"embeded"}>
+        <RichLinkCard href={child.properties.href} />
+      </div>
+    )
+  }
+}
 
 const Blockquote: Components["blockquote"] = ({ node, ...props }) => {
   return (
