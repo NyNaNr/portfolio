@@ -33,14 +33,14 @@ const RichLinkCardInner: React.FC<Props> = async ({ href }) => {
       target="_blank"
       rel="noreferrer"
     >
-      <div className={"loadedMetadata flex flex-col p-2 h-full"}>
+      <div className={"loadedMetadata flex-1 flex-col p-2 h-full"}>
         <div className={"loadedMetadataTitle font-bold break-all"}>
           {metadata.title ? metadata.title : metadata.url}
         </div>
         <div className={"loadedMetadataDescriptionContainer flex-grow mt-2"}>
           <div
             className={
-              "loadedMetadataDescription text-xs text-secondary break-all"
+              "loadedMetadataDescription text-xs text-secondary break-all line-clamp-2"
             }
           >
             {metadata.description}
@@ -59,7 +59,7 @@ const RichLinkCardInner: React.FC<Props> = async ({ href }) => {
         </div>
       </div>
       {metadata.image && (
-        <div className={"loadedMetadataImageContainer max-w-2/5 h-36"}>
+        <div className={"loadedMetadataImageContainer max-w-[40%] h-36"}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             className={"loadedMetadataImage w-full h-full object-cover"}
