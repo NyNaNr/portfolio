@@ -1,4 +1,4 @@
-import ImageCard from "@/components/works/ImageCard"
+import ImageCard from "@/components//works/ImageCard"
 
 export default function Works() {
   return (
@@ -19,20 +19,20 @@ export default function Works() {
           <ImageCard
             src="/randomNameApp32.png"
             title="Random Name App"
-            href="/random-name-app"
+            href="/works/random-name-app"
           />
           <div className="hidden dark:block">
             <ImageCard
               src="/yu_portfolio_light_32.png"
               title="Yu's Portfolio"
-              href="/yu-portfolio"
+              href="/works/yu-portfolio"
             />
           </div>
           <div className=" dark:hidden">
             <ImageCard
               src="/yu_portfolio_dark_32.png"
               title="Yu's Portfolio"
-              href="/yu-portfolio"
+              href="/works/yu-portfolio"
             />
           </div>
         </div>
