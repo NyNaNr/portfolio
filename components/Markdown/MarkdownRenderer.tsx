@@ -3,8 +3,7 @@ import React from "react"
 import ReactMarkdown, { Components } from "react-markdown"
 import remarkSlug from "remark-slug"
 import remarkGfm from "remark-gfm"
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
-import { vsDark } from "react-syntax-highlighter/dist/cjs/styles/prism"
+import { SyntaxHighlighter } from "./SyntaxHighlighter"
 
 import Link from "next/link"
 // import { ArticleTweetCard } from "./ArticleTweetCard"
@@ -136,14 +135,9 @@ const Code: Components["code"] = ({
   return !inline && match ? (
     <div className="p-1 rounded-lg mb-2 bg-codeBack">
       <SyntaxHighlighter
-        // @ts-ignore
-        style={vsDark}
-        language={match[1]}
-        PreTag="div"
-        {...props}
-      >
-        {String(children).replace(/\n$/, "")}
-      </SyntaxHighlighter>
+        code={String(children).replace(/\n$/, "")}
+        language={match?.[1] ?? "plain-text"}
+      />
     </div>
   ) : (
     <span className="px-1 bg-codeBack rounded-lg">
