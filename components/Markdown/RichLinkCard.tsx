@@ -76,28 +76,37 @@ const RichLinkCardInner: React.FC<Props> = async ({ href }) => {
 
 const RichLinkCardError: React.FC<{ href: string }> = ({ href }) => {
   return (
-    <a className={"error"} href={href} target="_blank" rel="noreferrer">
-      <p className={"errorTitle"}>ページを読み込めませんでした</p>
-      <div className={"errorDescription"}>{href}</div>
+    <a
+      className="error flex flex-col gap-2 p-4 border border-gray-200 rounded-lg transition-colors duration-300 hover:bg-black hover:bg-opacity-50 focus-visible:bg-black focus-visible:bg-opacity-50 dark:border-gray-700 dark:hover:bg-white dark:hover:bg-opacity-10 dark:focus-visible:bg-white dark:focus-visible:bg-opacity-10"
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+    >
+      <p className="errorTitle font-bold">ページを読み込めませんでした</p>
+      <div className="errorDescription text-sm text-secondary">{href}</div>
     </a>
   )
 }
 
 const RichLinkCardSkeleton: React.FC = () => {
   return (
-    <div className={"cardRoot"}>
-      <div className={"skeletonMetadata"}>
-        <div className={"skeletonTextContainer"}>
-          <div className={"skeletonText"} />
-          <div className={"skeletonTextShorter"} />
+    <div
+      className={
+        "cardRoot  my-3 flex gap-2 h-36 w-full rounded-lg border border-gray-200 overflow-hidden transition-colors duration-300"
+      }
+    >
+      <div className="skeletonMetadata flex flex-col h-full w-4/5 space-y-2 p-2">
+        <div className="skeletonTextContainer flex flex-col space-y-2 mt-2 flex-1">
+          <div className="skeletonText w-full h-4 bg-gray-300 animate-pulse rounded-full" />
+          <div className="skeletonTextShorter w-4/5 h-4 bg-gray-300 animate-pulse rounded-full" />
         </div>
-        <div className={"skeletonTextContainer"}>
-          <div className={"skeletonText"} />
-          <div className={"skeletonTextShorter"} />
+        <div className="skeletonTextContainer flex flex-col space-y-2 mt-6 flex-1">
+          <div className="skeletonText w-full h-4 bg-gray-300 animate-pulse rounded-full" />
+          <div className="skeletonTextShorter w-4/5 h-4 bg-gray-300 animate-pulse rounded-full" />
         </div>
-        <div className={"skeletonSiteIcon"} />
+        <div className="skeletonSiteIcon w-4 h-4 bg-gray-300 animate-pulse rounded-xs" />
       </div>
-      <div className={"skeletonImage"} />
+      <div className="skeletonImage w-1/5 h-full bg-gray-300 animate-pulse " />
     </div>
   )
 }
