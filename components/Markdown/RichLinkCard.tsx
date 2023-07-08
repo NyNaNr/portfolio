@@ -27,7 +27,7 @@ const RichLinkCardInner: React.FC<Props> = async ({ href }) => {
   return (
     <a
       className={
-        "cardRoot my-3 flex gap-2 h-36 w-full rounded-lg border border-gray-200 overflow-hidden transition-colors duration-300"
+        "cardRoot my-3 flex gap-2 h-36 w-full rounded-lg border hover:bg-gray-500 hover:bg-opacity-5 border-gray-200 overflow-hidden transition-colors duration-300"
       }
       href={metadata.url}
       target="_blank"
