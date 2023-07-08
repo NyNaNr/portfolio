@@ -1,8 +1,6 @@
 import Image from "next/image"
 import { Suspense } from "react"
 import { getFaviconUrl } from "./getFaviconUrl"
-import { fetchSiteMetadata } from "./fetchSiteMetadata"
-// import ""./"RichLinkCard.module.scss"
 
 type Props = {
   href: string
