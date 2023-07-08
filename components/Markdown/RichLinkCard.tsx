@@ -33,17 +33,23 @@ const RichLinkCardInner: React.FC<Props> = async ({ href }) => {
       target="_blank"
       rel="noreferrer"
     >
-      <div className={"loadedMetadata flex-1 flex-col p-2 h-full"}>
-        <div className={"loadedMetadataTitle font-bold break-all"}>
-          {metadata.title ? metadata.title : metadata.url}
-        </div>
-        <div className={"loadedMetadataDescriptionContainer flex-grow mt-2"}>
-          <div
-            className={
-              "loadedMetadataDescription text-xs text-secondary break-all line-clamp-2"
-            }
-          >
-            {metadata.description}
+      <div
+        className={
+          "loadedMetadata flex flex-1 flex-col justify-between p-2 h-full "
+        }
+      >
+        <div>
+          <div className={"loadedMetadataTitle font-bold break-all"}>
+            {metadata.title ? metadata.title : metadata.url}
+          </div>
+          <div className={"loadedMetadataDescriptionContainer flex-grow mt-2"}>
+            <div
+              className={
+                "loadedMetadataDescription text-xs text-secondary break-all line-clamp-2"
+              }
+            >
+              {metadata.description}
+            </div>
           </div>
         </div>
         <div className={"loadedMetadataSite flex items-center gap-2"}>
