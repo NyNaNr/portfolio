@@ -1,4 +1,4 @@
-import ImageCard from "@/components//works/ImageCard"
+import ImageCard from "@/components/works/ImageCard"
 
 export default function Works() {
   return (
