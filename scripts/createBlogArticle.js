@@ -32,7 +32,7 @@ const path = require("path")
 title: "Input Title"
 created_at: "${formattedDate}"
 updated_at: ""
-description:""
+description: ""
 tags: []
 ---
 
