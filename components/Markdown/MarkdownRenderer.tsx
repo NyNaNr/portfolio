@@ -197,6 +197,7 @@ const Paragraph: Components["p"] = ({ node, ...props }) => {
       </div>
     )
   }
+  return <p {...props} className={"mt-6"} />
 }
 
 const Blockquote: Components["blockquote"] = ({ node, ...props }) => {
