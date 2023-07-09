@@ -20,7 +20,7 @@ const path = require("path")
 
   const content = `---
 title: "Input Title"
-created_at: "${new Date().toISOString()}"
+created_at: "${new Date().toLocaleDateString()}"
 updated_at: ""
 description:""
 tags: []
