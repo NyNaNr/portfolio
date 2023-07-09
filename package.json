@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "create": "node scripts/createBlogArticle.ts",
+    "create": "node scripts/createBlogArticle.js",
     "lint": "next lint"
   },
   "dependencies": {
