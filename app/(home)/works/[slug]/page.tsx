@@ -34,14 +34,22 @@ export default function BlogPost({ params }: ParamsType) {
       </div>
       <div className="flex flex-col space-y-3 border-b border-gray-300 pb-2">
         <h1 className="mt-6 mb-2 text-2xl font-bold ">{title}</h1>
-        <p>{description}</p>
-        <div className="space-x-2 ">
-          {tags.map((tag: string, index: number) => (
-            <span key={index} className="tag bg-codeBack py-1 px-2 rounded-md">
-              {tag}
-            </span>
-          ))}
-        </div>
+        {description === "" ? "" : <p>{description}</p>}
+
+        {tags.lenght === 0 ? (
+          ""
+        ) : (
+          <div className="space-x-2 ">
+            {tags.map((tag: string, index: number) => (
+              <span
+                key={index}
+                className="tag bg-codeBack py-1 px-2 rounded-md"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
 
       <MarkdownRenderer>{content}</MarkdownRenderer>
