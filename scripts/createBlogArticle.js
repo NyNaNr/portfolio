@@ -17,14 +17,16 @@ const path = require("path")
   if (fileNames.includes(newFileName)) {
     throw new Error("the slug is already used.")
   }
-  //YYYY-MM-DD形
-  let date: Date = new Date()
-  let year: string = date.getFullYear().toString()
-  let month: string = (date.getMonth() + 1).toString()
-  let day: string = date.getDate().toString()
-  month = month.length < 2 ? "0" + month : month
-  day = day.length < 2 ? "0" + day : day
-  let formattedDate: string = `${year}-${month}-${day}`
+  //YYYY-MM-DD形 tsのまま実行はできないのでjsに戻した
+  let date = new Date()
+  let year = date.getFullYear()
+  let month = date.getMonth() + 1
+  let day = date.getDate()
+
+  month = month < 10 ? "0" + month : month
+  day = day < 10 ? "0" + day : day
+
+  let formattedDate = `${year}-${month}-${day}`
 
   const content = `---
 title: "Input Title"
