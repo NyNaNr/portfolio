@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { Suspense } from "react"
 import { getFaviconUrl } from "./getFaviconUrl"
+import { fetchSiteMetadata } from "./fetchSiteMetadata"
 
 type Props = {
   href: string
@@ -15,10 +16,13 @@ export const RichLinkCard: React.FC<Props> = ({ href }) => {
 }
 
 const RichLinkCardInner: React.FC<Props> = async ({ href }) => {
+  console.log(`Fetching metadata for URL: ${href}`)
   const url = new URL(href)
-  const metadata = await fetch(
-    `/api/metadata?url=${encodeURIComponent(url.href)}`,
-  ).then((res) => res.json())
+  // const metadata = await fetch(
+  //   `/api/metadata?url=${encodeURIComponent(url.href)}`,
+  // ).then((res) => res.json())
+
+  const metadata = await fetchSiteMetadata(url.href)
 
   if (!metadata) {
     return <RichLinkCardError href={href} />
