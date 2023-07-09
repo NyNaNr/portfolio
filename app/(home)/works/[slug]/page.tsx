@@ -28,7 +28,7 @@ export default function BlogPost({ params }: ParamsType) {
     <div>
       <div className="flex space-x-2">
         <h2>投稿日 {created_at}</h2>
-        {updated_at !== "" ? "<h2>更新日 {updated_at}</h2>" : ""}
+        {updated_at !== "" ? <h2>更新日 {updated_at}</h2> : ""}
       </div>
       <div className="flex flex-col space-y-3 border-b border-gray-300 pb-2">
         <h1 className="mt-6 mb-2 text-2xl font-bold ">{title}</h1>
