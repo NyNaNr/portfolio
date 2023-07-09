@@ -10,7 +10,7 @@ const DisplacementSphere = dynamic(
     import("app/(home)/DisplacementSphere").then(
       (mod) => mod.DisplacementSphere,
     ),
-  { ssr: false },
+  // { ssr: false }, 削除する。様子見よう
 )
 
 export default function Intro() {
