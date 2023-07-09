@@ -1,4 +1,3 @@
-"use client"
 import React from "react"
 import ReactMarkdown, { Components } from "react-markdown"
 import remarkSlug from "remark-slug"
@@ -9,8 +8,6 @@ import Link from "next/link"
 // import { ArticleTweetCard } from "./ArticleTweetCard"
 import { RichLinkCard } from "./RichLinkCard"
 type Props = { children: string }
-
-// TODO: Components["code"]の// @ts-ignoreをなくす。'use client' をいれると問題なく動作するようになったが、エラーが解消せず
 
 export const MarkdownRenderer: React.FC<Props> = ({ children }) => {
   return (
@@ -193,7 +190,7 @@ const Paragraph: Components["p"] = ({ node, ...props }) => {
     //     </div>
     //   )
     // }
-    console.log(child.properties.href) //markdownのURLを取得できている
+    console.log(`URL:${child.properties.href}`) //markdownのURLを取得できている
     return (
       <div className={"embeded"}>
         <RichLinkCard href={child.properties.href} />
