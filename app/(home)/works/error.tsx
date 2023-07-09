@@ -1,8 +1,7 @@
 "use client" // Error components must be Client Components
 
 import { useEffect } from "react"
-
-import LinkCss from "@/components/LinkCSS"
+import Link from "next/link"
 
 export default function Error({
   error,
@@ -22,8 +21,8 @@ export default function Error({
         <span className="inline-block">ページが</span>
         <span className="inline-block">見つかりません</span>
       </h2>
-      <div className="flex justify-center mt-32">
-        <LinkCss internal_link="/" title="ホームに戻る" />
+      <div className="flex justify-center mt-32 underline text-blue-700">
+        <Link href="/">ホームに戻る</Link>
       </div>
     </div>
   )
