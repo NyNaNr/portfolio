@@ -9,6 +9,8 @@ type ParamsType = {
   }
 }
 
+// 記事の変更で、更新日も書き変るようにできる？
+
 export default function BlogPost({ params }: ParamsType) {
   const { slug } = params
   const filePath = path.join(process.cwd(), "contents", `${slug}.md`)
