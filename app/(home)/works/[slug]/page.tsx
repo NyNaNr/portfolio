@@ -12,6 +12,7 @@ type ParamsType = {
 export default function BlogPost({ params }: ParamsType) {
   const { slug } = params
   const filePath = path.join(process.cwd(), "contents", `${slug}.md`)
+  console.log(`filePath:${filePath}`)
   const fileContents = fs.readFileSync(filePath, "utf8")
 
   // gray-matterを使ってマークダウンメタデータを解析
