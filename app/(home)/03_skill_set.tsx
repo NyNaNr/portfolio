@@ -40,7 +40,7 @@ export default function SkillSet() {
               フロントエンド
             </div>
             <div className="flex justify-center m-3">
-              WorksのプロジェクトはすべてNext.jsで作っています。
+              このポートフォリオはApp Routerで実装しています。他の作品も移行中。
             </div>
 
             <table className="w-full table-auto mx-auto">
