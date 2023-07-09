@@ -2,7 +2,6 @@ const fs = require("fs").promises
 const path = require("path")
 
 // の型を作る。　npm run create -- my-first-post　で実行
-// 自分の型に修正する。
 
 !(async () => {
   const slug = process.argv[2]
@@ -21,7 +20,9 @@ const path = require("path")
 
   const content = `---
 title: "Input Title"
-createdAt: "${new Date().toISOString()}"
+created_at: "${new Date().toISOString()}"
+updated_at: ""
+description:""
 tags: []
 ---
 
