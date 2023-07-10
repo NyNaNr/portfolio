@@ -1,9 +1,11 @@
 "use client"
+// ↑削除してもいい？
 
 import dynamic from "next/dynamic"
 import { Transition } from "@/components/Transition"
 import { useContext } from "react"
 import { ThemeContext } from "@/components/themeContext"
+import ScroolDown from "@/components/ScroolDown/ScroolDown"
 
 const DisplacementSphere = dynamic(
   () =>
@@ -20,7 +22,7 @@ export default function Intro() {
       {(visible, status) => (
         <>
           <div
-            className="flex flex-col w-screen items-center justify-between p-24"
+            className="flex flex-col items-center justify-between p-24"
             style={{ height: "calc(1.3 * 100vh)" }}
             id="intro"
           >
@@ -34,6 +36,10 @@ export default function Intro() {
                 Yu&apos;s Portfolio
               </p>
             </div>
+          </div>
+
+          <div className="fixed bottom-20 left-1/2 transform -translate-x-1/2 z-30">
+            <ScroolDown />
           </div>
         </>
       )}
