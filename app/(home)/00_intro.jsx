@@ -1,3 +1,6 @@
+// "use client"
+// ↑削除してもいい？
+
 import dynamic from "next/dynamic"
 import { Transition } from "@/components/Transition"
 import { useContext } from "react"
