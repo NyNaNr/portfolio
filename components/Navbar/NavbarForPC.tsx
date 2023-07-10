@@ -8,7 +8,7 @@ export default function NavbarForPC() {
   return (
     <>
       <div className="hidden lg:flex">
-        <div className="fixed z-20 bg-transparent  h-full w-48 ">
+        <div className="fixed z-50 bg-transparent  h-full w-48 ">
           <div className="fixed top-72 -left-28 flex flex-row-reverse -rotate-90 space-x-10 space-x-reverse text-lg font-medium">
             {pathname === "/" ? (
               <>
@@ -27,7 +27,7 @@ export default function NavbarForPC() {
             )}
           </div>
         </div>
-        <div className="fixed top-0 right-0 flex z-20  m-10">
+        <div className="fixed top-0 right-0 flex z-50  m-10">
           <DarkModeButton />
         </div>
       </div>
