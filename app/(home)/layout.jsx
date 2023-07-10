@@ -24,7 +24,7 @@ export default function HomeLayout({ children }) {
             }}
           >
             <div className="flex-grow">
-              <div className="flex fixed top-0 left-0  z-40 m-3 lg:m-10 lg:ml-12">
+              <div className="flex fixed top-0 left-0  z-50 mx-3 my-1 md:m-3 lg:m-10 lg:ml-12">
                 <HomeButton />
               </div>
 

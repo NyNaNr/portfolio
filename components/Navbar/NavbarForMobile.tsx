@@ -19,10 +19,11 @@ export default function NavbarForMobile() {
       <div className="lg:hidden">
         <div className="flex">
           {/*↑のflexは必要。親コンポーネントにflexないと子コンポーネント消える */}
+          <div className="header-bg z-10 fixed top-0 w-full h-16 bg-strongCyan md:bg-transparent drop-shadow-md"></div>
           <button
             onClick={handleMenuOpen}
             type="button"
-            className={`fixed top-0 right-0 flex justify-center items-center flex-col z-30 m-3 w-12 h-12
+            className={`fixed top-0 right-0 flex justify-center items-center flex-col z-50 my-2 mx-3 md:m-3 w-12 h-12
             
             hover:active:bg-gray-300 hover:active:bg-opacity-25
               ${openMenu ? "space-y-1" : "space-y-2"}`}
@@ -50,15 +51,15 @@ export default function NavbarForMobile() {
             />
           </button>
           <nav
-            className={`fixed ease-in duration-300 ${
+            className={`fixed z-40 ease-in duration-300 ${
               openMenu
-                ? "z-20 text-left top-0 right-0  w-full bg-slate-50 bg-opacity-50 backdrop-blur-lg dark:bg-black dark:bg-opacity-40"
-                : "z-20 top-[-100dvh] w-full"
+                ? "text-left top-0 right-0  w-full bg-slate-50 bg-opacity-50 backdrop-blur-lg dark:bg-black dark:bg-opacity-40"
+                : "top-[-100dvh] w-full"
             }`}
             style={{ height: "100dvh" }}
           >
             <div className="flex justify-center items-center h-full ">
-              <div className="flex flex-col mx-16 sm:mx-40 text-center space-y-10 text-3xl">
+              <div className="flex z-40 flex-col mx-16 sm:mx-40 text-center space-y-10 text-3xl">
                 {pathname === "/" ? (
                   <>
                     <NavHomeLink text="About me" id="about-me" />
