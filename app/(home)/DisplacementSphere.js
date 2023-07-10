@@ -200,7 +200,9 @@ export const DisplacementSphere = (props) => {
       {(visible) => (
         <canvas
           aria-hidden
-          className={`${styles.canvas} ${visible ? styles.canvasVisible : ""}`}
+          className={`z-20 ${styles.canvas} ${
+            visible ? styles.canvasVisible : ""
+          }`}
           data-visible={visible}
           ref={canvasRef}
           {...props}
