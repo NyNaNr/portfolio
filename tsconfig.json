@@ -32,7 +32,8 @@
     "app/(home)/page.jsx",
     "app/(home)/layout.jsx",
     "app/(home)/00_intro.jsx",
-    "app/api/route.js"
+    "app/api/route.js",
+    "scripts/createBlogArticle.js"
   ],
   "exclude": ["node_modules"]
 }
