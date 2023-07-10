@@ -27,7 +27,7 @@ export default function Intro() {
             <DisplacementSphere />
 
             <div
-              className="flex z-10 w-full justify-center items-center  "
+              className="flex z-30 w-full justify-center items-center  "
               style={{ height: "100dvh" }}
             >
               <p className="dark:text-white text-2xl sm:text-3xl md:text-6xl lg:text-9xl font-bold">
