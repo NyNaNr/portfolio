@@ -26,10 +26,10 @@ export default function ScroolDown() {
       }`}
     >
       <div className="s_container">
-        <div className="chevron"></div>
-        <div className="chevron"></div>
-        <div className="chevron"></div>
-        <span className="text">Scroll down</span>
+        <div className="chevron dark:before:bg-white dark:after:bg-white"></div>
+        <div className="chevron dark:before:bg-white dark:after:bg-white"></div>
+        <div className="chevron dark:before:bg-white dark:after:bg-white"></div>
+        <span className="text dark:text-white">Scroll down</span>
       </div>
     </div>
   )
