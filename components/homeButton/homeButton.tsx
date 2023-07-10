@@ -8,7 +8,7 @@ export default function HomeButton() {
   return (
     <>
       <button
-        className="flex  justify-center items-center z-50 dark:text-white transition-all duration-500 ease-out  h-14 w-14
+        className="flex  justify-center items-center dark:text-white transition-all duration-500 ease-out  h-14 w-14
         hover:active:bg-gray-300 hover:active:bg-opacity-25
         md:hover:bg-gray-300 md:hover:bg-opacity-25
         "
