@@ -2,7 +2,7 @@ export default function AboutMe() {
   return (
     <>
       <div
-        className="mx-auto w-screen flex flex-col max-w-xs sm:max-w-md "
+        className="mx-auto w-screen flex flex-col max-w-xs sm:max-w-md mt-32"
         id="about-me"
       >
         <div className="title max-w-fit mx-auto">
