@@ -22,20 +22,15 @@ export default function Intro() {
       {(visible, status) => (
         <>
           <div
-            className="flex flex-col items-center justify-between p-24"
+            className="flex flex-col items-center justify-between"
             style={{ height: "calc(1.3 * 100vh)" }}
             id="intro"
           >
             <DisplacementSphere />
 
-            <div
-              className="flex z-30 w-full justify-center items-center  "
-              style={{ height: "100dvh" }}
-            >
-              <p className="dark:text-white text-2xl sm:text-3xl md:text-6xl lg:text-9xl font-bold">
-                Yu&apos;s Portfolio
-              </p>
-            </div>
+            <p className="absolute top-1/2 z-30 dark:text-white text-2xl sm:text-3xl md:text-6xl lg:text-9xl font-bold">
+              Yu&apos;s Portfolio
+            </p>
           </div>
 
           <div className="fixed bottom-20 left-1/2 transform -translate-x-1/2 z-30">
