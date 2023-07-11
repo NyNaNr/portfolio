@@ -31,7 +31,7 @@ module.exports = {
           DEFAULT: "#111111", // Dark color
         },
         codeBack: {
-          DEFAULT: "#f5f2f0", // markdownのCSS
+          DEFAULT: "#1E1E1E", // markdownコードプレビューの背景のCSS
         },
       },
       screens: {

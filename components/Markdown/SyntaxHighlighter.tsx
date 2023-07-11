@@ -1,5 +1,5 @@
 import highlightjs from "highlight.js"
-import "highlight.js/styles/github.css"
+import "highlight.js/styles/vs2015.css"
 
 type Props = {
   code: string
