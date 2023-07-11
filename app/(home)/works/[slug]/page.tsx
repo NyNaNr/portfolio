@@ -32,7 +32,7 @@ export default function BlogPost({ params }: ParamsType) {
         <h2>投稿日 {created_at}</h2>
         {updated_at !== "" ? <h2>更新日 {updated_at}</h2> : ""}
       </div>
-      <div className="flex flex-col space-y-3 border-b border-gray-300 pb-2">
+      <div className="flex flex-col space-y-3 border-b border-gray-100 pb-2">
         <h1 className="mt-6 mb-2 text-2xl font-bold ">{title}</h1>
         {description === "" ? "" : <p>{description}</p>}
 
@@ -43,7 +43,7 @@ export default function BlogPost({ params }: ParamsType) {
             {tags.map((tag: string, index: number) => (
               <span
                 key={index}
-                className="tag bg-codeBack py-1 px-2 rounded-md"
+                className="tag bg-strongCyan bg-opacity-40 py-1 px-2 rounded-md"
               >
                 {tag}
               </span>
