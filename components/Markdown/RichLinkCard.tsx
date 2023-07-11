@@ -51,7 +51,7 @@ const RichLinkCardInner: React.FC<Props> = async ({ href }) => {
           <div className={"loadedMetadataDescriptionContainer flex-grow mt-2"}>
             <div
               className={
-                "loadedMetadataDescription text-xs text-secondary break-all line-clamp-3"
+                "loadedMetadataDescription text-xs text-secondary break-all line-clamp-2"
               }
             >
               {metadata.description}
