@@ -1,3 +1,4 @@
+"use client"
 import Intro from "@/app/(home)/00_intro"
 import AboutMe from "./01_about_me"
 import Works from "./02_works"
