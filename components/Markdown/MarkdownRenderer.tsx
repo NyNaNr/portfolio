@@ -137,7 +137,7 @@ const Code: Components["code"] = ({
       />
     </div>
   ) : (
-    <span className="px-1 bg-codeBack rounded-lg">
+    <span className="px-1 bg-strongCyan bg-opacity-40 rounded-lg">
       <code className={className} {...props}>
         {children}
       </code>
