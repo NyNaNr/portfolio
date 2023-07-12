@@ -9,35 +9,37 @@ export default function MobileMenuButton({
 }: MobileMenuButtonProps) {
   return (
     <>
-      <button
-        onClick={handleMenuOpen}
-        type="button"
-        className={`fixed top-0 right-0 flex justify-center items-center flex-col z-50 my-2 mx-3 md:m-3 w-12 h-12 mr-safe
+      <div className="mr-safe">
+        <button
+          onClick={handleMenuOpen}
+          type="button"
+          className={`fixed top-0 right-0 flex justify-center items-center flex-col z-50 my-2 mx-3 md:m-3 w-12 h-12
             hover:active:bg-gray-300 hover:active:bg-opacity-25
               ${isOpenMenu ? "space-y-1" : "space-y-2"}`}
-      >
-        <div
-          className={
-            isOpenMenu
-              ? "w-8 h-0.5 bg-gray-600 dark:bg-gray-50 translate-y-2.5 rotate-45 transition duration-500 ease-in-out"
-              : "w-8 h-0.5 bg-gray-600 dark:bg-gray-50 transition duration-500 ease-in-out backdrop-invert sm:filter-none"
-          }
-        />
-        <div
-          className={
-            isOpenMenu
-              ? "opacity-0 transition duration-500 ease-in-out"
-              : "w-8 h-0.5 bg-gray-600 dark:bg-gray-50 transition duration-500 ease-in-out backdrop-invert sm:filter-none"
-          }
-        />
-        <div
-          className={
-            isOpenMenu
-              ? "w-8 h-0.5 bg-gray-600 dark:bg-gray-50 -rotate-45 transition duration-500 ease-in-out"
-              : "w-8 h-0.5 bg-gray-600 dark:bg-gray-50 transition duration-500 ease-in-out backdrop-invert sm:filter-none"
-          }
-        />
-      </button>
+        >
+          <div
+            className={
+              isOpenMenu
+                ? "w-8 h-0.5 bg-gray-600 dark:bg-gray-50 translate-y-2.5 rotate-45 transition duration-500 ease-in-out"
+                : "w-8 h-0.5 bg-gray-600 dark:bg-gray-50 transition duration-500 ease-in-out backdrop-invert sm:filter-none"
+            }
+          />
+          <div
+            className={
+              isOpenMenu
+                ? "opacity-0 transition duration-500 ease-in-out"
+                : "w-8 h-0.5 bg-gray-600 dark:bg-gray-50 transition duration-500 ease-in-out backdrop-invert sm:filter-none"
+            }
+          />
+          <div
+            className={
+              isOpenMenu
+                ? "w-8 h-0.5 bg-gray-600 dark:bg-gray-50 -rotate-45 transition duration-500 ease-in-out"
+                : "w-8 h-0.5 bg-gray-600 dark:bg-gray-50 transition duration-500 ease-in-out backdrop-invert sm:filter-none"
+            }
+          />
+        </button>
+      </div>
     </>
   )
 }
