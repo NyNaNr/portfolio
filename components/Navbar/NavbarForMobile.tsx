@@ -23,36 +23,38 @@ export default function NavbarForMobile() {
             className="header-bg z-10 fixed top-0 w-full h-16 bg-light dark:bg-dark
            md:bg-transparent drop-shadow-md"
           ></div>
-          <button
-            onClick={handleMenuOpen}
-            type="button"
-            className={`fixed top-0 right-0 flex justify-center items-center flex-col z-50 my-2 mx-3 md:m-3 w-12 h-12
+          <div className="mr-safe">
+            <button
+              onClick={handleMenuOpen}
+              type="button"
+              className={`fixed top-0 right-0 flex justify-center items-center flex-col z-50 my-2 mx-3 md:m-3 w-12 h-12
             
             hover:active:bg-gray-300 hover:active:bg-opacity-25
               ${openMenu ? "space-y-1" : "space-y-2"}`}
-          >
-            <div
-              className={
-                openMenu
-                  ? "w-8 h-0.5 bg-gray-600 dark:bg-gray-50 translate-y-2.5 rotate-45 transition duration-500 ease-in-out"
-                  : "w-8 h-0.5 bg-gray-600 dark:bg-gray-50 transition duration-500 ease-in-out backdrop-invert sm:filter-none"
-              }
-            />
-            <div
-              className={
-                openMenu
-                  ? "opacity-0 transition duration-500 ease-in-out"
-                  : "w-8 h-0.5 bg-gray-600 dark:bg-gray-50 transition duration-500 ease-in-out backdrop-invert sm:filter-none"
-              }
-            />
-            <div
-              className={
-                openMenu
-                  ? "w-8 h-0.5 bg-gray-600 dark:bg-gray-50 -rotate-45 transition duration-500 ease-in-out"
-                  : "w-8 h-0.5 bg-gray-600 dark:bg-gray-50 transition duration-500 ease-in-out backdrop-invert sm:filter-none"
-              }
-            />
-          </button>
+            >
+              <div
+                className={
+                  openMenu
+                    ? "w-8 h-0.5 bg-gray-600 dark:bg-gray-50 translate-y-2.5 rotate-45 transition duration-500 ease-in-out"
+                    : "w-8 h-0.5 bg-gray-600 dark:bg-gray-50 transition duration-500 ease-in-out backdrop-invert sm:filter-none"
+                }
+              />
+              <div
+                className={
+                  openMenu
+                    ? "opacity-0 transition duration-500 ease-in-out"
+                    : "w-8 h-0.5 bg-gray-600 dark:bg-gray-50 transition duration-500 ease-in-out backdrop-invert sm:filter-none"
+                }
+              />
+              <div
+                className={
+                  openMenu
+                    ? "w-8 h-0.5 bg-gray-600 dark:bg-gray-50 -rotate-45 transition duration-500 ease-in-out"
+                    : "w-8 h-0.5 bg-gray-600 dark:bg-gray-50 transition duration-500 ease-in-out backdrop-invert sm:filter-none"
+                }
+              />
+            </button>
+          </div>
           <nav
             className={`fixed z-40 ease-in duration-300 ${
               openMenu
