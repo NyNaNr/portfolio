@@ -5,8 +5,6 @@ import NavGlobalLink from "./NavGlobalLink"
 import { usePathname } from "next/navigation"
 import MobileMenuButton from "./MobileMenuButton"
 
-// hamburgerボタンとかをそれぞれコンポネント化するのもあり。でも、useStateの共有忘れすに
-
 export default function NavbarForMobile() {
   const [isOpenMenu, setIsOpenMenu] = useState(false)
 
