@@ -23,7 +23,7 @@ export default function NavbarForMobile() {
             className="header-bg z-10 fixed top-0 w-full h-16 bg-light dark:bg-dark
            md:bg-transparent drop-shadow-md"
           ></div>
-          <div className="mr-safe">
+          <div className="ml-safe">
             <button
               onClick={handleMenuOpen}
               type="button"
