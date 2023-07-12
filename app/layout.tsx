@@ -8,6 +8,7 @@ import Script from "next/script"
 import { Suspense } from "react"
 import { GA_TRACKING_ID } from "../lib/contant"
 import { GoogleAnalyticsScript } from "@/lib/gtag"
+import Head from "next/head"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -23,21 +24,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <head>
+      <Head>
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, viewport-fit=cover"
         />
-        <Script
-          strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-        />
-        {/* eslint-disable-next-line @next/next/no-before-interactive-script-outside-document */}
-        <Script
-          id="gtag-init"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
+      </Head>
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+      />
+      {/* eslint-disable-next-line @next/next/no-before-interactive-script-outside-document */}
+      <Script
+        id="gtag-init"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
@@ -45,12 +47,11 @@ export default function RootLayout({
             page_path: window.location.pathname,
           });
         `,
-          }}
-        />
-        <Suspense fallback={null}>
-          <GoogleAnalyticsScript />
-        </Suspense>
-      </head>
+        }}
+      />
+      <Suspense fallback={null}>
+        <GoogleAnalyticsScript />
+      </Suspense>
       <body className={inter.className}>{children}</body>
     </html>
   )
