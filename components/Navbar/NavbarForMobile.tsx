@@ -23,10 +23,12 @@ export default function NavbarForMobile() {
            md:bg-transparent drop-shadow-md"
           ></div>
           <div className="mr-safe">
-            <MobileMenuButton
-              handleMenuOpen={handleMenuOpen}
-              isOpenMenu={isOpenMenu}
-            />
+            <div className="fixed top-0 z-50 right-0 my-2 mx-3 md:m-3">
+              <MobileMenuButton
+                handleMenuOpen={handleMenuOpen}
+                isOpenMenu={isOpenMenu}
+              />
+            </div>
           </div>
           <nav
             className={`fixed z-40 ease-in duration-300 ${
