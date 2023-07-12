@@ -8,7 +8,6 @@ import Script from "next/script"
 import { Suspense } from "react"
 import { GA_TRACKING_ID } from "../lib/contant"
 import { GoogleAnalyticsScript } from "@/lib/gtag"
-import Head from "next/head"
 
 const inter = Inter({ subsets: ["latin"] })
 
