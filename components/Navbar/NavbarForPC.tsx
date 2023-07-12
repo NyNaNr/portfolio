@@ -27,7 +27,7 @@ export default function NavbarForPC() {
             )}
           </div>
         </div>
-        <div className="mr-safe">
+        <div className="fixed top-0 right-0 flex z-50  m-10">
           <DarkModeButton />
         </div>
       </div>
