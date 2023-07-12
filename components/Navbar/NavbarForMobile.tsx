@@ -22,18 +22,13 @@ export default function NavbarForMobile() {
             className="header-bg z-10 fixed top-0 w-full h-16 bg-light dark:bg-dark
            md:bg-transparent drop-shadow-md"
           ></div>
-          <div
-            className="mr-safe"
-            style={{
-              right: "env(safe-area-inset-right)",
-              marginRight: "calc(env(safe-area-inset-right) + 1em)",
-              paddingRight: "env(safe-area-inset-right)",
-            }}
-          >
-            <MobileMenuButton
-              handleMenuOpen={handleMenuOpen}
-              isOpenMenu={isOpenMenu}
-            />
+          <div className="my-2 mx-3 md:m-3">
+            <div className="mr-safe">
+              <MobileMenuButton
+                handleMenuOpen={handleMenuOpen}
+                isOpenMenu={isOpenMenu}
+              />
+            </div>
           </div>
           <nav
             className={`fixed z-40 ease-in duration-300 ${
