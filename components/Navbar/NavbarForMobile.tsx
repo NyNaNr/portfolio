@@ -24,7 +24,11 @@ export default function NavbarForMobile() {
           ></div>
           <div
             className="mr-safe"
-            style={{ marginRight: "env(safe-area-inset-right)" }}
+            style={{
+              right: "env(safe-area-inset-right)",
+              marginRight: "calc(env(safe-area-inset-right) + 1em)",
+              paddingRight: "env(safe-area-inset-right)",
+            }}
           >
             <MobileMenuButton
               handleMenuOpen={handleMenuOpen}
@@ -58,7 +62,13 @@ export default function NavbarForMobile() {
                 )}
               </div>
             </div>
-            <div style={{ marginRight: "env(safe-area-inset-right)" }}>
+            <div
+              style={{
+                right: "env(safe-area-inset-right)",
+                marginRight: "calc(env(safe-area-inset-right) + 1em)",
+                paddingRight: "env(safe-area-inset-right)",
+              }}
+            >
               <div className="absolute bottom-0 right-0 m-2 mr-safe">
                 <DarkModeButton />
               </div>
