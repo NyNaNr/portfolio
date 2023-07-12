@@ -28,7 +28,9 @@ export default function HomeLayout({ children }) {
                 className="flex fixed top-0 left-0  mx-3 my-1 md:m-3 lg:m-10 lg:ml-12"
                 style={{ zIndex: 60 }} //z-index tailwindCSSの上限50対策
               >
-                <HomeButton />
+                <div className="ml-safe">
+                  <HomeButton />
+                </div>
               </div>
 
               <Navbar />
