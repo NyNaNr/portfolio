@@ -22,7 +22,7 @@ export default function NavbarForMobile() {
             className="header-bg z-10 fixed top-0 w-full h-16 bg-light dark:bg-dark
            md:bg-transparent drop-shadow-md"
           ></div>
-          <div className="mr-safe">
+          <div className="pr-safe">
             <MobileMenuButton
               handleMenuOpen={handleMenuOpen}
               isOpenMenu={isOpenMenu}
@@ -55,7 +55,7 @@ export default function NavbarForMobile() {
                 )}
               </div>
             </div>
-            <div className="mr-safe">
+            <div className="pr-safe">
               <div className="absolute bottom-0 right-0 m-2">
                 <DarkModeButton />
               </div>
