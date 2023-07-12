@@ -15,8 +15,6 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata = {
   title: "Yu's portfolio",
   description: "Where there is a will, there is a way",
-  viewport:
-    "width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover",
 }
 
 export default function RootLayout({
