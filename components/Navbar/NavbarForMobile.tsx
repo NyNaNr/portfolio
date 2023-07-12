@@ -58,8 +58,10 @@ export default function NavbarForMobile() {
               </div>
             </div>
             <div>
-              <div className="absolute bottom-0 right-0 m-3 mr-safe">
-                <DarkModeButton />
+              <div className="mr-safe">
+                <div className="absolute bottom-0 right-0 m-3 ">
+                  <DarkModeButton />
+                </div>
               </div>
             </div>
           </nav>
