@@ -15,6 +15,8 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata = {
   title: "Yu's portfolio",
   description: "Where there is a will, there is a way",
+  viewport:
+    "width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover",
 }
 
 export default function RootLayout({
@@ -24,22 +26,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <Head>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, viewport-fit=cover"
+      <head>
+        <Head>
+          <meta name="viewport" content="viewport-fit=cover" />
+        </Head>
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
         />
-      </Head>
-      <Script
-        strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-      />
-      {/* eslint-disable-next-line @next/next/no-before-interactive-script-outside-document */}
-      <Script
-        id="gtag-init"
-        strategy="beforeInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
+        {/* eslint-disable-next-line @next/next/no-before-interactive-script-outside-document */}
+        <Script
+          id="gtag-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
@@ -47,11 +47,12 @@ export default function RootLayout({
             page_path: window.location.pathname,
           });
         `,
-        }}
-      />
-      <Suspense fallback={null}>
-        <GoogleAnalyticsScript />
-      </Suspense>
+          }}
+        />
+        <Suspense fallback={null}>
+          <GoogleAnalyticsScript />
+        </Suspense>
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )
