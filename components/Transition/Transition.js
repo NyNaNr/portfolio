@@ -1,5 +1,6 @@
-import { AnimatePresence, usePresence } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
+"use client"
+import { AnimatePresence, usePresence } from "framer-motion"
+import { useEffect, useRef, useState } from "react"
 
 /**
  * A Framer Motion AnimatePresence implementation of `react-transition-group`
@@ -15,16 +16,16 @@ export const Transition = ({
   in: show,
   unmount,
 }) => {
-  const enterTimeout = useRef();
-  const exitTimeout = useRef();
+  const enterTimeout = useRef()
+  const exitTimeout = useRef()
 
   useEffect(() => {
     if (show) {
-      clearTimeout(exitTimeout.current);
+      clearTimeout(exitTimeout.current)
     } else {
-      clearTimeout(enterTimeout.current);
+      clearTimeout(enterTimeout.current)
     }
-  }, [show]);
+  }, [show])
 
   return (
     <AnimatePresence>
@@ -43,8 +44,8 @@ export const Transition = ({
         </TransitionContent>
       )}
     </AnimatePresence>
-  );
-};
+  )
+}
 
 const TransitionContent = ({
   children,
@@ -57,48 +58,48 @@ const TransitionContent = ({
   onExited,
   show,
 }) => {
-  const [status, setStatus] = useState('exited');
-  const [isPresent, safeToRemove] = usePresence();
-  const [hasEntered, setHasEntered] = useState(false);
-  const splitTimeout = typeof timeout === 'object';
+  const [status, setStatus] = useState("exited")
+  const [isPresent, safeToRemove] = usePresence()
+  const [hasEntered, setHasEntered] = useState(false)
+  const splitTimeout = typeof timeout === "object"
 
   useEffect(() => {
-    if (hasEntered || !show) return;
+    if (hasEntered || !show) return
 
-    const actualTimeout = splitTimeout ? timeout.enter : timeout;
+    const actualTimeout = splitTimeout ? timeout.enter : timeout
 
-    clearTimeout(enterTimeout.current);
-    clearTimeout(exitTimeout.current);
+    clearTimeout(enterTimeout.current)
+    clearTimeout(exitTimeout.current)
 
-    setHasEntered(true);
-    setStatus('entering');
-    onEnter?.();
+    setHasEntered(true)
+    setStatus("entering")
+    onEnter?.()
 
     enterTimeout.current = setTimeout(() => {
-      setStatus('entered');
-      onEntered?.();
-    }, actualTimeout);
+      setStatus("entered")
+      onEntered?.()
+    }, actualTimeout)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [onEnter, onEntered, timeout, status, show]);
+  }, [onEnter, onEntered, timeout, status, show])
 
   useEffect(() => {
-    if (isPresent && show) return;
+    if (isPresent && show) return
 
-    const actualTimeout = splitTimeout ? timeout.exit : timeout;
+    const actualTimeout = splitTimeout ? timeout.exit : timeout
 
-    clearTimeout(enterTimeout.current);
-    clearTimeout(exitTimeout.current);
+    clearTimeout(enterTimeout.current)
+    clearTimeout(exitTimeout.current)
 
-    setStatus('exiting');
-    onExit?.();
+    setStatus("exiting")
+    onExit?.()
 
     exitTimeout.current = setTimeout(() => {
-      setStatus('exited');
-      safeToRemove?.();
-      onExited?.();
-    }, actualTimeout);
+      setStatus("exited")
+      safeToRemove?.()
+      onExited?.()
+    }, actualTimeout)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isPresent, onExit, safeToRemove, timeout, onExited, show]);
+  }, [isPresent, onExit, safeToRemove, timeout, onExited, show])
 
-  return children(hasEntered && show ? isPresent : false, status);
-};
+  return children(hasEntered && show ? isPresent : false, status)
+}

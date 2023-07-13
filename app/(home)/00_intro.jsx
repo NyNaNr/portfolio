@@ -1,5 +1,4 @@
-// "use client"
-// ↑削除してもいい？
+"use client"
 
 import dynamic from "next/dynamic"
 import { Transition } from "@/components/Transition"
