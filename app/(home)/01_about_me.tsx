@@ -1,4 +1,4 @@
-import Profile_Links from "@/components/About_me/Profile_Links"
+import Profile_Links from "@/components/About_me/profile_Links"
 
 export default function AboutMe() {
   return (
