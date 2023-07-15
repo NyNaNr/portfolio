@@ -1,3 +1,5 @@
+import Profile_Links from "@/components/About_me/Profile_Links"
+
 export default function AboutMe() {
   return (
     <>
@@ -18,6 +20,7 @@ export default function AboutMe() {
           また、趣味は音楽と旅行です。空き時間にはギターを弾いたり、新しい場所を探検したりしています。これらの活動が創造性を刺激し、新たな視点から問題を見つめる手助けになっています。
           これからも、技術の進歩を追求し、革新的なソリューションを生み出すことを目指しています。よろしくお願いいたします。
         </p>
+        <Profile_Links />
       </div>
     </>
   )
