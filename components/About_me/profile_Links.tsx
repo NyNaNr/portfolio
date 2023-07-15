@@ -15,7 +15,7 @@ const Profile_Links = () => {
         <div className="mr-2">
           <FontAwesomeIcon icon={faGithub} />
         </div>
-        <div className="text-blue-600 hover:underline">
+        <div className="text-blue-600 dark:text-blue-400 hover:underline">
           https://github.com/NyNaNr
         </div>
       </a>
@@ -33,7 +33,7 @@ const Profile_Links = () => {
             height={16}
           />
         </div>
-        <div className="text-blue-600 hover:underline">
+        <div className="text-blue-600 hover:underline dark:text-blue-400 ">
           https://qiita.com/KariKariMentaiFrance
         </div>
       </a>
