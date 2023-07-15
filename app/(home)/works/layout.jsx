@@ -1,5 +1,3 @@
-"use client"
-
 export default function WorksLayout({ children }) {
   return (
     <div
