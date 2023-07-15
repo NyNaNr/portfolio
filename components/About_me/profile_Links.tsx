@@ -10,7 +10,7 @@ const Profile_Links = () => {
         href="https://github.com/NyNaNr"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex mx-5"
+        className="flex mx-5 items-center"
       >
         <div className="mr-2">
           <FontAwesomeIcon icon={faGithub} />
@@ -23,7 +23,7 @@ const Profile_Links = () => {
         href="https://qiita.com/KariKariMentaiFrance"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex mx-5"
+        className="flex mx-5 items-center"
       >
         <div className="flex h-full mr-2">
           <Image
@@ -31,7 +31,6 @@ const Profile_Links = () => {
             alt={"Qiita_favicon.png"}
             width={16}
             height={16}
-            className="flex items-center"
           />
         </div>
         <div className="text-blue-600 hover:underline">
