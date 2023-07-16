@@ -1,7 +1,5 @@
-import React from "react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGithub } from "@fortawesome/free-brands-svg-icons"
-import Image from "next/image"
+import GithubSvg from "@/public/External_link/github-96.svg"
+import QiitaSvg from "@/public/External_link/Qiita_favicon.svg"
 
 const Profile_Links = () => {
   return (
@@ -13,7 +11,7 @@ const Profile_Links = () => {
         className="flex mx-5 items-center"
       >
         <div className="mr-2">
-          <FontAwesomeIcon icon={faGithub} />
+          <GithubSvg width={16} height={16} />
         </div>
         <div className="text-blue-600 dark:text-blue-400 hover:underline">
           https://github.com/NyNaNr
@@ -26,12 +24,7 @@ const Profile_Links = () => {
         className="flex mx-5 items-center"
       >
         <div className="flex h-full mr-2">
-          <Image
-            src={"/Qiita_favicon.png"}
-            alt={"Qiita_favicon.png"}
-            width={16}
-            height={16}
-          />
+          <QiitaSvg width={16} height={16} />
         </div>
         <div className="text-blue-600 hover:underline dark:text-blue-400 ">
           https://qiita.com/KariKariMentaiFrance
