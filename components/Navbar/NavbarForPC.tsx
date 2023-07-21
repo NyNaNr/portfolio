@@ -2,7 +2,6 @@ import DarkModeButton from "./DarkModeButton"
 import NavHomeLink from "./NavHomeLink"
 import NavGlobalLink from "./NavGlobalLink"
 import { usePathname } from "next/navigation"
-import External_links from "./External_links"
 
 export default function NavbarForPC() {
   const pathname = usePathname()
@@ -30,9 +29,6 @@ export default function NavbarForPC() {
         </div>
         <div className="fixed top-0 right-0 flex z-50  m-10">
           <DarkModeButton />
-        </div>
-        <div className="fixed bottom-0 left-0 flex flex-col z-50 m-10">
-          <External_links />
         </div>
       </div>
     </>
