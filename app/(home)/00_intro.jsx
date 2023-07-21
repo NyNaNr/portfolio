@@ -5,6 +5,7 @@ import { Transition } from "@/components/Transition"
 import { useContext } from "react"
 import { ThemeContext } from "@/components/themeContext"
 import ScroolDown from "@/components/ScroolDown/ScroolDown"
+import { Julius_Sans_One } from "next/font/google"
 
 const DisplacementSphere = dynamic(
   () =>
@@ -13,6 +14,10 @@ const DisplacementSphere = dynamic(
     ),
   // { ssr: false }, 削除する。様子見よう
 )
+const MonotonFont = Julius_Sans_One({
+  weight: "400",
+  subsets: ["latin"],
+})
 
 export default function Intro() {
   const { themeId, setThemeId } = useContext(ThemeContext)
@@ -27,9 +32,9 @@ export default function Intro() {
           >
             <DisplacementSphere />
 
-            <p className="absolute top-1/2 z-30 dark:text-white text-2xl sm:text-3xl md:text-6xl lg:text-9xl font-bold">
-              Yu&apos;s Portfolio
-            </p>
+            <div className="absolute top-1/2 z-30 dark:text-white text-2xl sm:text-3xl md:text-6xl lg:text-9xl font-bold">
+              <div className={MonotonFont.className}>Yu&apos;s Portfolio</div>
+            </div>
           </div>
 
           <div className="fixed bottom-20 left-1/2 transform -translate-x-1/2 z-30">
