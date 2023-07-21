@@ -1,5 +1,5 @@
-import TableRow from "@/components/SkillSet/TableRow"
-import TableHeader from "@/components/SkillSet/TableHeader"
+import TableRow from "@/components/SkillSet/TableRow";
+import TableHeader from "@/components/SkillSet/TableHeader";
 
 export default function SkillSet() {
   return (
@@ -40,7 +40,8 @@ export default function SkillSet() {
               フロントエンド
             </div>
             <div className="flex justify-center m-3">
-              このポートフォリオはApp Routerで実装しています。他の作品も移行中。
+              Next.jsをよく使います。ポートフォリオはApp
+              Routerで実装しています。他の作品も移行中。
             </div>
 
             <table className="w-full table-auto mx-auto">
@@ -141,5 +142,5 @@ export default function SkillSet() {
         </div>
       </div>
     </>
-  )
+  );
 }
