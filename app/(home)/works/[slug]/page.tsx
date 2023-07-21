@@ -36,7 +36,7 @@ export default function BlogPost({ params }: ParamsType) {
         <h1 className="mt-6 mb-2 text-2xl font-bold ">{title}</h1>
         {description === "" ? "" : <p>{description}</p>}
 
-        {tags.lenght === 0 ? (
+        {tags.length === 0 ? (
           ""
         ) : (
           <div className="space-x-2 ">
