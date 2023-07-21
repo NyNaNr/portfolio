@@ -13,7 +13,29 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
   title: "Yu's portfolio",
-  description: "Where there is a will, there is a way",
+  description:
+    "エンジニアYuのポートフォリオサイトです。私がこれまでに手がけた制作物、身につけたスキルをまとめています。",
+  openGraph: {
+    title: "Yu's portfolio",
+    description:
+      "エンジニアYuのポートフォリオサイトです。私がこれまでに手がけた制作物、身につけたスキルをまとめています。",
+    url: "https://yur-portfolio.vercel.app/",
+    siteName: "Yu's portfolio",
+    images: [
+      {
+        url: "/og/YuPortfolio800600.png",
+        width: 800,
+        height: 600,
+      },
+      {
+        url: "og/YuPortfolio18001600.png",
+        width: 1800,
+        height: 1600,
+      },
+    ],
+    locale: "ja_JP.UTF-8 ",
+    type: "website",
+  },
   viewport:
     "width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,viewport-fit=cover",
 }
