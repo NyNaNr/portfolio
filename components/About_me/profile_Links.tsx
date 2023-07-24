@@ -35,7 +35,7 @@ const Profile_Links = () => {
             height={16}
           />
         </div>
-        <div className="text-blue-600 hover:underline dark:text-blue-400 ">
+        <div className="overflow-hidden text-overflow-ellipsis whitespace-nowrap text-blue-600 hover:underline dark:text-blue-400 ">
           https://qiita.com/KariKariMentaiFrance
         </div>
       </a>
