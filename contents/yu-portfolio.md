@@ -1,148 +1,117 @@
 ---
-title: "Next.jsでmarkdownブログ（ポートフォリオも兼ねる）を構築"
-created_at: "2023-07-05"
-updated_at: "2023-07-06"
-description: "Next.jsでmarkdownファイルを利用したブログの構築手順を解説しています。"
+title: "Yu’s portfolioを支える技術"
+created_at: "2023-07-24"
+updated_at: "2023-07-25"
+description: "このポートフォリオサイトを作る時の試行錯誤を書いています。"
 tags: ["tech", "web", "nextjs"]
 ---
 
-vs code online から編集しています。テストです。
+# Yu’s portfolioを支える技術
 
-https://qiita.com/tbpgr/items/989c6badefff69377da7
+## はじめに
+この記事では、このポートフォリオサイトを作るにあたって使用した技術と機能（できること）、工夫したことについて書きます。
 
-https://musclecoding.com/nextjs-app-router-markdown-blog/
+https://github.com/NyNaNr/portfolio
 
-https://www.google.co.jp/
 
-https://qiita.com/KariKariMentaiFrance/items/70679902bd3a92ae2a6d
+## 目次
+- [使用した技術](###技術選定)
+- [機能（できること）](###機能（できること）)
+- [工夫したこと](###工夫したこと)
 
-https://www.noheya.jp/5
+### 技術選定
+このポートフォリオを作るにあたって以下の技術を使用しています。
+- Next.js(App Router)
+- TypeScript
+- Tailwind CSS
+- Docker
+- Node.js
 
-# 見出し 1
+#### Next.js & 苦悩
+このポートフォリオサイトを作る前に、Random Name Appというアプリを作成しました。
 
-## 見出し 2
+以下に紹介URLを貼る
+アプリサイト
+Qiita
+Git 
 
-### 見出し 3
+Random Name Appを作成し始めた当時、最新のNext.jsは13.3.0で、App RouterがStableになる前の世界でした。
 
-#### 見出し 4
+初めてのWebアプリをなんとか作り上げて、完成の喜びに浸たり
+、さて同じ要領でポートフォリオサイトも作ろう！と意気込んでいたところでした。
 
-##### 見出し 5
+Next.jsが、13.4でApp Routerがstableになり前回作ったアプリの知識だけでは通用しなくなってしましました。
 
-###### 見出し 6
+バージョンを下げて使用する考えもあったのですが、『エンジニアたるものキャッチアップをするべき』という考えに至り、自分の成長の為と最新の13.4.3のApp Routerを使用することを決意しました。
 
-- リスト 1
-  - ネスト リスト 1_1
-    - ネスト リスト 1_1_1
-    - ネスト リスト 1_1_2
-  - ネスト リスト 1_2
-- リスト 2
-- リスト 3
+当時は、App Routerが出てきたばかりで解説記事が大変少なく苦労したのを覚えています。そんな時に公式のドキュメントを何度も読み込み、自身のアプリに適用させていきました。（以前なら日本語化されたドキュメントや解説ブログを読んでいたのですが）公式のドキュメントを読みながらキャッチアップしていく習慣を身につけることができました。
 
-1. 番号付きリスト 1
-   1. 番号付きリスト 1_1
-   1. 番号付きリスト 1_2
-1. 番号付きリスト 2
-1. 番号付きリスト 3
+### 機能（できること）
+- 記事をMarkdownで書ける。
+- レスポンシブ対応
+- ダークモード切り替え
+- コンタクトフォーム・メールの送信
+- 
 
-> お世話になります。xxx です。
->
-> ご連絡いただいた、バグの件ですが、仕様です。
+#### 記事をMarkdownで書ける
+Markdown を HTML に変換するライブラリreact-markdownを使用しています。
 
-> お世話になります。xxx です。
->
-> ご連絡いただいた、バグの件ですが、仕様です。
->
-> > お世話になります。 yyy です。
-> >
-> > あの新機能バグってるっすね
+レンダリング時にどのような表示にするかCSSで指定できるので、書式を揃えて表示したい時ぬに非常に便利です。
 
-インストールコマンドは `gem install hoge` です
+また、Next.jsのDynamic Routesを利用することで、Markdown形式のファイルを追加するとファイル名からルートが作成されます。
 
-normal _italic_ normal
-normal _italic_ normal
+https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes
 
-normal **bold** normal
-normal **bold** normal
+MarkdownをHTMLに変換する際にかなりこだわったのが、リンクカードです。
 
-normal **_bold_** normal
-normal **_bold_** normal
+↓これがリンクカードです。URLを貼るとこのように表示されます。
 
----
+https://yur-portfolio.vercel.app
 
----
+Server Componentsを使うことで、APIをサーバーで事前に叩けます。ポートフォリオサイトにアクセスした時点で、リンク先のtitleやimage,descriptionなどのOGPがpre-fetchされます。ページの表示速度の貢献につながります。
 
----
+#### レスポンシブ対応
+スマホが普及している現在、レスポンシブ対応は必須だと思います。
+レスポンシブ対応を考えるのは前作アプリを含め、2回目なのでかなり慣れてきたように感じます。
 
----
+今回、苦戦したことがあります。
+他のサイトを閲覧しているとiPhoneの表示領域が画面いっぱいに広がるのに、自分のポートフォリオサイトは、ノッチの部分を避けて小さく表示されているのが大変気になりました。
 
-[Google 先生](https://www.google.co.jp/)
+`viewport-fit=cover`を追加することで解決できたかのように思ったのですが、今度は『UI がノッチやアクションバーと被ってしまう』問題に直面しました。ただ単にマージンを変えるだけだと、ノッチの有無に関わらずマージンが適用されてしまい思い通りのUIにできませんでした。
 
-[こっちから google][google]
-その他の文章
-[こっちからも google][google]
+調べてみると、
+セーフエリアを考慮に入れることで、解決できそうだと分かりました。
 
-[google]: https://www.google.co.jp/
+ちなみにTailwind CSSでセーフエリアを設定するためには
+`tailwindcss-safe-area`というプラグインを導入する必要があります。
 
-~~取り消し線~~
+無事にノッチの有無でUIを変更することができました。
 
-```ruby
-　 class Hoge
-　 def hoge
-　 print 'hoge'
-　 end
-　 end
-```
+振り返りながらこの記事を書いていると偶然以下のサイトを見つけました。
 
-```ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
-```
+https://zenn.dev/yuta_ike/articles/responsive_layout
 
-```tsx
-import highlightjs from "highlight.js"
-import "highlight.js/styles/vs2015.css"
+今回悩んだこともまとめられており、いい復習になりました。
 
-type Props = {
-  code: string
-  language: string
-}
+#### ダークモード切り替え
 
-export const SyntaxHighlighter: React.FC<Props> = ({ code, language }) => {
-  if (!highlightjs.getLanguage(language))
-    return (
-      <pre className="hljs">
-        <code className="hljs">{code}</code>
-      </pre>
-    )
 
-  const highlightedCode = highlightjs.highlight(code, { language }).value
 
-  return (
-    <pre className="hljs">
-      <code
-        className={`hljs ${language}`}
-        dangerouslySetInnerHTML={{ __html: highlightedCode }}
-      />
-    </pre>
-  )
-}
-```
+#### コンタクトフォーム・メールの送信
 
-| header1    |     header2 |   header3    |
-| :--------- | ----------: | :----------: |
-| align left | align right | align center |
-| a          |           b |      c       |
+react-hook-formとsendgrid/mailを使用しました。
 
-| ああああああああ | header2     | header3      |
-| :--------------- | :---------- | :----------- |
-| align left ｓ    | align right | align center |
-| a ｓ             | b           | c            |
+react-hook-formでバリデーションチェックをして、sendgrid/mailで、APIを通してお問い合わせ内容が私自身と、お問い合わせした方にメールで届くようになっています。
 
-| 東京         |         長野 |  奈良  |
-| :----------- | -----------: | :----: |
-| スカイツリー |       スキー |  大仏  |
-| 高い         | やってみたい | でかい |
+
+https://sendgrid.kke.co.jp/
+
+sendgrid/mailは、メルカリやNoteといった名だたるサービスも使用しています。
+さらに月12000通まで無料で使用することができます。
+
+
+
+
 
 ## menu
 
