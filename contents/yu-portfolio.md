@@ -31,7 +31,7 @@ tags: ["個人開発", "Next.js"]
 - Docker
 - Node.js
 
-#### Next.js & 苦悩
+#### Next.js App Router 苦悩
 
 このポートフォリオサイトを作る前に、Random Name App というアプリを作成しました。
 
