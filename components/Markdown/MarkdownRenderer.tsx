@@ -129,7 +129,7 @@ const Code: Components["code"] = ({
 
   ...props
 }) => {
-  const match = /language-(\w+):(.+)/.exec(className || "")
+  const match = /language-(\w+):?(.+)*/.exec(className || "")
   const fileName = match && match[2] ? match[2] : ""
   return !inline && match ? (
     <div className="p-1 my-2 rounded-lg bg-codeBack relative">

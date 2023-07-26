@@ -6,15 +6,15 @@ description: "Next.jsでmarkdownファイルを利用したブログの構築手
 tags: ["tech", "web", "nextjs"]
 ---
 
-https://qiita.com/tbpgr/items/989c6badefff69377da7
+<https://qiita.com/tbpgr/items/989c6badefff69377da7>
 
-https://musclecoding.com/nextjs-app-router-markdown-blog/
+<https://musclecoding.com/nextjs-app-router-markdown-blog/>
 
-https://www.google.co.jp/
+<https://www.google.co.jp/>
 
-https://qiita.com/KariKariMentaiFrance/items/70679902bd3a92ae2a6d
+<https://qiita.com/KariKariMentaiFrance/items/70679902bd3a92ae2a6d>
 
-https://www.noheya.jp/5
+<https://www.noheya.jp/5>
 
 # 見出し 1
 
@@ -83,7 +83,7 @@ normal **_bold_** normal
 
 ~~取り消し線~~
 
-```ruby
+```ruby:test.rb
 　 class Hoge
 　 def hoge
 　 print 'hoge'
