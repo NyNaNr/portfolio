@@ -31,9 +31,9 @@ tags: ["tech", "web", "nextjs"]
 このポートフォリオサイトを作る前に、Random Name App というアプリを作成しました。
 
 以下に紹介 URL を貼る
-アプリサイト
-Qiita
-Git
+<https://yur.vercel.app/random_name_app/home>
+<https://github.com/NyNaNr/randomNameApp>
+<https://qiita.com/KariKariMentaiFrance/items/70679902bd3a92ae2a6d>
 
 Random Name App を作成し始めた当時、最新の Next.js は 13.3.0 で、App Router が Stable になる前の世界でした。
 
@@ -99,30 +99,6 @@ Server Components を使うことで、API をサーバーで事前に叩けま�
 
 #### コンタクトフォーム・メールの送信
 
-<<<<<<< HEAD
-react-hook-form と sendgrid/mail を使用しました。
-
-react-hook-form でバリデーションチェックをして、sendgrid/mail で、API を通してお問い合わせ内容が私自身と、お問い合わせした方にメールで届くようになっています。
-
-<https://sendgrid.kke.co.jp/>
-
-sendgrid/mail は、メルカリや Note といった名だたるサービスも使用しています。
-さらに月 12000 通まで無料で使用することができます。
-
-## menu
-
-- [to header1](#header1)
-- [to header2](#header2)
-
-<!-- some long code -->
-
-[return to menu](#menu)
-
-### header1
-
-### header2
-
-=======
 react-hook-form と sendgrid/mail を使用しました。
 
 react-hook-form でバリデーションチェックをして、sendgrid/mail で、API を通してお問い合わせ内容が私自身と、お問い合わせした方にメールで届くようになっています。
@@ -140,5 +116,4 @@ sendgrid/mail は、メルカリや Note といった名だたるサービスも
 #### 　第一印象
 
 このポートフォリオサイトを開いて一番初めに表示されるものをインパクトのあるものにしようと考えました。
-
 心理学では初頭効果と言い、最初に示された特性が印象に残りやすく、後の評価に大きな影響を与えるものなのです。
