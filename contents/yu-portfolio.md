@@ -31,8 +31,6 @@ tags: ["個人開発", "Next.js"]
 
 このポートフォリオサイトを作る前に、Random Name App というアプリを作成しました。
 
-以下に紹介 URL を貼る
-
 <https://yur.vercel.app/random_name_app/home>
 
 <https://github.com/NyNaNr/randomNameApp>
@@ -132,7 +130,7 @@ sendgrid/mail は、メルカリや Note といった名だたるサービスも
 心理学では初頭効果と言い、最初に示された特性が印象に残りやすく、後の評価に大きな影響を与えるものなのです。
 
 それほど重要と認識していたので、このサイトを作成するときに最優先で考えました。
-Github でさまざまなポートフォリオサイトを閲覧していた時、感動したポートフォリオサイトを見つけたのです。
+Github でさまざまなポートフォリオサイトを閲覧していた時、ついに見つけたのです。
 
 <https://hamishw.com/>
 
