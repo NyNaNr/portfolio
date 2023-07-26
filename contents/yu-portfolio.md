@@ -70,7 +70,7 @@ Markdown を HTML に変換する際にかなりこだわったのが、リン�
 
 <https://yur-portfolio.vercel.app>
 
-Server Components を使うことで、API をサーバーで事前に叩けます。ポートフォリオサイトにアクセスした時点で、リンク先の title や image,description などの OGP が pre-fetch されます。ページの表示速度の貢献につながります。
+Server Components を使うことで、API をサーバーで事前に叩けます。ポートフォリオサイトにアクセスした時点で、リンク先の title や image,description などの OGP が pre-fetch され、ページの表示速度の貢献につながります。
 
 #### レスポンシブ対応
 
