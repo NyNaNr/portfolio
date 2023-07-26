@@ -32,8 +32,11 @@ tags: ["個人開発", "Next.js"]
 このポートフォリオサイトを作る前に、Random Name App というアプリを作成しました。
 
 以下に紹介 URL を貼る
+
 <https://yur.vercel.app/random_name_app/home>
+
 <https://github.com/NyNaNr/randomNameApp>
+
 <https://qiita.com/KariKariMentaiFrance/items/70679902bd3a92ae2a6d>
 
 Random Name App を作成し始めた当時、最新の Next.js は 13.3.0 で、App Router が Stable になる前の世界でした。
@@ -130,8 +133,11 @@ sendgrid/mail は、メルカリや Note といった名だたるサービスも
 
 それほど重要と認識していたので、このサイトを作成するときに最優先で考えました。
 Github でさまざまなポートフォリオサイトを閲覧していた時、感動したポートフォリオサイトを見つけたのです。
+
 <https://hamishw.com/>
+
 <https://github.com/HamishMW/portfolio>
+
 このページを開いたときのインパクト、すごくないですか？
 子どもの頃に見ていた『脳内エステ IQ サプリ』のモヤッとボールようなもこもこした形。
 私はなつかしさも相まって感動しました。
@@ -175,6 +181,7 @@ Github でさまざまなポートフォリオサイトを閲覧していた時�
 コントラストを少し下げることで、目に優しいサイトに一歩近づきました。
 
 有名なサイトの黒色についての扱いが検証＆まとめられています。
+
 <https://www.evoworx.co.jp/blog/pureblack/>
 
 サイトの見やすさを意識するいい機会でした。
