@@ -1,5 +1,5 @@
-import TableRow from "@/components/SkillSet/TableRow";
-import TableHeader from "@/components/SkillSet/TableHeader";
+import TableRow from "@/components/SkillSet/TableRow"
+import TableHeader from "@/components/SkillSet/TableHeader"
 
 export default function SkillSet() {
   return (
@@ -29,8 +29,8 @@ export default function SkillSet() {
                 <TableHeader />
               </thead>
               <tbody>
-                <TableRow title={"HTML5"} startDate={"2022-11-01"} rate={4} />
-                <TableRow title={"CSS3"} startDate={"2022-06-30"} rate={2} />
+                <TableRow title={"HTML5"} startDate={"2023-03-01"} rate={4} />
+                <TableRow title={"CSS3"} startDate={"2023-03-01"} rate={4} />
               </tbody>
             </table>
           </div>
@@ -41,7 +41,7 @@ export default function SkillSet() {
             </div>
             <div className="flex justify-center m-3">
               Next.jsをよく使います。ポートフォリオはApp
-              Routerで実装しています。他の作品も移行中。
+              Routerで実装しています。
             </div>
 
             <table className="w-full table-auto mx-auto">
@@ -51,16 +51,16 @@ export default function SkillSet() {
               <tbody>
                 <TableRow
                   title={"JavaScript"}
-                  startDate={"2022-11-01"}
-                  rate={4}
+                  startDate={"2023-04-01"}
+                  rate={3}
                 />
                 <TableRow
                   title={"TypeScript"}
-                  startDate={"2022-11-01"}
-                  rate={4}
+                  startDate={"2023-04-01"}
+                  rate={3}
                 />
-                <TableRow title={"React"} startDate={"2022-06-30"} rate={2} />
-                <TableRow title={"Next.js"} startDate={"2022-06-30"} rate={2} />
+                <TableRow title={"React"} startDate={"2023-03-01"} rate={3} />
+                <TableRow title={"Next.js"} startDate={"2023-04-01"} rate={4} />
               </tbody>
             </table>
           </div>
@@ -77,8 +77,8 @@ export default function SkillSet() {
                 <TableHeader />
               </thead>
               <tbody>
-                <TableRow title={"Node.js"} startDate={"2022-11-01"} rate={4} />
-                <TableRow title={"Python"} startDate={"2022-11-01"} rate={4} />
+                <TableRow title={"Node.js"} startDate={"2022-11-01"} rate={2} />
+                <TableRow title={"Python"} startDate={"2019-12-01"} rate={4} />
               </tbody>
             </table>
           </div>
@@ -95,8 +95,8 @@ export default function SkillSet() {
                 <TableHeader />
               </thead>
               <tbody>
-                <TableRow title={"MySQL"} startDate={"2022-11-01"} rate={4} />
-                <TableRow title={"MongoDB"} startDate={"2022-11-01"} rate={4} />
+                <TableRow title={"MySQL"} startDate={"2022-11-01"} rate={0} />
+                <TableRow title={"MongoDB"} startDate={"2022-11-01"} rate={0} />
               </tbody>
             </table>
           </div>
@@ -111,13 +111,14 @@ export default function SkillSet() {
                 <TableHeader />
               </thead>
               <tbody>
-                <TableRow title={"Git"} startDate={"2022-11-01"} rate={4} />
-                <TableRow title={"Docker"} startDate={"2022-11-01"} rate={4} />
+                <TableRow title={"Git"} startDate={"2023-01-27"} rate={3} />
+                <TableRow title={"Docker"} startDate={"2023-06-01"} rate={2} />
                 <TableRow
                   title={"Photoshop"}
-                  startDate={"2022-11-01"}
+                  startDate={"2010-04-01"}
                   rate={4}
                 />
+                <TableRow title={"Excel"} startDate={"2019-04-01"} rate={4} />
               </tbody>
             </table>
           </div>
@@ -132,15 +133,60 @@ export default function SkillSet() {
 
             <table className="w-full table-auto mx-auto">
               <thead>
-                <TableHeader />
+                <tr>
+                  <th className="px-4 py-2 text-sm sm:text-base">技術</th>
+                  <th className="px-4 py-2 text-sm sm:text-base">取得年月</th>
+                </tr>
               </thead>
               <tbody>
-                <TableRow title={"英検2級"} startDate={"2022-11-01"} rate={4} />
+                <tr>
+                  <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                    英検2級
+                  </td>
+                  <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                    平成27年3月
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                    小学校一種免許
+                  </td>
+                  <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                    平成31年3月
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                    中学校英語一種免許
+                  </td>
+                  <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                    平成31年3月
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                    高等学校英語一種免許
+                  </td>
+                  <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                    平成31年3月
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                    特別支援学校一種免許
+                  </td>
+                  <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                    平成31年3月
+                  </td>
+                </tr>
               </tbody>
             </table>
+            <div className="mt-2">
+              過去に英検準一級の一次試験を通過したこともありますが、2次試験で不合格になって悔しい思いをしたこともあり、現在準一級取得に向けて勉強中。(早くこれを消したい)
+            </div>
           </div>
         </div>
       </div>
     </>
-  );
+  )
 }
