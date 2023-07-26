@@ -105,7 +105,7 @@ Server Components を使うことで、API をサーバーで事前に叩けま�
 ユーザーによって手動でダークモードに切り替えられるようにしています。
 `tailwind.config.js` の設定の変更すれば使えるようになります。
 
-```tailwind.config.js
+```js:tailwind.config.js
 module.exports = {
   darkMode: "class",
   // ...
