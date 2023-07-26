@@ -190,7 +190,7 @@ const Paragraph: Components["p"] = ({ node, ...props }) => {
     //     </div>
     //   )
     // }
-    console.log(`URL:${child.properties.href}`) //markdownのURLを取得できている
+
     return (
       <div className={"embeded"}>
         <RichLinkCard href={child.properties.href} />
