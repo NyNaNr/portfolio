@@ -135,14 +135,14 @@ const Code: Components["code"] = ({
     <div className="p-1 my-2 rounded-lg bg-codeBack relative">
       {fileName && (
         <div
-          className="fileName flex absolute top-0 left-0 mb-3 px-2 py-1 bg-strongCyan bg-opacity-70
+          className="fileName flex absolute top-0 left-0 mb-3 px-2 bg-strongCyan bg-opacity-70
         rounded-lg rounded-tr-none rounded-bl-none"
         >
           {fileName}
         </div>
       )}
       {/* ファイル名とコードの被りを以下のコードで回避する */}
-      {fileName && <div className="h-8"></div>}
+      {fileName && <div className="h-7"></div>}
       <SyntaxHighlighter
         code={String(children).replace(/\n$/, "")}
         language={match?.[1] ?? "plain-text"}
