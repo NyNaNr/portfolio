@@ -186,6 +186,9 @@ export default function SkillSet() {
             </div>
           </div>
         </div>
+        <div className="flex justify-center mt-10">
+          ※独学で勉強してきた私にとって実務経験を伴っていないため、☆の数は主観です。
+        </div>
       </div>
     </>
   )
