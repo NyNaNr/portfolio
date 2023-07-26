@@ -126,18 +126,30 @@ const Code: Components["code"] = ({
   inline,
   className,
   children,
+
   ...props
 }) => {
-  const match = /language-(\w+)/.exec(className || "")
+  const match = /language-(\w+):(.+)/.exec(className || "")
+  const fileName = match && match[2] ? match[2] : ""
   return !inline && match ? (
-    <div className="p-1 rounded-lg mb-2 bg-codeBack">
+    <div className="p-1 my-2 rounded-lg bg-codeBack relative">
+      {fileName && (
+        <div
+          className="fileName flex absolute top-0 left-0 mb-3 px-2 py-1 text-white bg-strongCyan bg-opacity-70
+        rounded-lg rounded-tr-none rounded-bl-none"
+        >
+          {fileName}
+        </div>
+      )}
+      {/* ファイル名とコードの被りを以下のコードで回避する */}
+      {fileName && <div className="h-8"></div>}
       <SyntaxHighlighter
         code={String(children).replace(/\n$/, "")}
         language={match?.[1] ?? "plain-text"}
       />
     </div>
   ) : (
-    <span className="px-1 bg-strongCyan bg-opacity-40 rounded-lg">
+    <span className="px-1 bg-strongCyan bg-opacity-40 rounded-lg ">
       <code className={className} {...props}>
         {children}
       </code>
