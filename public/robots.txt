@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://yur-portfolio.vercel.app/
+
+# Sitemaps
+Sitemap: https://yur-portfolio.vercel.app/sitemap.xml
