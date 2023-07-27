@@ -1,7 +1,7 @@
 ---
 title: "Yu’s portfolioを支える技術"
 created_at: "2023-07-24"
-updated_at: "2023-07-26"
+updated_at: "2023-07-27"
 description: "このポートフォリオサイトを作る時の試行錯誤を書いています。"
 tags: ["個人開発", "Next.js"]
 ---
