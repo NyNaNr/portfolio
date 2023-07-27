@@ -48,6 +48,11 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
+        {/* google search console */}
+        <meta
+          name="google-site-verification"
+          content="9egKRDBY78wzxWE3GjSqBkjZ-xw480zb4PVogFGOhn0"
+        />
         <Script
           strategy="afterInteractive"
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
