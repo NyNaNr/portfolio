@@ -181,9 +181,6 @@ export default function SkillSet() {
                 </tr>
               </tbody>
             </table>
-            <div className="mt-2 mx-5">
-              過去に英検準一級の一次試験を通過したこともありますが、2次試験で不合格になって悔しい思いをしたこともあり、現在準一級取得に向けて勉強中。(早くこれを消したい)
-            </div>
           </div>
         </div>
         <div className="flex justify-center mt-10">
