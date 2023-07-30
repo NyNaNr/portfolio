@@ -8,6 +8,7 @@ import Script from "next/script"
 import { Suspense } from "react"
 import { GA_TRACKING_ID } from "../lib/contant"
 import { GoogleAnalyticsScript } from "@/lib/gtag"
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -76,7 +77,10 @@ export default function RootLayout({
           <GoogleAnalyticsScript />
         </Suspense>
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   )
 }
