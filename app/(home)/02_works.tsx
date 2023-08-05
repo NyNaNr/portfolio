@@ -13,6 +13,9 @@ export default function Works() {
           </h2>
           <div className="flex z-0 justify-center mx-auto bg-strongCyan h-1  mb-5"></div>
         </div>
+        <p className="flex justify-center mb-3">
+          私が制作した成果物です。クリックすると紹介記事に飛べます。
+        </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-4 mx-5">
           {/* 一行目 */}
 
