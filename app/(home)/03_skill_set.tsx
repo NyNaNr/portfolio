@@ -127,9 +127,7 @@ export default function SkillSet() {
             <div className="flex justify-center font-semibold my-3">
               保有資格
             </div>
-            <div className="flex justify-center m-3">
-              大学でも英語を専攻していました。
-            </div>
+            <div className="flex justify-center m-3"></div>
 
             <table className="w-full table-auto mx-auto">
               <thead>
@@ -139,14 +137,6 @@ export default function SkillSet() {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
-                    英検2級
-                  </td>
-                  <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
-                    平成27年3月
-                  </td>
-                </tr>
                 <tr>
                   <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
                     小学校一種免許
