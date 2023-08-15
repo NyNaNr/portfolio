@@ -173,7 +173,7 @@ export default function SkillSet() {
             </table>
           </div>
         </div>
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center mt-10 mx-6">
           ※独学で勉強してきた私にとって実務経験を伴っていないため、☆の数は主観です。
         </div>
       </div>
