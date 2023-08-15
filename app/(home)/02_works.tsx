@@ -8,7 +8,7 @@ export default function Works() {
         id="works"
       >
         <div className="title max-w-fit mx-auto">
-          <h2 className="flex z-0 justify-center text-3xl font-medium">
+          <h2 className="flex z-0 justify-center text-3xl font-medium mt-20">
             Works
           </h2>
           <div className="flex z-0 justify-center mx-auto bg-strongCyan h-1  mb-5"></div>
