@@ -42,10 +42,26 @@ export default function NavbarForMobile() {
               <div className="flex z-40 flex-col mx-16 sm:mx-40 text-center space-y-10 text-3xl">
                 {pathname === "/" ? (
                   <>
-                    <NavHomeLink text="About me" id="about-me" />
-                    <NavHomeLink text="Works" id="works" />
-                    <NavHomeLink text="Skills" id="skills" />
-                    <NavHomeLink text="Contact" id="contact" />
+                    <NavHomeLink
+                      text="About me"
+                      id="about-me"
+                      onClick={handleMenuOpen}
+                    />
+                    <NavHomeLink
+                      text="Works"
+                      id="works"
+                      onClick={handleMenuOpen}
+                    />
+                    <NavHomeLink
+                      text="Skills"
+                      id="skills"
+                      onClick={handleMenuOpen}
+                    />
+                    <NavHomeLink
+                      text="Contact"
+                      id="contact"
+                      onClick={handleMenuOpen}
+                    />
                   </>
                 ) : (
                   <>
