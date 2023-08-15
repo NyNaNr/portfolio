@@ -60,7 +60,6 @@ export const DisplacementSphere = (props) => {
       powerPreference: "high-performance",
       failIfMajorPerformanceCaveat: true,
     })
-    console.log(canvasRef.current)
 
     renderer.current.setSize(innerWidth, innerHeight)
     renderer.current.setPixelRatio(1)
