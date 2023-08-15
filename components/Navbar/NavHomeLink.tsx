@@ -4,7 +4,7 @@ import { Link as Scroll } from "react-scroll"
 interface NavHomeLinkProps {
   text: string
   id: string
-  onClick: () => void
+  onClick?: () => void
 }
 
 //リンク（位置）を受け取れるように改良する
