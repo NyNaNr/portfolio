@@ -76,7 +76,7 @@ export default function NavbarForMobile() {
             <div>
               <div className="mr-safe">
                 <div className="absolute bottom-0 right-0 m-3 ">
-                  <DarkModeButton />
+                  <DarkModeButton onClick={handleMenuOpen} />
                 </div>
               </div>
             </div>
