@@ -59,7 +59,6 @@ export const DisplacementSphere = (props) => {
       alpha: true,
       powerPreference: "high-performance",
       failIfMajorPerformanceCaveat: false,
-      failIfMajorPerformanceCaveat: true,
     })
 
     renderer.current.setSize(innerWidth, innerHeight)
