@@ -58,6 +58,8 @@ export const DisplacementSphere = (props) => {
       antialias: false,
       alpha: true,
       powerPreference: "high-performance",
+      precision: "mediump",
+      failIfMajorPerformanceCaveat: false,
       failIfMajorPerformanceCaveat: true,
     })
 
