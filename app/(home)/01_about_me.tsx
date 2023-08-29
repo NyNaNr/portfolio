@@ -15,7 +15,7 @@ export default function AboutMe() {
         </div>
 
         <p className="flex flex-wrap text-justify mx-5 mb-16 z-0">
-          WebエンジニアになりたいYuです。
+          エンジニアになりたいYuです。
           <br />
           大学で英語と英語教育を学んだ後、小学校教員になる。ICT主任となりエクセルで業務効率改善をしていくうちにPythonに興味が湧く。全国の教員の役に立ちたいと思い、名前をランダムに表示するWebアプリを作る。IT業界で働きたい意志が強くなり、転職に向けて準備中。
         </p>
