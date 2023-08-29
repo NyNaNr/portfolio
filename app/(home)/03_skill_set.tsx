@@ -179,6 +179,9 @@ export default function SkillSet() {
           <div className="flex justify-center font-semibold my-3">
             評価基準について
           </div>
+          <div className="flex justify-center m-3">
+            実務未経験なので、独自の評価基準を設定しました。
+          </div>
           <div className="flex justify-center m-3"></div>
 
           <table className="w-full table-auto mx-auto">
@@ -193,15 +196,15 @@ export default function SkillSet() {
                 <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
                   <StarRating rate={1} />
                 </td>
-                <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
-                  本や公式ドキュメントで、基本的な概念や文法について学習中
+                <td className="border-t border-b border-gray-300 px-4 py-2">
+                  本や公式ドキュメントで、基本的な概念や文法について学習中。
                 </td>
               </tr>
               <tr>
                 <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
                   <StarRating rate={2} />
                 </td>
-                <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                <td className="border-t border-b border-gray-300 px-4 py-2">
                   基本的な文法や概念を理解している。簡単なプログラムやスクリプトを書くことができる。
                 </td>
               </tr>
@@ -209,7 +212,7 @@ export default function SkillSet() {
                 <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
                   <StarRating rate={3} />
                 </td>
-                <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                <td className="border-t border-b border-gray-300 px-4 py-2">
                   いくつかの小さなプロジェクトやタスクを完了している。
                 </td>
               </tr>
@@ -217,7 +220,7 @@ export default function SkillSet() {
                 <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
                   <StarRating rate={4} />
                 </td>
-                <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                <td className="border-t border-b border-gray-300 px-4 py-2">
                   複数のプロジェクトでの経験があり、特定の領域での深い知識を持ち始めている。
                 </td>
               </tr>
@@ -225,7 +228,7 @@ export default function SkillSet() {
                 <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
                   <StarRating rate={5} />
                 </td>
-                <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                <td className="border-t border-b border-gray-300 px-4 py-2">
                   大きなプロジェクトや挑戦的なタスクを独力で完了させた。
                 </td>
               </tr>
