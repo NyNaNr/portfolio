@@ -30,8 +30,8 @@ export default function SkillSet() {
                 <TableHeader />
               </thead>
               <tbody>
-                <TableRow title={"HTML5"} startDate={"2023-03-01"} rate={4} />
-                <TableRow title={"CSS3"} startDate={"2023-03-01"} rate={4} />
+                <TableRow title={"HTML5"} startDate={"2023-03-01"} rate={5} />
+                <TableRow title={"CSS3"} startDate={"2023-03-01"} rate={5} />
               </tbody>
             </table>
           </div>
@@ -53,15 +53,15 @@ export default function SkillSet() {
                 <TableRow
                   title={"JavaScript"}
                   startDate={"2023-04-01"}
-                  rate={3}
+                  rate={5}
                 />
                 <TableRow
                   title={"TypeScript"}
                   startDate={"2023-04-01"}
-                  rate={3}
+                  rate={4}
                 />
                 <TableRow title={"React"} startDate={"2023-03-01"} rate={3} />
-                <TableRow title={"Next.js"} startDate={"2023-04-01"} rate={4} />
+                <TableRow title={"Next.js"} startDate={"2023-04-01"} rate={5} />
               </tbody>
             </table>
           </div>
@@ -78,8 +78,8 @@ export default function SkillSet() {
                 <TableHeader />
               </thead>
               <tbody>
-                <TableRow title={"Node.js"} startDate={"2022-11-01"} rate={2} />
-                <TableRow title={"Python"} startDate={"2019-12-01"} rate={4} />
+                <TableRow title={"Node.js"} startDate={"2022-11-01"} rate={3} />
+                <TableRow title={"Python"} startDate={"2019-12-01"} rate={3} />
               </tbody>
             </table>
           </div>
@@ -112,14 +112,14 @@ export default function SkillSet() {
                 <TableHeader />
               </thead>
               <tbody>
-                <TableRow title={"Git"} startDate={"2023-01-27"} rate={3} />
+                <TableRow title={"Git"} startDate={"2023-01-27"} rate={4} />
                 <TableRow title={"Docker"} startDate={"2023-06-01"} rate={2} />
                 <TableRow
                   title={"Photoshop"}
                   startDate={"2010-04-01"}
-                  rate={4}
+                  rate={5}
                 />
-                <TableRow title={"Excel"} startDate={"2019-04-01"} rate={4} />
+                <TableRow title={"Excel"} startDate={"2019-04-01"} rate={5} />
               </tbody>
             </table>
           </div>
