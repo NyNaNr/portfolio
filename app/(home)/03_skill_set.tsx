@@ -1,5 +1,6 @@
 import TableRow from "@/components/SkillSet/TableRow"
 import TableHeader from "@/components/SkillSet/TableHeader"
+import StarRating from "@/components/SkillSet/StarRating"
 
 export default function SkillSet() {
   return (
@@ -83,7 +84,7 @@ export default function SkillSet() {
             </table>
           </div>
 
-          <div className="date-base">
+          {/* <div className="date-base">
             <div className="flex justify-center font-semibold my-3">
               データベース
             </div>
@@ -99,7 +100,7 @@ export default function SkillSet() {
                 <TableRow title={"MongoDB"} startDate={"2022-11-01"} rate={0} />
               </tbody>
             </table>
-          </div>
+          </div> */}
 
           <div className="etc">
             <div className="flex justify-center font-semibold my-3">その他</div>
@@ -134,6 +135,56 @@ export default function SkillSet() {
                 <tr>
                   <th className="px-4 py-2 text-sm sm:text-base">技術</th>
                   <th className="px-4 py-2 text-sm sm:text-base">取得年月</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                    小学校一種免許
+                  </td>
+                  <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                    平成31年3月
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                    中学校英語一種免許
+                  </td>
+                  <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                    平成31年3月
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                    高等学校英語一種免許
+                  </td>
+                  <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                    平成31年3月
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                    特別支援学校一種免許
+                  </td>
+                  <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                    平成31年3月
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="evaluation-criterion">
+            <div className="flex justify-center font-semibold my-3">
+              評価基準
+            </div>
+            <div className="flex justify-center m-3"></div>
+
+            <table className="w-full table-auto mx-auto">
+              <thead>
+                <tr>
+                  <th className="px-4 py-2 text-sm sm:text-base">数値</th>
+                  <th className="px-4 py-2 text-sm sm:text-base">評価基準</th>
                 </tr>
               </thead>
               <tbody>
