@@ -173,59 +173,64 @@ export default function SkillSet() {
               </tbody>
             </table>
           </div>
-
-          <div className="evaluation-criterion">
-            <div className="flex justify-center font-semibold my-3">
-              評価基準
-            </div>
-            <div className="flex justify-center m-3"></div>
-
-            <table className="w-full table-auto mx-auto">
-              <thead>
-                <tr>
-                  <th className="px-4 py-2 text-sm sm:text-base">数値</th>
-                  <th className="px-4 py-2 text-sm sm:text-base">評価基準</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
-                    小学校一種免許
-                  </td>
-                  <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
-                    平成31年3月
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
-                    中学校英語一種免許
-                  </td>
-                  <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
-                    平成31年3月
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
-                    高等学校英語一種免許
-                  </td>
-                  <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
-                    平成31年3月
-                  </td>
-                </tr>
-                <tr>
-                  <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
-                    特別支援学校一種免許
-                  </td>
-                  <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
-                    平成31年3月
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
         </div>
-        <div className="flex justify-center mt-10 mx-6">
-          ※独学で勉強してきた私にとって実務経験を伴っていないため、☆の数は主観です。
+
+        <div className="evaluation-criterion mt-8">
+          <div className="flex justify-center font-semibold my-3">
+            評価基準について
+          </div>
+          <div className="flex justify-center m-3"></div>
+
+          <table className="w-full table-auto mx-auto">
+            <thead>
+              <tr>
+                <th className="px-4 py-2 text-sm sm:text-base">数値</th>
+                <th className="px-4 py-2 text-sm sm:text-base">評価基準</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                  <StarRating rate={1} />
+                </td>
+                <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                  本や公式ドキュメントで、基本的な概念や文法について学習中
+                </td>
+              </tr>
+              <tr>
+                <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                  <StarRating rate={2} />
+                </td>
+                <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                  基本的な文法や概念を理解している。簡単なプログラムやスクリプトを書くことができる。
+                </td>
+              </tr>
+              <tr>
+                <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                  <StarRating rate={3} />
+                </td>
+                <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                  いくつかの小さなプロジェクトやタスクを完了している。
+                </td>
+              </tr>
+              <tr>
+                <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                  <StarRating rate={4} />
+                </td>
+                <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                  複数のプロジェクトでの経験があり、特定の領域での深い知識を持ち始めている。
+                </td>
+              </tr>
+              <tr>
+                <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                  <StarRating rate={5} />
+                </td>
+                <td className="border-t border-b border-gray-300 px-4 py-2 text-center">
+                  大きなプロジェクトや挑戦的なタスクを独力で完了させた。
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </>
