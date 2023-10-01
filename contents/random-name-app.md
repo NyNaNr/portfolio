@@ -2,7 +2,7 @@
 title: "【はじめての個人開発】授業中にランダム指名できるWebアプリを作ってみた【教育】"
 created_at: "2023-06-02"
 updated_at: "2023-06-11"
-description: "Next.jsでmarkdownファイルを利用したブログの構築手順を解説しています。"
+description: "はじめての自作Webアプリ　RandomNameAppの制作背景です。"
 tags: ["TypeScript", "Next.js", "React", "個人開発"]
 ---
 
