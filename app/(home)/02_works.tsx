@@ -38,6 +38,11 @@ export default function Works() {
               href="/works/yu-portfolio"
             />
           </div>
+          <ImageCard
+            src="/effective-teaching-methods-for-a-music-program-32.png"
+            title="【教育】音楽会の問題解決！"
+            href="/works/effective-teaching-methods-for-a-music-program"
+          />
         </div>
       </div>
     </>
