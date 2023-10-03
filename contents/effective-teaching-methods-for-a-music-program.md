@@ -27,6 +27,8 @@ tags: ["iPad", "LumaFusion", "動画制作", "個人開発"]
 
 プログラミングはしていません。動画を作成しました。（著作権上、音源つきの動画を掲載することができません。）
 
+![zyoutetsu_example](https://yur-portfolio.vercel.app/zyoutetsu_example.gif)
+
 音源と楽譜をつなぐ架け橋となる動画です。楽譜の練習番号と小節番号を動画で表示することで、その音源がどこの小節を再生しているのか容易に分かるようになります。繰り返しも動画を見れば一目瞭然です。
 
 <https://ameblo.jp/trb293/entry-12354981315.html>
