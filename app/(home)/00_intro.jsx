@@ -14,7 +14,7 @@ const DisplacementSphere = dynamic(
     ),
   // { ssr: false }, 削除する。様子見よう
 )
-const MonotonFont = Julius_Sans_One({
+const JuliusSansOne = Julius_Sans_One({
   weight: "400",
   subsets: ["latin"],
 })
@@ -33,7 +33,7 @@ export default function Intro() {
             <DisplacementSphere />
 
             <div className="absolute top-1/2 z-30 dark:text-white text-2xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold">
-              <div className={MonotonFont.className}>Yu&apos;s Portfolio</div>
+              <div className={JuliusSansOne.className}>Yu&apos;s Portfolio</div>
             </div>
           </div>
 
