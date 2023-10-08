@@ -22,7 +22,7 @@ const Profile_Links = () => {
         </div>
       </a>
       <a
-        href="https://qiita.com/KariKariMentaiFrance"
+        href="https://qiita.com/N_oka"
         target="_blank"
         rel="noopener noreferrer"
         className="flex mx-5 items-center"
