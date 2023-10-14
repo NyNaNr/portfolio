@@ -213,7 +213,7 @@ export default function SkillSet() {
                   <StarRating rate={3} />
                 </td>
                 <td className="border-t border-b border-gray-300 px-4 py-2">
-                  いくつかの小さなプロジェクトやタスクを完了している。
+                  いくつかの簡単なプロジェクトやタスクを完了している。
                 </td>
               </tr>
               <tr>
@@ -229,7 +229,7 @@ export default function SkillSet() {
                   <StarRating rate={5} />
                 </td>
                 <td className="border-t border-b border-gray-300 px-4 py-2">
-                  大きなプロジェクトや挑戦的なタスクを独力で完了させた。
+                  実際にユーザーがいる、実用的なものを独力でデプロイした。
                 </td>
               </tr>
             </tbody>
